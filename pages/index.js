@@ -1,6 +1,11 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
+import { HeroSection } from "../components/HomeComponents/HeroSection";
+import { SecondSection } from "../components/HomeComponents/SecondSection";
+import { ThirdSection } from "../components/HomeComponents/ThirdSection";
+import { FourthSection } from "../components/HomeComponents/FourthSection";
+import { FifthSection } from "../components/HomeComponents/FifthSection";
 
 export default function Home() {
   return (
@@ -16,9 +21,11 @@ export default function Home() {
           content="Gigawaffle, Digital Marketing Company based in Preston City Centre. Web Design, Brand Design, SEO and Copywriting. grow your business and turn it into a brand"
         />
       </Head>
-      <div>
-        <h1>Home page</h1>
-      </div>
+      <HeroSection />
+      <SecondSection />
+      <ThirdSection />
+      <FourthSection />
+      <FifthSection />
     </>
   );
 }
