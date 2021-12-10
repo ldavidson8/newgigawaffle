@@ -1,4 +1,16 @@
+import Link from "next/link";
+import { useEffect } from "react";
+import Router, { useRouter } from "next/router";
+
 const NotFound = () => {
+  const router = useRouter();
+
+  useEffect(() => {
+    setTimeout(() => {
+      //router.go(1)
+      router.push("/");
+    }, 3000);
+  }, []);
   return (
     <div class="flex items-center justify-center w-screen h-screen">
       <div class="px-4 lg:py-12">
