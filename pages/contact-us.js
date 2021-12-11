@@ -3,9 +3,9 @@ import Image from "next/image";
 
 export default function Contact() {
   return (
-    <div className="flex justify-center items-end xl:items-center lg:justify-end md:bg-mapImage bg-no-repeat bg-[bottom_-14rem_right_-120rem] md:bg-center h-4/5 w-screen py-6">
-      <div className="bg-white rounded-2xl h-min md:h-full w-full md:w-1/2 xl:w-1/3 font-bold text-gray-600 p-12 pb-24 relative">
-        <form className="xl:space-y-10 w-3/4">
+    <div className="flex justify-center items-end xl:items-center md:justify-end bg-mapImage bg-no-repeat bg-[bottom_-10rem_right_-120rem] md:bg-[bottom_-30rem_right_-90rem] xl:bg-center h-4/5 w-screen pt-52 md:py-6">
+      <div className="bg-white rounded-2xl h-min md:h-full w-full md:w-1/2 xl:w-1/3 font-bold text-gray-600 p-4 md:p-12 pb-24 relative">
+        <form className="xl:space-y-10 w-3/4 mx-auto">
           <h1 className="text-black uppercase mb-2">Let's Talk</h1>
           <div className="relative my-4 border-b-2 focus-within:border-primary">
             <input
