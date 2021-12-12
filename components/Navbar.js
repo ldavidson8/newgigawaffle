@@ -1,11 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Hamburger from "./Hamburger";
+import Menu from "./Menu";
 
 export const Navbar = () => {
+  const [sidebar, setSidebar] = useState(false);
+
+  const toggleSidebar = () => {
+    setSidebar(!sidebar);
+  };
   return (
-    <nav className="flex w-full px-10 pt-10 justify-between absolute top-0">
+    <nav className="flex w-full fixed justify-between bg-navy-blue z-max">
       <div>
         <Link href="/">
           <a>
@@ -13,51 +19,10 @@ export const Navbar = () => {
           </a>
         </Link>
       </div>
-      <Hamburger />
-      {/* <ul>
-        <li>
-          <Link href="/">
-            <a className="text-3xl capitalize py-8 px-0 font-bold no-underline;">
-              Home
-            </a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/">
-            <a className="text-3xl capitalize py-8 px-0 font-bold no-underline;">
-              Portfolio
-            </a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/">
-            <a className="text-3xl capitalize py-8 px-0 font-bold no-underline;">
-              Services
-            </a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/">
-            <a className="text-3xl capitalize py-8 px-0 font-bold no-underline;">
-              About
-            </a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/">
-            <a className="text-3xl capitalize py-8 px-0 font-bold no-underline;">
-              Blog
-            </a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/">
-            <a className="text-3xl capitalize py-8 px-0 font-bold no-underline;">
-              Contact
-            </a>
-          </Link>
-        </li>
-      </ul> */}
+      <div onClick={toggleSidebar}>
+        <Hamburger isOpen={sidebar} />
+        <Menu isOpen={sidebar} />
+      </div>
     </nav>
   );
 };

@@ -22,6 +22,7 @@ module.exports = {
       },
       transformOrigin: {
         0: "0%",
+        1: "1px",
       },
       fontFamily: {
         sans: ["Poppins", "sans-serif"],
@@ -29,6 +30,9 @@ module.exports = {
       },
       maxWidth: {
         section: "1250px",
+      },
+      zIndex: {
+        max: "9999",
       },
     },
   },
