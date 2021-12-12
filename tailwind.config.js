@@ -5,6 +5,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        'all': {'min': '0px', 'max': '640px'},
+      },
       colors: {
         primary: "#E14985",
         secondary: "#7C97EC",
@@ -12,6 +15,7 @@ module.exports = {
         "light-blue": "#3E4766",
         "dark-gray": "#202020",
         "lighter-gray": "#2B2B2B",
+        "light-navy": "#1E2236"
       },
       boxShadow: {
         card: "0px 4px 4px 0px #00000040;",
@@ -19,6 +23,10 @@ module.exports = {
       backgroundImage: {
         heroImage: "url('/heroimage.png')",
         mapImage: "url('/map.png')",
+        dash: "linear-gradient(180deg,#e5e7eb,#e5e7eb 50%,transparent 0,transparent);"
+      },
+      backgroundSize: {
+        dashGap: "1px 8px"
       },
       transformOrigin: {
         0: "0%",

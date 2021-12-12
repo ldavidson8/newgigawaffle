@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import { Lines } from "./Lines";
 
 export const FourthSection = () => {
   const ref = useRef(null);
@@ -7,16 +8,12 @@ export const FourthSection = () => {
   });
   return (
     <div className="max-w-screen-xl min-w-full -skew-y-2 relative p-global">
-      <div className="absolute grid grid-cols-5 h-screen w-screen">
-        <div></div>
-        <div className="relative h-full w-px bg-gray-200"></div>
-        <div className="relative h-full w-px bg-gray-200"></div>
-        <div className="relative h-full w-px bg-gray-200"></div>
-        <div className="relative h-full w-px bg-gray-200"></div>
-      </div> {/* Lines grid */}
-      {/* <div className="bg-navy-blue w-32 md:w-56 xl:w-64 h-10 md:h-16 -skew-y-2 absolute bottom-0 xl:bottom-3 left-0"></div>
-      <div className="bg-primary w-24 md:w-36 h-8 md:h-12 -skew-y-2 absolute -bottom-1 xl:bottom-2 left-12 md:left-24 xl:left-32"></div> */}
-      <div className="relative max-w-section mx-auto h-full grid grid-cols-1 md:grid-cols-2 pt-10 mb-20 gap-12 skew-y-2">
+      <Lines/>
+
+      <div className="bg-navy-blue w-32 md:w-56 xl:w-64 h-10 md:h-16 -skew-y-1 absolute -bottom-2 left-0"></div>
+      <div className="bg-primary w-24 md:w-36 h-8 md:h-12 -skew-y-1 absolute left-12 md:left-24 -bottom-1 xl:left-32"></div>
+
+      <div className="relative max-w-section mx-auto sm:px-10 all:px-4 h-full grid grid-cols-1 md:grid-cols-2 pt-10 pb-20 md:gap-12 sm:gap-4 all:gap-4 skew-y-2">
         <div className="mt-8">
           <h3 className="text-primary font-bold text-lg lg:text-2xl mb-2">
             Passionate

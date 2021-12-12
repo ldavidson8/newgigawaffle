@@ -8,7 +8,7 @@ export const ThirdSection = () => {
   return (
     <div className="relative w-full">
       <div className="min-w-full -skew-y-2 bg-gray-200 relative p-global">
-        <div className="max-w-section mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 pt-10 skew-y-2 justify-center">
+        <div className="max-w-section mx-auto sm:px-10 all:px-4 grid grid-cols-1 md:grid-cols-2 gap-12 pt-10 pb-10 skew-y-2 justify-center">
           <div className="mt-8">
             <h3 className="text-primary font-bold text-lg lg:text-2xl mb-2">
               On Trend
