@@ -22,10 +22,14 @@ module.exports = {
       },
       transformOrigin: {
         0: "0%",
+        1: "1px",
       },
       fontFamily: {
         sans: ["Poppins", "sans-serif"],
         rubik: ["Rubik", "sans-serif"],
+      },
+      zIndex: {
+        max: "9999",
       },
     },
   },
