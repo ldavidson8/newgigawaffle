@@ -5,7 +5,7 @@ import Hamburger from "./Hamburger";
 
 export const Navbar = () => {
   return (
-    <nav className="flex w-full justify-between">
+    <nav className="flex w-full px-10 pt-10 justify-between absolute top-0">
       <div>
         <Link href="/">
           <a>

@@ -6,6 +6,7 @@ import { SecondSection } from "../components/HomeComponents/SecondSection";
 import { ThirdSection } from "../components/HomeComponents/ThirdSection";
 import { FourthSection } from "../components/HomeComponents/FourthSection";
 import { FifthSection } from "../components/HomeComponents/FifthSection";
+import { SGrid } from "../components/SkewedGrid";
 
 export default function Home() {
   return (

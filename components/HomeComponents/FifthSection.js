@@ -1,7 +1,7 @@
 export const FifthSection = () => {
   return (
     <div className="w-full py-16 -skew-y-2 bg-navy-blue relative">
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 skew-y-2 gap-2 px-5 sm:px-global">
+      <div className="grid max-w-section mx-auto grid-cols-1 md:grid-cols-2 xl:grid-cols-3 skew-y-2 gap-2 px-5 pt-10 sm:px-global">
         <div className="bg-gradient-to-br from-primary to-secondary p-1">
           <div className="bg-navy-blue h-full p-4 lg:p-8 ">
             <p className="mb-4 text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl text-light-blue font-medium text-shadow">
@@ -99,13 +99,13 @@ export const FifthSection = () => {
           </div>
         </div>
       </div>
-      <div className="py-8 skew-y-2 px-5 sm:px-global">
-        <h2 className="text-xl lg:text-3xl pb-4 text-white font-medium">
+      <div className="max-w-section mx-auto py-8 skew-y-2 px-5 sm:px-global">
+        <h2 className="text-xl lg:text-2xl pb-4 text-white font-medium">
           We pride ourselves on making it easy for you to turn your business
           into a brand. Whether you know exactly what you're after, or you have
           no clue where to begin, we'll make it a simple process.
         </h2>
-        <p className="text-lg lg:text-2xl pt-4 text-white font-normal">
+        <p className="text-lg lg:text-xl pt-4 text-white font-normal">
           Our enthusiastic and passionate team will always be on hand throughout
           the process, allowing you to see your image come to life.
         </p>

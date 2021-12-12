@@ -27,6 +27,9 @@ module.exports = {
         sans: ["Poppins", "sans-serif"],
         rubik: ["Rubik", "sans-serif"],
       },
+      maxWidth: {
+        section: "1250px",
+      },
     },
   },
   variants: {
