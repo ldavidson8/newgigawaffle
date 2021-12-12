@@ -5,7 +5,7 @@ const Menu = ({ isOpen }) => {
   return (
     <>
       <ul
-        className={`flex flex-col justify-around items-center pt-8 w-full md:w-1/2 xl:w-1/3 text-white h-screen fixed xl:absolute top-0 transition-transform ease-in-out duration-700 bg-black bg-opacity-50 ${
+        className={`flex flex-col justify-around items-center pt-8 w-full md:w-1/2 xl:w-1/3 text-white h-screen fixed z-max xl:absolute top-0 transition-transform ease-in-out duration-700 bg-black bg-opacity-50 ${
           isOpen ? "-translate-x-full" : "translate-x-full"
         }`}
       >

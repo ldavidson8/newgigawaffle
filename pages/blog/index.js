@@ -1,4 +1,3 @@
-import React from "react";
 import { createClient } from "contentful";
 import BlogCard from "../../components/BlogCard";
 
@@ -14,6 +13,7 @@ export async function getStaticProps() {
     props: {
       blogPosts: res.items,
     },
+    revalidate: 60,
   };
 }
 
@@ -82,7 +82,7 @@ export default function Blog({ blogPosts }) {
             </div>
           </div>
         </div>
-        <div className="grid grid-cols-3 grid-rows-[50px_1fr] p-8 gap-4">
+        <div className="grid grid-cols-3 grid-rows-[50px_1fr] p-8 gap-8">
           <h1 className="font-blogheader col-span-full">The Waffle Corner</h1>
           {blogPosts.map((blogPost) => (
             <BlogCard key={blogPost.sys.id} blogPost={blogPost} />
