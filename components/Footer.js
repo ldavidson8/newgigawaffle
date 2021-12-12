@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-export const Footer = () => {
+const Footer = () => {
   return (
     <div className="text-white">
       <div className="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 bg-dark-gray py-9 px-4 gap-8 font-medium order-1">
@@ -117,3 +117,5 @@ export const Footer = () => {
     </div>
   );
 };
+
+export default Footer;

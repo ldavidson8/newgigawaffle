@@ -1,12 +1,22 @@
 import React from "react";
-import Image from "next/image";
+import { useForm } from "react-hook-form";
 
-export default function Contact() {
+const Contact = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+  const onSubmit = (data) => console.log(data);
   return (
     <div className="flex justify-center items-end xl:items-center md:justify-end bg-mapImage bg-no-repeat bg-[bottom_-10rem_right_-120rem] md:bg-[bottom_-30rem_right_-90rem] xl:bg-center h-4/5 w-screen pt-52 md:py-6">
       <div className="bg-white rounded-2xl h-min md:h-full w-full md:w-1/2 xl:w-1/3 font-bold text-gray-600 p-4 md:p-12 pb-24 relative">
-        <form className="xl:space-y-10 w-3/4 mx-auto">
+        <form
+          onSubmit={handleSubmit(onSubmit)}
+          className="xl:space-y-10 w-3/4 mx-auto"
+        >
           <h1 className="text-black uppercase mb-2">Let's Talk</h1>
+          {errors.name && <p className="text-red-600">This is required</p>}
           <div className="relative my-4 border-b-2 focus-within:border-primary">
             <input
               id="name"
@@ -14,7 +24,7 @@ export default function Contact() {
               type="text"
               placeholder=" "
               className="block w-full appearance-none focus:outline-none bg-transparent"
-              required
+              {...register("name", { required: true })}
             ></input>
             <label
               htmlFor="name"
@@ -30,7 +40,7 @@ export default function Contact() {
               type="email"
               placeholder=" "
               className="block w-full appearance-none focus:outline-none bg-transparent"
-              required
+              {...register("email", { required: true })}
             ></input>
             <label
               htmlFor="email"
@@ -46,6 +56,7 @@ export default function Contact() {
               type="tel"
               placeholder=" "
               className="block w-full appearance-none focus:outline-none bg-transparent"
+              {...register("tel")}
             ></input>
             <label
               htmlFor="tel"
@@ -61,6 +72,7 @@ export default function Contact() {
               type="text"
               placeholder=" "
               className="block w-full appearance-none focus:outline-none bg-transparent"
+              {...register("companyName")}
             ></input>
             <label
               htmlFor="companyName"
@@ -76,6 +88,7 @@ export default function Contact() {
               type="url"
               placeholder=" "
               className="block w-full appearance-none focus:outline-none bg-transparent"
+              {...register("siteurl")}
             ></input>
             <label
               htmlFor="siteurl"
@@ -90,7 +103,7 @@ export default function Contact() {
               name="message"
               placeholder=" "
               className="block w-full appearance-none focus:outline-none bg-transparent"
-              required
+              {...register("message", { required: true })}
             ></textarea>
             <label
               htmlFor="message"
@@ -112,4 +125,6 @@ export default function Contact() {
       </div>
     </div>
   );
-}
+};
+
+export default Contact;

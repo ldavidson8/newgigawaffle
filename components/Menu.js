@@ -5,8 +5,8 @@ const Menu = ({ isOpen }) => {
   return (
     <>
       <ul
-        className={`flex flex-col justify-around items-center pt-8 w-full md:w-1/2 xl:w-1/3 text-white h-screen fixed top-0 transition-transform ease-in-out duration-700 bg-black bg-opacity-50 ${
-          isOpen ? "-translate-x-full" : "translate-x-full"
+        className={`flex-col justify-around items-center pt-8 w-full md:w-1/2 xl:w-1/3 text-white h-screen fixed xl:absolute top-0 transition-transform ease-in-out duration-700 bg-black bg-opacity-50 ${
+          isOpen ? "-translate-x-full flex" : "translate-x-full hidden"
         }`}
       >
         <li>
@@ -17,42 +17,42 @@ const Menu = ({ isOpen }) => {
           </Link>
         </li>
         <li>
-          <Link href="/">
+          <Link href="/portfolio">
             <a className="text-3xl capitalize py-8 px-0 font-bold no-underline;">
               Portfolio
             </a>
           </Link>
         </li>
         <li>
-          <Link href="/">
+          <Link href="#">
             <a className="text-3xl capitalize py-8 px-0 font-bold no-underline;">
               Services
             </a>
           </Link>
         </li>
         <li>
-          <Link href="/">
+          <Link href="/about">
             <a className="text-3xl capitalize py-8 px-0 font-bold no-underline;">
               About
             </a>
           </Link>
         </li>
         <li>
-          <Link href="/">
+          <Link href="/blog">
             <a className="text-3xl capitalize py-8 px-0 font-bold no-underline;">
               Blog
             </a>
           </Link>
         </li>
         <li>
-          <Link href="/">
+          <Link href="/contact-us">
             <a className="text-3xl capitalize py-8 px-0 font-bold no-underline;">
               Contact
             </a>
           </Link>
         </li>
         <p className="text-2xl">Drop us an email</p>
-        <form className="space-y-10 w-3/4">
+        {/* <form className="space-y-10 w-3/4">
           <div className="relative my-4 border-b-2 text-white focus-within:border-primary">
             <input
               id="name"
@@ -109,7 +109,7 @@ const Menu = ({ isOpen }) => {
             </span>
             <img src="/arrow-right.svg"></img>
           </button>
-        </form>
+        </form> */}
       </ul>
     </>
   );

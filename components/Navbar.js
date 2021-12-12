@@ -4,14 +4,14 @@ import Image from "next/image";
 import Hamburger from "./Hamburger";
 import Menu from "./Menu";
 
-export const Navbar = () => {
+const Navbar = () => {
   const [sidebar, setSidebar] = useState(false);
 
   const toggleSidebar = () => {
     setSidebar(!sidebar);
   };
   return (
-    <nav className="flex w-full fixed justify-between bg-navy-blue z-max">
+    <nav className="flex w-full justify-between bg-navy-blue z-max">
       <div>
         <Link href="/">
           <a>
@@ -26,3 +26,5 @@ export const Navbar = () => {
     </nav>
   );
 };
+
+export default Navbar;

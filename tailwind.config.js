@@ -27,6 +27,7 @@ module.exports = {
       fontFamily: {
         sans: ["Poppins", "sans-serif"],
         rubik: ["Rubik", "sans-serif"],
+        blogheader: ["Feeling Passionate", "sans-serif"],
       },
       maxWidth: {
         section: "1250px",
