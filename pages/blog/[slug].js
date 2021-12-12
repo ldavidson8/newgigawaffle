@@ -37,14 +37,16 @@ export async function getStaticProps({ params }) {
 export default function BlogPost({ blogPost }) {
   const { featuredImage, title, content } = blogPost.fields;
   return (
-    <div>
+    <div className="p-40">
       <div>
         <Image
           src={"https:" + featuredImage.fields.file.url}
           width={featuredImage.fields.file.details.image.width}
           height={featuredImage.fields.file.details.image.height}
         />
-        <h1>{title}</h1>
+      </div>
+      <div>
+        <h1 className="text-3xl pb-8">{title}</h1>
       </div>
       <div>{documentToReactComponents(content)}</div>
     </div>
