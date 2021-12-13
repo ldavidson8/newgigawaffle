@@ -7,6 +7,7 @@ import { ThirdSection } from "../components/HomeComponents/ThirdSection";
 import { FourthSection } from "../components/HomeComponents/FourthSection";
 import { FifthSection } from "../components/HomeComponents/FifthSection";
 import { SGrid } from "../components/SkewedGrid";
+import ContactSection from "../components/HomeComponents/ContactSection";
 
 export default function Home() {
   return (
@@ -27,6 +28,7 @@ export default function Home() {
       <ThirdSection />
       <FourthSection />
       <FifthSection />
+      <ContactSection />
     </>
   );
 }
