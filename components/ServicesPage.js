@@ -1,4 +1,5 @@
 import { Lines } from "./HomeComponents/Lines";
+import { StepsCard, StepsFeaturesCard } from "./HomeComponents/StepsCard";
 
 export const Services = (props) => {
     return (
@@ -31,14 +32,27 @@ export const Services = (props) => {
                     <img
                         src={props.serviceOverlay}
                         alt={props.serviceOverlayAlt}
-                        className="absolute z-5 right-6 top-12 translate-x-1/4 translate-y-1/3"
+                        className="absolute right-6 top-12 translate-x-1/4 translate-y-1/3 z-100"
                     />
                 </div>
-
             </div>
         </div>
-        <div className="relative -mt-20 max-w-section sm:px-10 all:px-4 h-[400px] mx-auto">
-            <Lines></Lines>
+        <div className="relative -mt-20 max-w-section sm:px-10 all:px-4 h-[500px] mx-auto">
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-w-section mx-auto sm:px-10 all:px-4 grid grid-cols-4 h-[500px] w-screen">
+            <div className="relative h-[500px]">
+                <div className="absolute left-0 h-[500px] w-px bg-gray-200"></div>
+                <div className="absolute right-0 h-[500px] w-px bg-dash bg-dashGap"></div>
+            </div>
+            <div className="relative h-[500px]">
+                <div className="absolute right-0 h-[500px] w-px bg-dash bg-dashGap"></div>
+            </div>
+            <div className="relative h-[300px] pt-24">
+                <div className="absolute right-0 h-[300px] w-px bg-dash bg-dashGap"></div>
+            </div>
+            <div className="relative h-[500px]">
+            <div className="absolute right-0 h-[500px] w-px bg-gray-200"></div>
+            </div>
+            </div>
             <h3 className="relative text-center pt-40 text-black font-rubik font-bold text-2xl mx-auto">Who we've worked with</h3>
             <div className="grid grid-cols-6 max-w-section h-[100px] sm:px-10 all:px-4 mt-10">
                 <img
@@ -71,6 +85,37 @@ export const Services = (props) => {
                     alt="Specialist Coating Logo"
                     className="h-[100px] object-cover mx-auto"
                 />
+            </div>
+        </div>
+        <div className="bg-gray-200 h-screen w-full -skew-y-2">
+            <div className="max-w-section skew-y-2 mx-auto sm:px-10 all:px-4 pt-20">
+                <h3 className="font-bold font-rubik text-2xl">{props.title}</h3>
+                <div className="grid grid-cols-3 gap-2 h-[580px]">   >
+                    <StepsCard
+                        number="01"
+                        title="Scope Definition"
+                        description="We collaborate with the client to decide what objectives the new website must achieve. i.e., what is its purpose? We can determine the scope of the project once we know what the site's purpose is. I.e., what web pages and features the site will need to achieve the goal, as well as the timeframe for implementing them."                       
+                    />
+                    <StepsCard
+                        number="02"
+                        title="Wireframe Creation"
+                        description="Wireframes allow us to plan out how each page will be structured and how people will interact with the website."                       
+                    />
+                    <StepsCard
+                        number="04"
+                        title="Content Creation"  
+                        description="Now that we have a clearer picture of the site, we can begin creating content for individual pages, keeping in mind search engine optimization (SEO) to keep pages focused on a single topic."                     
+                    />
+                    <StepsCard
+                        number="05"
+                        title="Visual Elements"
+                        description="We begin working on the client's brand after we have the site architecture and some content in place. This allows us to define the visual aspect of the website."                       
+                    />
+                    <StepsCard
+                        number="06"
+                        title="Testing"                       
+                    />
+                </div>
             </div>
         </div>
         </div>
