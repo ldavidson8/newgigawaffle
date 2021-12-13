@@ -22,7 +22,7 @@ export const FifthSection = () => {
         />
         <div className="relative h-64 xl:h-full">
           <img
-            src="grandOccasions.jpg"
+            src=""
             alt="Grand Occasions"
             className="w-full h-full object-cover absolute z-0"
           />
@@ -39,7 +39,7 @@ export const FifthSection = () => {
 
         <div className="relative h-64 xl:h-full">
           <img
-            src="playgroundBullysUK.jpeg"
+            src=""
             alt="PlaygroundBullys UK"
             className="w-full h-full object-cover absolute z-0"
           />
@@ -68,17 +68,17 @@ export const FifthSection = () => {
           with you after your website is complete to analyse your SEO
           rankings and adjust keywords to find your target demographics."
         />
-      <div className="max-w-section mx-auto py-8">
-        <h2 className="text-xl lg:text-2xl pb-4 text-white font-medium">
-          We pride ourselves on making it easy for you to turn your business
-          into a brand. Whether you know exactly what you're after, or you have
-          no clue where to begin, we'll make it a simple process.
-        </h2>
-        <p className="text-lg lg:text-xl pt-4 text-white font-normal">
-          Our enthusiastic and passionate team will always be on hand throughout
-          the process, allowing you to see your image come to life.
-        </p>
-      </div>
+        <div className="max-w-section mx-auto py-8">
+          <h2 className="text-xl lg:text-2xl pb-4 text-white font-medium">
+            We pride ourselves on making it easy for you to turn your business
+            into a brand. Whether you know exactly what you're after, or you
+            have no clue where to begin, we'll make it a simple process.
+          </h2>
+          <p className="text-lg lg:text-xl pt-4 text-white font-normal">
+            Our enthusiastic and passionate team will always be on hand
+            throughout the process, allowing you to see your image come to life.
+          </p>
+        </div>
       </div>
     </div>
   );

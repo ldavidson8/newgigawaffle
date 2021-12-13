@@ -12,10 +12,10 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Gigawaffle | Home</title>
+        <title>Home | Gigawaffle</title>
         <meta
           name="keywords"
-          content="Marketing | Digital Marketing | Creative Design | Website Design &amp; Development | Branding | SEO | Copywriting |Preston |marketing agency | Hustle"
+          content="Marketing | Digital Marketing | Creative Design | Website Design &amp; Development | Branding | SEO | Copywriting |Preston | Marketing Agency | Hustle"
         />
         <meta
           name="description"
