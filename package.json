@@ -11,13 +11,13 @@
     "@contentful/rich-text-react-renderer": "^15.9.1",
     "@lottiefiles/lottie-player": "^1.5.3",
     "@sendgrid/mail": "^7.6.0",
-    "axios": "^0.24.0",
     "contentful": "^9.1.5",
     "framer-motion": "^5.4.5",
     "next": "12.0.7",
     "nodemailer": "^6.7.2",
     "react": "17.0.2",
     "react-dom": "17.0.2",
+    "react-flip-toolkit": "^7.0.13",
     "react-hook-form": "^7.21.2"
   },
   "devDependencies": {
