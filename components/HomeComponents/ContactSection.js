@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form";
-import axios from "axios";
+import { motion } from "framer-motion";
 
 const ContactSection = () => {
   const { register, handleSubmit } = useForm();
@@ -19,9 +19,9 @@ const ContactSection = () => {
   return (
     <div className="w-full">
       <div className="grid items-center h-full md:grid-cols-2">
-        <div className="w-full h-full p-4 font-bold text-white bg-primary sm:p-8 lg:p-32">
-          <h2 className="text-6xl lg:text-8xl">Let's Talk</h2>
-          <div className="w-1/3 pb-3 mb-2 bg-white bg-left-bottom bg-no-repeat"></div>
+        <div className="w-full h-full p-4 font-bold text-white bg-primary sm:p-8 xl:p-32">
+          <h2 className="text-5xl md:text-7xl">Let's Talk</h2>
+          <div className="w-1/3 pb-1.5 mb-2 bg-white bg-left-bottom bg-no-repeat"></div>
           <h3 className="text-4xl text-center mt-14">
             Find out what our experts can do
           </h3>
@@ -104,7 +104,7 @@ const ContactSection = () => {
                 htmlFor="companyName"
                 className="absolute top-0 duration-300 origin-0 cursor-text"
               >
-                Company Name
+                Company
               </label>
             </div>
             <div className="relative border-b-2 focus-within:border-primary">

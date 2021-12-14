@@ -18,7 +18,7 @@ export default (req, res) => {
     from: "hello@gigawaffle.co.uk",
     subject: "New Contact Form Submission!",
     text: message,
-    html: message.replace(/\r\na/g, "<br>"),
+    html: message.replace(/\r\n/g, "<br>"),
   };
 
   mail.send(data);
