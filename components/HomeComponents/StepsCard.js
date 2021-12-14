@@ -8,15 +8,15 @@ export const StepsCard = (props) => {
                          ${props.direction[2] ? 'bg-gradient-to-bl' : ""} 
                          ${props.direction[3] ? 'bg-gradient-to-tl' : ""}
                          from-primary to-secondary p-1`}>
-        <div className="bg-light-navy h-full p-4 lg:p-8 ">
-          <p className="mb-4 text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl text-light-blue font-medium text-shadow">
+        <div className="bg-light-navy h-full p-3 lg:p-6 ">
+          <p className="mb-4 text-md lg:text-lg xl:text-2xl 2xl:text-3xl text-light-blue font-medium text-shadow">
             {props.number}
           </p>
-          <h2 className="my-4 text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl text-white font-medium">
+          <h2 className="my-4 text-md lg:text-lg xl:text-xl 2xl:text-2xl text-white font-medium">
             {props.title}
             {/*Web Design*/}
           </h2>
-          <p className="mt-4 text-md lg:text-xl xl:text-2xl text-white font-light ">
+          <p className="mt-4 text-sm lg:text-md xl:text-lg text-white font-light ">
             {props.description}
             {/*We know it can be difficult to manage your business while also
             creating a website that effectively shows off your brand. We will

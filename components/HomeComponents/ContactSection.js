@@ -1,4 +1,5 @@
 import { useForm } from "react-hook-form";
+import { Lines } from "./Lines";
 import axios from "axios";
 
 const ContactSection = () => {
@@ -17,9 +18,9 @@ const ContactSection = () => {
     console.log(formData);
   }
   return (
-    <div className="w-full">
+    <div className="w-full h-screen skewT">
       <div className="grid items-center h-full md:grid-cols-2">
-        <div className="w-full h-full p-4 font-bold text-white bg-primary sm:p-8 lg:p-32">
+        <div className="w-full h-full font-bold text-white bg-primary sm:p-8 lg:p-32">
           <h2 className="text-6xl lg:text-8xl">Let's Talk</h2>
           <div className="w-1/3 pb-3 mb-2 bg-white bg-left-bottom bg-no-repeat"></div>
           <h3 className="text-4xl text-center mt-14">
@@ -30,13 +31,13 @@ const ContactSection = () => {
             contact soon.
           </p>
           <img
-            src="/placeholder.png"
+            src="/hero.png"
             height="400"
             width="600"
             className="mx-auto"
           ></img>
         </div>
-        <div className="flex items-center p-8 font-bold">
+        <div className="flex items-center h-full p-8 font-bold bg-white">
           <form
             method="post"
             onSubmit={onSubmit}

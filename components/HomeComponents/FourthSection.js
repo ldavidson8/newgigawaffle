@@ -7,13 +7,13 @@ export const FourthSection = () => {
     import("@lottiefiles/lottie-player");
   });
   return (
-    <div className="max-w-screen-xl min-w-full -skew-y-2 relative p-global">
+    <div className="max-w-screen-xl min-w-full skew relative p-global">
       <Lines/>
 
-      <div className="bg-navy-blue w-32 md:w-56 xl:w-64 h-10 md:h-16 -skew-y-1 absolute -bottom-2 left-0"></div>
-      <div className="bg-primary w-24 md:w-36 h-8 md:h-12 -skew-y-1 absolute left-12 md:left-24 -bottom-1 xl:left-32"></div>
+      <div className="bg-navy-blue w-32 md:w-56 xl:w-64 h-10 md:h-16 absolute bottom-6 left-0 -skew-y-1"></div>
+      <div className="bg-primary w-24 md:w-36 h-8 md:h-12 absolute left-12 md:left-24 bottom-6 xl:left-32 -skew-y-1"></div>
 
-      <div className="relative max-w-section mx-auto sm:px-10 all:px-4 h-full grid grid-cols-1 md:grid-cols-2 pt-10 pb-20 md:gap-12 sm:gap-4 all:gap-4 skew-y-2">
+      <div className="relative max-w-section mx-auto sm:px-10 all:px-4 h-full grid grid-cols-1 md:grid-cols-2 pt-16 pb-16 md:gap-12 sm:gap-4 all:gap-4">
         <div className="mt-8">
           <h3 className="text-primary font-bold text-lg lg:text-2xl mb-2">
             Passionate
@@ -22,7 +22,7 @@ export const FourthSection = () => {
             Business Nurturement
           </h2>
           <div className="pb-1.5 bg-primary bg-no-repeat bg-left-bottom w-1/4 mb-2"></div>
-          <p className="text-lg lg:text-xl xl:text-2xl mb-2">
+          <p className="text-md lg:text-lg xl:text-xl mb-2">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed
             egestas egestas fringilla phasellus.
@@ -61,7 +61,7 @@ export const FourthSection = () => {
             Creative Solutions
           </h2>
           <div className="pb-1.5 bg-primary bg-no-repeat bg-left-bottom w-1/4 ml-auto my-2"></div>
-          <p className="text-lg lg:text-xl xl:text-2xl mb-2">
+          <p className="text-md lg:text-lg xl:text-xl mb-2">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed
             egestas egestas fringilla phasellus.

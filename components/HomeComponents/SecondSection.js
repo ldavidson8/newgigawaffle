@@ -3,11 +3,11 @@ import { Lines } from "./Lines";
 
 export const SecondSection = () => {
   return (
-    <div className="relative w-full overflow-hidden">
+    <div className="relative w-full skew">
       <Lines/>
 
-      <div className="bg-navy-blue w-32 md:w-56 xl:w-64 h-12 md:h-16 -skew-y-2 absolute bottom-0 xl:bottom-3 right-0"></div>
-      <div className="bg-primary w-24 md:w-36 h-8 md:h-12 -skew-y-2 absolute bottom-0 xl:bottom-4 right-0"></div>
+      <div className="bg-navy-blue w-32 md:w-56 xl:w-64 h-12 md:h-16 absolute bottom-0 xl:bottom-4 right-0 -skew-y-1"></div>
+      <div className="bg-primary w-24 md:w-36 h-8 md:h-12 absolute bottom-0 xl:bottom-5 right-0 -skew-y-1"></div>
 
       <div className="relative max-w-section mx-auto sm:px-10 all:px-4 top-1/3 grid all:grid-cols-1 md:grid-cols-4 sm:grid-cols-1 w-screen lg:py-32 md:py-20 sm:pt-10 sm:pb-16 all:pt-10 all:pb-16">
         <div className="md:col-span-2 sm:col-span-1">

@@ -6,9 +6,9 @@ export const ThirdSection = () => {
     import("@lottiefiles/lottie-player");
   });
   return (
-    <div className="relative w-full">
-      <div className="min-w-full -skew-y-2 bg-gray-200 relative p-global">
-        <div className="max-w-section mx-auto sm:px-10 all:px-4 grid grid-cols-1 md:grid-cols-2 gap-12 pt-10 pb-10 skew-y-2 justify-center">
+    <div className="relative w-full h-full skew">
+      <div className="min-w-full bg-gray-200 relative p-global">
+        <div className="max-w-section mx-auto sm:px-10 all:px-4 grid grid-cols-1 md:grid-cols-2 gap-12 pt-16 pb-16 justify-center">
           <div className="mt-8">
             <h3 className="text-primary font-bold text-lg lg:text-2xl mb-2">
               On Trend
@@ -17,7 +17,7 @@ export const ThirdSection = () => {
               Brand And Marketing strategies
             </h2>
             <div className="pb-1.5 bg-primary bg-no-repeat bg-left-bottom w-1/4 my-2"></div>
-            <p className="text-lg lg:text-xl xl:text-2xl mb-2">
+            <p className="text-md lg:text-lg xl:text-xl mb-2">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed
               egestas egestas fringilla phasellus.
@@ -56,7 +56,7 @@ export const ThirdSection = () => {
               Idea Execution
             </h2>
             <div className="pb-1.5 bg-primary bg-no-repeat bg-right-bottom w-1/4 ml-auto my-2"></div>
-            <p className="text-lg lg:text-xl xl:text-2xl mb-2">
+            <p className="text-md lg:text-lg xl:text-xl mb-2">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed
               egestas egestas fringilla phasellus.
