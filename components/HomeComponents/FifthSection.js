@@ -2,8 +2,8 @@ import { StepsCard } from "./StepsCard";
 
 export const FifthSection = () => {
   return (
-    <div className="w-full py-16 -skew-y-2 bg-light-navy relative">
-      <div className="grid max-w-section mx-auto grid-cols-1 md:grid-cols-2 xl:grid-cols-3 skew-y-2 gap-2 sm:px-10 all:px-4 pt-10">
+    <div className="w-full bg-light-navy h-screen relative skew">
+      <div className="grid max-w-section mx-auto grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-2 sm:px-10 all:px-4 -mt-20 pt-24">
         <StepsCard
           number="01"
           title="Web Design"
@@ -72,6 +72,7 @@ export const FifthSection = () => {
           rankings and adjust keywords to find your target demographics."
           direction={[false,true,false,false]}
         />
+        {/*}
         <div className="max-w-section mx-auto py-8">
           <h2 className="text-xl lg:text-2xl pb-4 text-white font-medium">
             We pride ourselves on making it easy for you to turn your business
@@ -83,6 +84,7 @@ export const FifthSection = () => {
             throughout the process, allowing you to see your image come to life.
           </p>
         </div>
+  */}
       </div>
     </div>
   );

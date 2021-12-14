@@ -48,3 +48,17 @@ input:focus-within ~ label,
 textarea:focus-within ~ label {
   @apply text-secondary;
 }
+
+.skewB {
+  clip-path: polygon(0 0, 100% 0, 100% 95%, 0% 100%);
+}
+
+.skewT {
+  clip-path: polygon(0 5%, 100% 0, 100% 100%, 0% 100%);
+  margin-top: -2.5rem;
+}
+
+.skew {
+  clip-path: polygon(0 5%, 100% 0, 100% 95%, 0% 100%);
+  margin-top: -2.5rem;
+}
