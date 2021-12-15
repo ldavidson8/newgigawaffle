@@ -4,7 +4,7 @@ import { StepsCard, StepsFeaturesCard } from "./HomeComponents/StepsCard";
 export const Services = (props) => {
   return (
     <div>
-      <div className="relative w-full h-[550px] skewB">
+      <div className="relative w-full h-[650px] skewB">
         <Lines />
         <img
           src={props.bannerImage}
