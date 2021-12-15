@@ -39,9 +39,11 @@ module.exports = {
       },
       maxWidth: {
         section: "1250px",
+        nav: "800px",
       },
       minWidth: {
         section: "1250px",
+
       },
       zIndex: {
         max: "9999",

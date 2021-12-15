@@ -62,3 +62,11 @@ textarea:focus-within ~ label {
   clip-path: polygon(0 5%, 100% 0, 100% 95%, 0% 100%);
   margin-top: -2.5rem;
 }
+
+.circle {
+  clip-path: circle(50% at 50% 50%);
+}
+
+.pointer {
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}

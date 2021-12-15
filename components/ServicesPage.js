@@ -12,8 +12,8 @@ export const Services = (props) => {
           className="object-fill w-full h-full mx-auto"
         />
       </div>
-      <div className="absolute grid h-full grid-cols-4 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 min-w-section sm:px-10 all:px-4">
-          <div className="flex col-span-2 pb-56 my-auto">
+      <div className="absolute top-[56px] grid h-[550px] grid-cols-4 -translate-x-1/2 left-1/2 min-w-section -pt-[56px] sm:px-10 all:px-4">
+          <div className="flex col-span-2 pb-28 my-auto ">
             <div className="w-[2px] ml-0 bg-primary"></div>
             <div className="pl-4">
               <span className="text-base font-bold text-primary font-rubik">
@@ -27,41 +27,33 @@ export const Services = (props) => {
               </p>
             </div>
           </div>
-          <div className="relative w-full h-full text-right">
-            <p className="absolute right-2 bottom-0 mb-[410px] rotate-90 pl-2 origin-top-right font-rubik border-l-[2px] border-primary border-solid text-white text-sm font-bold z-10">
-              <a href={props.caseStudyLink}>
-                CASE STUDY:
-                <br />
-                {props.caseStudy}
-              </a>
-            </p>
-          </div>
-          <div className="pt-20">
+          <div></div>
+          <div className="pt-10">
             <img
               src={props.serviceImage}
               alt={props.serviceImgAlt}
-              className="relative right-0 object-fill w-full mx-auto mt-16 z-2"
+              className="relative right-0 object-fill w-full mx-auto mt-8 z-2"
             />
             <img
               src={props.serviceOverlay}
               alt={props.serviceOverlayAlt}
-              className="absolute right-6 top-20 translate-x-1/4 translate-y-1/3 z-100"
+              className="absolute right-6 top-10 translate-x-1/4 translate-y-1/3 z-100"
             />
           </div>
         </div>
       <div className="relative -mt-20 pt-10 max-w-section sm:px-10 all:px-4 h-[500px] mx-auto">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-w-section mx-auto sm:px-10 all:px-4 grid grid-cols-4 h-[500px] w-screen">
-          <div className="relative h-[500px]">
+          <div className="relative h-[500px] mt-20">
             <div className="absolute left-0 h-[600px] w-px bg-gray-200"></div>
             <div className="absolute right-0 h-[550px] w-px bg-dash bg-dashGap"></div>
           </div>
-          <div className="relative h-[500px]">
+          <div className="relative h-[550px] mt-20">
             <div className="absolute right-0 h-[550px] w-px bg-dash bg-dashGap"></div>
           </div>
-          <div className="relative h-[500px]">
+          <div className="relative h-[550px] mt-20">
             <div className="absolute right-0 h-[550px] w-px bg-dash bg-dashGap"></div>
           </div>
-          <div className="relative h-[500px]">
+          <div className="relative h-[550px] mt-20">
             <div className="absolute right-0 h-[550px] w-px bg-gray-200"></div>
           </div>
         </div>
