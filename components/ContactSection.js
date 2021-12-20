@@ -1,5 +1,57 @@
 import { useForm } from "react-hook-form";
 import { motion } from "framer-motion";
+import Image from "next/image";
+
+const animatedSquare = {
+  hidden: { height: 0, width: 0, backgroundColor: "#fff" },
+  visible: {
+    height: "100%",
+    width: "100%",
+    backgroundColor: "#E14985",
+    transition: {
+      staggerChildren: 0.8,
+    },
+  },
+};
+
+const popupHeader = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+    scale: 4,
+  },
+};
+
+const underline = {
+  hidden: {
+    width: 0,
+  },
+  visible: {
+    width: "33%",
+  },
+};
+
+const popupH3 = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+    scale: 2,
+  },
+};
+
+const fadeIn = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+    transition: {},
+  },
+};
 
 const ContactSection = () => {
   const { register, handleSubmit } = useForm();
@@ -18,28 +70,32 @@ const ContactSection = () => {
   }
   return (
     <div className="w-full h-screen skewT">
-      <div className="grid items-center h-full md:grid-cols-2">
-        <div className="w-full h-full p-4 font-bold text-white bg-primary sm:p-8 xl:p-32">
-          <h2 className="text-5xl md:text-7xl">Let's Talk</h2>
-          <div className="w-1/3 pb-1.5 mb-2 bg-white bg-left-bottom bg-no-repeat"></div>
-          <h3 className="text-4xl text-center mt-14">
+      <div className="grid h-full md:grid-cols-2">
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={animatedSquare}
+          className="w-full flex flex-col gap-10 justify-center items-center font-bold text-white bg-primary"
+        >
+          <motion.h2 variants={popupHeader} className="text-2xl">
+            Let's Talk
+          </motion.h2>
+          <motion.div
+            variants={underline}
+            className="pb-1.5 mb-2 bg-white bg-left-bottom bg-no-repeat"
+          ></motion.div>
+          <motion.h3 variants={popupH3} className="text-sm text-center">
             Find out what our experts can do
-          </h3>
-          <p className="text-lg text-center mt-14">
+          </motion.h3>
+          <p className="text-lg text-center">
             Fill out the form, drop us a call or shoot us an email. We’ll be in
             contact soon.
           </p>
-          <img
-            src="/hero.png"
-            height="400"
-            width="600"
-            className="mx-auto"
-          ></img>
-        </div>
-        <div className="flex items-center h-full p-8 font-bold bg-white">
+        </motion.div>
+        <div className="flex items-center h-full py-12 px-8 font-bold bg-white">
           <form
             method="post"
-            onSubmit={onSubmit}
+            onSubmit={handleSubmit(onSubmit)}
             className="w-full grid-cols-2 mx-auto space-y-12 md:w-3/4 lg:grid gap-14 md:space-y-12 lg:space-y-0 lg:gap-24"
           >
             {/* {errors.name && <p className="text-red-600">This is required</p>} */}
