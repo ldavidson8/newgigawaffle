@@ -5,6 +5,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      height:{
+        '3/4': '3/4vh'
+      },
       screens: {
         'all': {'min': '0px', 'max': '640px'},
       },

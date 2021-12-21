@@ -9,7 +9,7 @@ const Menu = () => {
           </Link>
         </li>
         <li className="mr-24">
-          <Link href="#">
+          <Link href="/Services">
             <a>Services</a>
           </Link>
         </li>
