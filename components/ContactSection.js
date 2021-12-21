@@ -9,7 +9,7 @@ const animatedSquare = {
     width: "100%",
     backgroundColor: "#E14985",
     transition: {
-      staggerChildren: 0.8,
+      staggerChildren: 0.6,
     },
   },
 };
@@ -49,25 +49,37 @@ const fadeIn = {
   },
   visible: {
     opacity: 1,
-    transition: {},
   },
 };
 
 const ContactSection = () => {
-  const { register, handleSubmit } = useForm();
-  async function onSubmit(e) {
-    e.preventDefault();
-    const formData = {};
-    Array.from(e.currentTarget.elements).forEach((field) => {
-      if (!field.name) return;
-      formData[field.name] = field.value;
-    });
-    fetch("api/mail", {
-      method: "post",
-      body: JSON.stringify(formData),
-    });
-    console.log(formData);
-  }
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+  const onSubmit = (data) => {
+    // fetch("api/mail", {
+    //   method: "post",
+    //   body: JSON.stringify(data),
+    // });
+    console.log(data);
+  };
+
+  // async function onSubmit(e) {
+  //   e.preventDefault();
+  //   const formData = {};
+  //   Array.from(e.currentTarget.elements).forEach((field) => {
+  //     if (!field.name) return;
+  //     formData[field.name] = field.value;
+  //   });
+  //   fetch("api/mail", {
+  //     method: "post",
+  //     body: JSON.stringify(formData),
+  //   });
+  //   console.log(formData);
+  // }
+
   return (
     <div className="w-full h-screen skewT">
       <div className="grid h-full md:grid-cols-2">
@@ -77,7 +89,7 @@ const ContactSection = () => {
           variants={animatedSquare}
           className="w-full flex flex-col gap-10 justify-center items-center font-bold text-white bg-primary"
         >
-          <motion.h2 variants={popupHeader} className="text-2xl">
+          <motion.h2 variants={popupHeader} className="text-sm md:text-2xl">
             Let's Talk
           </motion.h2>
           <motion.div
@@ -87,30 +99,34 @@ const ContactSection = () => {
           <motion.h3 variants={popupH3} className="text-sm text-center">
             Find out what our experts can do
           </motion.h3>
-          <p className="text-lg text-center">
+          <motion.p variants={fadeIn} className="text-lg text-center">
             Fill out the form, drop us a call or shoot us an email. We’ll be in
             contact soon.
-          </p>
+          </motion.p>
         </motion.div>
         <div className="flex items-center h-full py-12 px-8 font-bold bg-white">
           <form
             method="post"
             onSubmit={handleSubmit(onSubmit)}
-            className="w-full grid-cols-2 mx-auto space-y-12 md:w-3/4 lg:grid gap-14 md:space-y-12 lg:space-y-0 lg:gap-24"
+            className="w-full mx-auto grid grid-cols-2 gap-12"
+            autoComplete="off"
           >
-            {/* {errors.name && <p className="text-red-600">This is required</p>} */}
             <div className="relative border-b-2 focus-within:border-primary">
               <input
                 id="name"
                 name="name"
                 type="text"
                 placeholder=" "
-                className="block w-full bg-transparent appearance-none focus:outline-none"
+                className={`block w-full bg-transparent appearance-none focus:outline-none ${
+                  errors.name ? "ring-2 ring-red-500 rounded" : null
+                }`}
                 {...register("name", { required: true })}
               ></input>
               <label
                 htmlFor="name"
-                className="absolute top-0 duration-300 origin-0 cursor-text"
+                className={`absolute top-0 duration-300 origin-0 cursor-text ${
+                  errors.name ? "text-red-500 focus-within:text-red-500" : null
+                }`}
               >
                 Name *
               </label>
@@ -121,12 +137,16 @@ const ContactSection = () => {
                 name="email"
                 type="email"
                 placeholder=" "
-                className="block w-full bg-transparent appearance-none focus:outline-none"
+                className={`block w-full bg-transparent appearance-none focus:outline-none ${
+                  errors.email ? "ring-2 ring-red-500 rounded" : null
+                }`}
                 {...register("email", { required: true })}
               ></input>
               <label
                 htmlFor="email"
-                className="absolute top-0 duration-300 origin-0 cursor-text"
+                className={`absolute top-0 duration-300 origin-0 cursor-text ${
+                  errors.email ? "text-red-500 focus-within:text-red-500" : null
+                }`}
               >
                 Email *
               </label>
@@ -184,12 +204,18 @@ const ContactSection = () => {
                 id="message"
                 name="message"
                 placeholder=" "
-                className="block w-full bg-transparent appearance-none focus:outline-none"
+                className={`block w-full bg-transparent appearance-none focus:outline-none ${
+                  errors.message ? "ring-2 ring-red-500 rounded" : null
+                }`}
                 {...register("message", { required: true })}
               ></textarea>
               <label
                 htmlFor="message"
-                className="absolute top-0 duration-300 origin-0 cursor-text"
+                className={`absolute top-0 duration-300 origin-0 cursor-text ${
+                  errors.message
+                    ? "text-red-500 focus-within:text-red-500"
+                    : null
+                }`}
               >
                 Message *
               </label>
