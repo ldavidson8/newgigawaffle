@@ -97,7 +97,7 @@ const Footer = () => {
         </div>
         <div className="bg-gradient-to-r from-primary to-secondary p-1 order-2 xl:order-last col-span-2 xl:col-span-1">
           <div className="bg-lighter-gray  h-full w-full items-end p-4">
-            <Link href="/">
+            <Link href="/contact-us">
               <a className="flex items-end h-full">
                 <span className="uppercase text-sm md:text-base mr-2">
                   Start Your Journey

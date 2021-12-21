@@ -1,5 +1,6 @@
 import { ServiceCard } from "./ServiceCard";
 import { Lines } from "./Lines";
+import Link from "next/link";
 
 export const SecondSection = () => {
   return (
@@ -74,8 +75,10 @@ export const SecondSection = () => {
             >
               About Gigawaffle
             </button>
-            <button
-              className="   
+            <Link href="/contact-us" passHref>
+              <a>
+                <button
+                  className="   
               text-sm   
               min-w-[180px]    
               min-h-[40px]
@@ -91,9 +94,11 @@ export const SecondSection = () => {
               font-bold
               uppercase
               "
-            >
-              Contact Us
-            </button>
+                >
+                  Contact Us
+                </button>
+              </a>
+            </Link>
           </div>
           <div className="lg:block md:hidden"></div>
         </div>

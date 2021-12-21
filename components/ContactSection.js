@@ -9,7 +9,7 @@ const animatedSquare = {
     width: "100%",
     backgroundColor: "#E14985",
     transition: {
-      staggerChildren: 0.6,
+      staggerChildren: 0.8,
     },
   },
 };
@@ -59,10 +59,10 @@ const ContactSection = () => {
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => {
-    // fetch("api/mail", {
-    //   method: "post",
-    //   body: JSON.stringify(data),
-    // });
+    fetch("api/mail", {
+      method: "post",
+      body: JSON.stringify(data),
+    });
     console.log(data);
   };
 

@@ -2,7 +2,7 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import NavTransparent from "./NavTransparent";
 
-const Layout = ({ children }) => {
+const HomeLayout = ({ children }) => {
   return (
     <div>
       <NavTransparent />
@@ -12,4 +12,4 @@ const Layout = ({ children }) => {
   );
 };
 
-export default Layout;
+export default HomeLayout;

@@ -1,4 +1,5 @@
 import { useForm } from "react-hook-form";
+import SiteLayout from "../components/SiteLayout";
 
 const Contact = () => {
   const {
@@ -127,3 +128,7 @@ const Contact = () => {
 };
 
 export default Contact;
+
+Contact.getLayout = function getLayout(contact) {
+  return <SiteLayout>{contact}</SiteLayout>;
+};
