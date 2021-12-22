@@ -423,7 +423,7 @@ const NavTransparent = () => {
                 <path
                   d="M25.6 14.3a1 1 0 0 1 0 1.4l-4.24 4.25 4.25 4.24a1 1 0 1 1-1.42 1.42l-4.24-4.25-4.24 4.25a1 1 0 0 1-1.42-1.42l4.25-4.24-4.25-4.24a1 1 0 0 1 1.42-1.42l4.24 4.25 4.24-4.25a1 1 0 0 1 1.42 0z"
                   fill="#8898AA"
-                  fillrule="evenodd"
+                  fillRule="evenodd"
                 ></path>
               </svg>
             </button>
