@@ -610,7 +610,7 @@ const NavBlue = () => {
                   title="Email"
                   text="hello@gigawaffle.co.uk"
                   icon="/nav-icons/email.svg"
-                  url="/servicepage"
+                  url="/"
                 />
               </section>
               <section>
@@ -618,7 +618,7 @@ const NavBlue = () => {
                   title="Phone"
                   text="01772 376748"
                   icon="/nav-icons/phone.svg"
-                  url="/servicepage"
+                  url="/"
                 />
               </section>
               <section>
@@ -626,7 +626,7 @@ const NavBlue = () => {
                   title="Facebook"
                   text="Check us out on Facebook"
                   icon="/facebook.svg"
-                  url="/servicepage"
+                  url="/"
                 />
               </section>
               <section>
@@ -634,7 +634,7 @@ const NavBlue = () => {
                   title="LinkedIn"
                   text="Connect with us on LinkedIn"
                   icon="/linkedin.svg"
-                  url="/servicepage"
+                  url="/"
                 />
               </section>
             </div>
