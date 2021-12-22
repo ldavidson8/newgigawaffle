@@ -8,7 +8,7 @@ export const FourthSection = () => {
   });
   return (
     <div className="max-w-screen-xl min-w-full skew relative p-global">
-      <Lines/>
+      <Lines />
 
       <div className="bg-navy-blue w-32 md:w-56 xl:w-64 h-10 md:h-16 absolute bottom-6 left-0 -skew-y-1"></div>
       <div className="bg-primary w-24 md:w-36 h-8 md:h-12 absolute left-12 md:left-24 bottom-6 xl:left-32 -skew-y-1"></div>
@@ -23,9 +23,9 @@ export const FourthSection = () => {
           </h2>
           <div className="pb-1.5 bg-primary bg-no-repeat bg-left-bottom w-1/4 mb-2"></div>
           <p className="text-md lg:text-lg xl:text-xl mb-2">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed
-            egestas egestas fringilla phasellus.
+            Customer retainment is our specialty. Discovering how to maintain an
+            outreach suitable for your business and retaining loyal
+            customers/clients will require time and a mindset of said clientele.
           </p>
           <a className="underline text-primary text-lg lg:text-xl font-bold">
             Find Out More
@@ -62,9 +62,9 @@ export const FourthSection = () => {
           </h2>
           <div className="pb-1.5 bg-primary bg-no-repeat bg-left-bottom w-1/4 ml-auto my-2"></div>
           <p className="text-md lg:text-lg xl:text-xl mb-2">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed
-            egestas egestas fringilla phasellus.
+            A business can't be a great one without eye-catching graphics and
+            multimedia. Our designers can create whatever you can imagine for a
+            fresh look and feeling whether you're a new or old business.
           </p>
           <a className="underline text-primary text-lg lg:text-xl font-bold">
             Find Out More

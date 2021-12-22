@@ -135,25 +135,26 @@ const NavTransparent = () => {
         </button>
         <div
           className={`p-4 absolute top-0 left-0 w-full desktop:hidden transition-all duration-300 origin-top-right ${
-            menuOpen ? "opacity-0" : "opacity-100"
+            menuOpen ? "opacity-100" : "opacity-0"
           }`}
         >
           <div className="bg-white relative rounded-lg min-w-full overflow-hidden shadow-2xl">
             <section className="relative">
-              <div className="p-6">
+              <div className="p-4 sm:p-6">
                 <section>
                   <h1 className="font-semibold uppercase text-gray-400 text-sm mb-4">
                     Services
                   </h1>
                   <ul className="grid grid-cols-2 sm:grid-cols-3">
-                    <li className="p-2 inline-flex">
+                    <li className="p-2">
                       <Link href="/" passHref>
-                        <a>
+                        <a className="inline-flex">
                           <span className="mr-3 mt-1">
                             <Image
                               src="/nav-icons/speakerphone.svg"
                               height="15"
                               width="15"
+                              layout="fixed"
                             ></Image>
                           </span>
                           <span className="font-semibold text-gray-800 group-hover:text-secondary 0 text-sm">
@@ -162,14 +163,15 @@ const NavTransparent = () => {
                         </a>
                       </Link>
                     </li>
-                    <li className="p-2 inline-flex">
+                    <li className="p-2">
                       <Link href="/" passHref>
-                        <a>
+                        <a className="inline-flex">
                           <span className="mr-3 mt-1">
                             <Image
                               src="/nav-icons/forward_to_inbox.svg"
                               height="15"
                               width="15"
+                              layout="fixed"
                             ></Image>
                           </span>
                           <span className="font-semibold text-gray-800 group-hover:text-secondary 0 text-sm">
@@ -178,14 +180,15 @@ const NavTransparent = () => {
                         </a>
                       </Link>
                     </li>
-                    <li className="p-2 inline-flex">
+                    <li className="p-2">
                       <Link href="/" passHref>
-                        <a>
+                        <a className="inline-flex">
                           <span className="mr-3 mt-1">
                             <Image
                               src="/nav-icons/user-group.svg"
                               height="15"
                               width="15"
+                              layout="fixed"
                             ></Image>
                           </span>
                           <span className="font-semibold text-gray-800 group-hover:text-secondary 0 text-sm">
@@ -194,14 +197,15 @@ const NavTransparent = () => {
                         </a>
                       </Link>
                     </li>
-                    <li className="p-2 inline-flex">
+                    <li className="p-2">
                       <Link href="/" passHref>
-                        <a>
+                        <a className="inline-flex">
                           <span className="mr-3 mt-1">
                             <Image
                               src="/nav-icons/phone_iphone.svg"
                               height="15"
                               width="15"
+                              layout="fixed"
                             ></Image>
                           </span>
                           <span className="font-semibold text-gray-800 group-hover:text-secondary 0 text-sm">
@@ -210,14 +214,15 @@ const NavTransparent = () => {
                         </a>
                       </Link>
                     </li>
-                    <li className="p-2 inline-flex">
+                    <li className="p-2">
                       <Link href="/" passHref>
-                        <a>
+                        <a className="inline-flex">
                           <span className="mr-3 mt-1">
                             <Image
                               src="/nav-icons/search.svg"
                               height="15"
                               width="15"
+                              layout="fixed"
                             ></Image>
                           </span>
                           <span className="font-semibold text-gray-800 group-hover:text-secondary 0 text-sm">
@@ -226,14 +231,15 @@ const NavTransparent = () => {
                         </a>
                       </Link>
                     </li>
-                    <li className="p-2 inline-flex">
+                    <li className="p-2">
                       <Link href="/" passHref>
-                        <a>
+                        <a className="inline-flex">
                           <span className="mr-3 mt-1">
                             <Image
                               src="/nav-icons/mountains_black.svg"
                               height="15"
                               width="15"
+                              layout="fixed"
                             ></Image>
                           </span>
                           <span className="font-semibold text-gray-800 group-hover:text-secondary 0 text-sm">
@@ -242,30 +248,32 @@ const NavTransparent = () => {
                         </a>
                       </Link>
                     </li>
-                    <li className="p-2 inline-flex">
+                    <li className="p-2">
                       <Link href="/" passHref>
-                        <a>
+                        <a className="inline-flex">
                           <span className="mr-3 mt-1">
                             <Image
                               src="/nav-icons/cube.svg"
                               height="15"
                               width="15"
+                              layout="fixed"
                             ></Image>
                           </span>
                           <span className="font-semibold text-gray-800 group-hover:text-secondary 0 text-sm">
-                            Packaging Design
+                            Packaging
                           </span>
                         </a>
                       </Link>
                     </li>
-                    <li className="p-2 inline-flex">
+                    <li className="p-2">
                       <Link href="/" passHref>
-                        <a>
+                        <a className="inline-flex">
                           <span className="mr-3 mt-1">
                             <Image
                               src="/nav-icons/view_quilt.svg"
                               height="15"
                               width="15"
+                              layout="fixed"
                             ></Image>
                           </span>
                           <span className="font-semibold text-gray-800 group-hover:text-secondary 0 text-sm">
@@ -274,14 +282,15 @@ const NavTransparent = () => {
                         </a>
                       </Link>
                     </li>
-                    <li className="p-2 inline-flex">
+                    <li className="p-2">
                       <Link href="/" passHref>
-                        <a>
+                        <a className="inline-flex">
                           <span className="mr-3 mt-1">
                             <Image
                               src="/nav-icons/smile.svg"
                               height="15"
                               width="15"
+                              layout="fixed"
                             ></Image>
                           </span>
                           <span className="font-semibold text-gray-800 group-hover:text-secondary 0 text-sm">
@@ -290,30 +299,32 @@ const NavTransparent = () => {
                         </a>
                       </Link>
                     </li>
-                    <li className="p-2 inline-flex">
+                    <li className="p-2">
                       <Link href="/" passHref>
-                        <a>
+                        <a className="inline-flex">
                           <span className="mr-3 mt-1">
                             <Image
                               src="/nav-icons/code.svg"
                               height="15"
                               width="15"
+                              layout="fixed"
                             ></Image>
                           </span>
                           <span className="font-semibold text-gray-800 group-hover:text-secondary 0 text-sm">
-                            Web Development
+                            Web Dev
                           </span>
                         </a>
                       </Link>
                     </li>
-                    <li className="p-2 inline-flex">
+                    <li className="p-2">
                       <Link href="/" passHref>
-                        <a>
+                        <a className="inline-flex">
                           <span className="mr-3 mt-1">
                             <Image
                               src="/nav-icons/photo_camera.svg"
                               height="15"
                               width="15"
+                              layout="fixed"
                             ></Image>
                           </span>
                           <span className="font-semibold text-gray-800 group-hover:text-secondary 0 text-sm">
@@ -322,14 +333,15 @@ const NavTransparent = () => {
                         </a>
                       </Link>
                     </li>
-                    <li className="p-2 inline-flex">
+                    <li className="p-2">
                       <Link href="/" passHref>
-                        <a>
+                        <a className="inline-flex">
                           <span className="mr-3 mt-1">
                             <Image
                               src="/nav-icons/play_circle.svg"
                               height="15"
                               width="15"
+                              layout="fixed"
                             ></Image>
                           </span>
                           <span className="font-semibold text-gray-800 group-hover:text-secondary 0 text-sm">
@@ -338,46 +350,49 @@ const NavTransparent = () => {
                         </a>
                       </Link>
                     </li>
-                    <li className="p-2 inline-flex">
+                    <li className="p-2">
                       <Link href="/" passHref>
-                        <a>
+                        <a className="inline-flex">
                           <span className="mr-3 mt-1">
                             <Image
                               src="/nav-icons/adobephotoshop.svg"
                               height="15"
                               width="15"
+                              layout="fixed"
                             ></Image>
                           </span>
                           <span className="font-semibold text-gray-800 group-hover:text-secondary 0 text-sm">
-                            Graphics Design
+                            Graphics
                           </span>
                         </a>
                       </Link>
                     </li>
-                    <li className="p-2 inline-flex">
+                    <li className="p-2">
                       <Link href="/" passHref>
-                        <a>
+                        <a className="inline-flex">
                           <span className="mr-3 mt-1">
                             <Image
                               src="/nav-icons/equalizer.svg"
                               height="15"
                               width="15"
+                              layout="fixed"
                             ></Image>
                           </span>
                           <span className="font-semibold text-gray-800 group-hover:text-secondary 0 text-sm">
-                            Audio Content
+                            Audio
                           </span>
                         </a>
                       </Link>
                     </li>
-                    <li className="p-2 inline-flex">
+                    <li className="p-2">
                       <Link href="/" passHref>
-                        <a>
+                        <a className="inline-flex">
                           <span className="mr-3 mt-1">
                             <Image
                               src="/nav-icons/pencil.svg"
                               height="15"
                               width="15"
+                              layout="fixed"
                             ></Image>
                           </span>
                           <span className="font-semibold text-gray-800 group-hover:text-secondary 0 text-sm">
@@ -387,6 +402,18 @@ const NavTransparent = () => {
                       </Link>
                     </li>
                   </ul>
+                </section>
+                <section className="relative">
+                  <h1 className="font-semibold uppercase text-gray-400 text-sm mb-4">
+                    Portfolio
+                  </h1>
+                  <div className="p-4 sm:p-6"></div>
+                </section>
+                <section className="relative">
+                  <h1 className="font-semibold uppercase text-gray-400 text-sm mb-4">
+                    Portfolio
+                  </h1>
+                  <div className="p-4 sm:p-6"></div>
                 </section>
               </div>
             </section>
