@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
+// Desktop navigation //
+
 const Underline = () => (
   <motion.div
     className="absolute -bottom-1 left-0 right-0 h-1 bg-gradient-to-r from-primary to-secondary"
@@ -10,184 +12,6 @@ const Underline = () => (
     layout
   ></motion.div>
 );
-
-const NavBlue = () => {
-  return (
-    <div className="w-screen p-4 flex items-center justify-center z-10 bg-navy-blue">
-      <div className="absolute top-2 left-2">
-        <Link href="/" passHref>
-          <a>
-            <Image src="/logo.png" width="150" height="35"></Image>
-          </a>
-        </Link>
-      </div>
-      <motion.div className="px-10 flex justify-center">
-        <MenuItem text={"Portfolio"}>
-          <SubItem
-            title="PlaygroundBullys UK"
-            text="Dog Breeder"
-            icon="/placeholder.png"
-            url="#"
-          />
-          <SubItem
-            title="Grand Venue"
-            text="Wedding Planner"
-            icon="/placeholder.png"
-            url="#"
-          />
-          <SubItem
-            title="My Cabin Bed"
-            text="Children's Bed Store"
-            icon="/placeholder.png"
-            url="#"
-          />
-        </MenuItem>
-        <MenuItem text={"Services"}>
-          <div className="grid grid-cols-3 gap-16 p-4">
-            <section>
-              <h2 className="uppercase text-gray-500 font-bold">Marketing</h2>
-              <ul>
-                <li>
-                  <SubItem
-                    title="Digital Marketing"
-                    text="Get to know us better"
-                    icon="/nav-icons/speakerphone.svg"
-                    url="#"
-                  />
-                </li>
-                <li>
-                  <SubItem
-                    title="Email Marketing"
-                    text="Get to know us better"
-                    icon="/nav-icons/forward_to_inbox.svg"
-                    url="#"
-                  />
-                </li>
-                <li>
-                  <SubItem
-                    title="Affiliate Marketing"
-                    text="Get to know us better"
-                    icon="/nav-icons/user-group.svg"
-                    url="#"
-                  />
-                </li>
-                <li>
-                  <SubItem
-                    title="Content Marketing"
-                    text="Get to know us better"
-                    icon="/nav-icons/phone_iphone.svg"
-                    url="#"
-                  />
-                </li>
-                <li>
-                  <SubItem
-                    title="SEO"
-                    text="Get to know us better"
-                    icon="/nav-icons/search.svg"
-                    url="#"
-                  />
-                </li>
-                <li>
-                  <SubItem
-                    title="Logo Design"
-                    text="Get to know us better"
-                    icon="/nav-icons/mountains_black.svg"
-                    url="#"
-                  />
-                </li>
-                <li>
-                  <SubItem
-                    title="Packaging Design"
-                    text="Get to know us better"
-                    icon="/nav-icons/cube.svg"
-                    url="#"
-                  />
-                </li>
-              </ul>
-            </section>
-            <section>
-              <h2 className="uppercase text-gray-500 font-bold">Web</h2>
-              <ul>
-                <li>
-                  <SubItem
-                    title="UI Design"
-                    text="Get to know us better"
-                    icon="/nav-icons/view_quilt.svg"
-                    url="#"
-                  />
-                </li>
-                <li>
-                  <SubItem
-                    title="UX Design"
-                    text="Get to know us better"
-                    icon="/nav-icons/smile.svg"
-                    url="#"
-                  />
-                </li>
-                <li>
-                  <SubItem
-                    title="Web Development"
-                    text="Get to know us better"
-                    icon="/nav-icons/code.svg"
-                    url="#"
-                  />
-                </li>
-              </ul>
-            </section>
-            <section>
-              <h2 className="uppercase text-gray-500 font-bold">Content</h2>
-              <ul>
-                <li>
-                  <SubItem
-                    title="Photography"
-                    text="Get to know us better"
-                    icon="/nav-icons/photo_camera.svg"
-                    url="#"
-                  />
-                </li>
-                <li>
-                  <SubItem
-                    title="Videography"
-                    text="Get to know us better"
-                    icon="/nav-icons/play_circle.svg"
-                    url="#"
-                  />
-                </li>
-                <li>
-                  <SubItem
-                    title="Graphics Design"
-                    text="Get to know us better"
-                    icon="/nav-icons/adobephotoshop.svg"
-                    url="#"
-                  />
-                </li>
-                <li>
-                  <SubItem
-                    title="Audio Content"
-                    text="Get to know us better"
-                    icon="/nav-icons/equalizer.svg"
-                    url="#"
-                  />
-                </li>
-                <li>
-                  <SubItem
-                    title="Illustrations"
-                    text="Get to know us better"
-                    icon="/nav-icons/pencil.svg"
-                    url="#"
-                  />
-                </li>
-              </ul>
-            </section>
-          </div>
-        </MenuItem>
-        <MenuItem text={"About"}></MenuItem>
-        <MenuItem text={"Blog"}></MenuItem>
-        <MenuItem text={"Contact"}></MenuItem>
-      </motion.div>
-    </div>
-  );
-};
 
 const MenuItemVariants = {
   hidden: {
@@ -212,12 +36,12 @@ const MenuItem = ({ text, children, ...props }) => {
       onHoverStart={() => setIsBeingHovered(true)}
       onHoverEnd={() => setIsBeingHovered(false)}
     >
-      <button className="relative text-white cursor-default">
+      <button className="relative text-white font-bold cursor-default">
         {text}
         {isBeingHovered && <Underline />}
       </button>
       {isBeingHovered && (
-        <div>
+        <div className="h-[1000px] w-full">
           <motion.div
             {...props}
             layoutId="menu"
@@ -254,20 +78,572 @@ const SubItem = ({ title, text, icon, url }) => {
     >
       <Link href={url} passHref>
         <a>
-          <div className="flex items-center gap-4">
-            <p className="font-bold text-gray-800 group-hover:text-secondary 0 text-md">
-              <span>
-                <Image src={icon} height="20" width="20"></Image>
-              </span>
-              {title}
-            </p>
+          <div className="grid grid-cols-[50px_1fr] gap-0">
+            <div>
+              <Image src={icon} height="30" width="30"></Image>
+            </div>
+            <div>
+              <p className="font-semibold text-gray-800 group-hover:text-secondary 0 text-md">
+                {title}
+              </p>
+            </div>
+            <div className="col-start-2">
+              <p className="text-gray-400 group-hover:text-blue-400 text-sm">
+                {text}
+              </p>
+            </div>
           </div>
-          <p className="font-bold text-gray-400 group-hover:text-blue-400 text-sm">
-            {text}
-          </p>
         </a>
       </Link>
     </motion.div>
+  );
+};
+
+const NavBlue = () => {
+  // Mobile Navigation //
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const handleClick = () => {
+    setMenuOpen(!menuOpen);
+  };
+
+  return (
+    <div className="w-full absolute top-0 left-0 z-max">
+      <div className="max-w-screen-lg max-h-fit flex mx-auto justify-between items-center px-4">
+        <div className="absolute top-8">
+          {/* Requires absolute or hover menus increase height and push logo down */}
+          <Link href="/" passHref>
+            <a>
+              <Image src="/logo.png" width="150" height="35"></Image>
+            </a>
+          </Link>
+        </div>
+        <button
+          onClick={handleClick}
+          className="absolute top-8 right-4 p-3 rounded-2xl bg-white bg-opacity-20 desktop:hidden"
+        >
+          <a>
+            <svg width="30" height="15" viewBox="0 0 16 10">
+              <title>Open mobile navigation</title>
+              <g fill="#fff">
+                <rect y="8" width="16" height="2" rx="1"></rect>
+                <rect y="4" width="16" height="2" rx="1"></rect>
+                <rect width="16" height="2" rx="1"></rect>
+              </g>
+            </svg>
+          </a>
+        </button>
+        <div
+          className={`p-4 absolute top-0 left-0 w-full desktop:hidden transition-all duration-300 origin-top-right ${
+            menuOpen ? "opacity-100" : "opacity-0"
+          }`}
+        >
+          <div className="bg-white relative rounded-lg min-w-full overflow-hidden shadow-2xl">
+            <section className="relative">
+              <div className="p-4 sm:p-6">
+                <section>
+                  <h1 className="font-semibold uppercase text-gray-400 text-sm mb-4">
+                    Services
+                  </h1>
+                  <ul className="grid grid-cols-2 sm:grid-cols-3">
+                    <li className="p-2">
+                      <Link href="/" passHref>
+                        <a className="inline-flex">
+                          <span className="mr-3 mt-1">
+                            <Image
+                              src="/nav-icons/speakerphone.svg"
+                              height="15"
+                              width="15"
+                              layout="fixed"
+                            ></Image>
+                          </span>
+                          <span className="font-semibold text-gray-800 group-hover:text-secondary 0 text-sm">
+                            Digital Marketing
+                          </span>
+                        </a>
+                      </Link>
+                    </li>
+                    <li className="p-2">
+                      <Link href="/" passHref>
+                        <a className="inline-flex">
+                          <span className="mr-3 mt-1">
+                            <Image
+                              src="/nav-icons/forward_to_inbox.svg"
+                              height="15"
+                              width="15"
+                              layout="fixed"
+                            ></Image>
+                          </span>
+                          <span className="font-semibold text-gray-800 group-hover:text-secondary 0 text-sm">
+                            Email Marketing
+                          </span>
+                        </a>
+                      </Link>
+                    </li>
+                    <li className="p-2">
+                      <Link href="/" passHref>
+                        <a className="inline-flex">
+                          <span className="mr-3 mt-1">
+                            <Image
+                              src="/nav-icons/user-group.svg"
+                              height="15"
+                              width="15"
+                              layout="fixed"
+                            ></Image>
+                          </span>
+                          <span className="font-semibold text-gray-800 group-hover:text-secondary 0 text-sm">
+                            Affiliate Marketing
+                          </span>
+                        </a>
+                      </Link>
+                    </li>
+                    <li className="p-2">
+                      <Link href="/" passHref>
+                        <a className="inline-flex">
+                          <span className="mr-3 mt-1">
+                            <Image
+                              src="/nav-icons/phone_iphone.svg"
+                              height="15"
+                              width="15"
+                              layout="fixed"
+                            ></Image>
+                          </span>
+                          <span className="font-semibold text-gray-800 group-hover:text-secondary 0 text-sm">
+                            Content Marketing
+                          </span>
+                        </a>
+                      </Link>
+                    </li>
+                    <li className="p-2">
+                      <Link href="/" passHref>
+                        <a className="inline-flex">
+                          <span className="mr-3 mt-1">
+                            <Image
+                              src="/nav-icons/search.svg"
+                              height="15"
+                              width="15"
+                              layout="fixed"
+                            ></Image>
+                          </span>
+                          <span className="font-semibold text-gray-800 group-hover:text-secondary 0 text-sm">
+                            SEO
+                          </span>
+                        </a>
+                      </Link>
+                    </li>
+                    <li className="p-2">
+                      <Link href="/" passHref>
+                        <a className="inline-flex">
+                          <span className="mr-3 mt-1">
+                            <Image
+                              src="/nav-icons/mountains_black.svg"
+                              height="15"
+                              width="15"
+                              layout="fixed"
+                            ></Image>
+                          </span>
+                          <span className="font-semibold text-gray-800 group-hover:text-secondary 0 text-sm">
+                            Logo Design
+                          </span>
+                        </a>
+                      </Link>
+                    </li>
+                    <li className="p-2">
+                      <Link href="/" passHref>
+                        <a className="inline-flex">
+                          <span className="mr-3 mt-1">
+                            <Image
+                              src="/nav-icons/cube.svg"
+                              height="15"
+                              width="15"
+                              layout="fixed"
+                            ></Image>
+                          </span>
+                          <span className="font-semibold text-gray-800 group-hover:text-secondary 0 text-sm">
+                            Packaging
+                          </span>
+                        </a>
+                      </Link>
+                    </li>
+                    <li className="p-2">
+                      <Link href="/" passHref>
+                        <a className="inline-flex">
+                          <span className="mr-3 mt-1">
+                            <Image
+                              src="/nav-icons/view_quilt.svg"
+                              height="15"
+                              width="15"
+                              layout="fixed"
+                            ></Image>
+                          </span>
+                          <span className="font-semibold text-gray-800 group-hover:text-secondary 0 text-sm">
+                            UI Design
+                          </span>
+                        </a>
+                      </Link>
+                    </li>
+                    <li className="p-2">
+                      <Link href="/" passHref>
+                        <a className="inline-flex">
+                          <span className="mr-3 mt-1">
+                            <Image
+                              src="/nav-icons/smile.svg"
+                              height="15"
+                              width="15"
+                              layout="fixed"
+                            ></Image>
+                          </span>
+                          <span className="font-semibold text-gray-800 group-hover:text-secondary 0 text-sm">
+                            UX Design
+                          </span>
+                        </a>
+                      </Link>
+                    </li>
+                    <li className="p-2">
+                      <Link href="/" passHref>
+                        <a className="inline-flex">
+                          <span className="mr-3 mt-1">
+                            <Image
+                              src="/nav-icons/code.svg"
+                              height="15"
+                              width="15"
+                              layout="fixed"
+                            ></Image>
+                          </span>
+                          <span className="font-semibold text-gray-800 group-hover:text-secondary 0 text-sm">
+                            Web Dev
+                          </span>
+                        </a>
+                      </Link>
+                    </li>
+                    <li className="p-2">
+                      <Link href="/" passHref>
+                        <a className="inline-flex">
+                          <span className="mr-3 mt-1">
+                            <Image
+                              src="/nav-icons/photo_camera.svg"
+                              height="15"
+                              width="15"
+                              layout="fixed"
+                            ></Image>
+                          </span>
+                          <span className="font-semibold text-gray-800 group-hover:text-secondary 0 text-sm">
+                            Photography
+                          </span>
+                        </a>
+                      </Link>
+                    </li>
+                    <li className="p-2">
+                      <Link href="/" passHref>
+                        <a className="inline-flex">
+                          <span className="mr-3 mt-1">
+                            <Image
+                              src="/nav-icons/play_circle.svg"
+                              height="15"
+                              width="15"
+                              layout="fixed"
+                            ></Image>
+                          </span>
+                          <span className="font-semibold text-gray-800 group-hover:text-secondary 0 text-sm">
+                            Videography
+                          </span>
+                        </a>
+                      </Link>
+                    </li>
+                    <li className="p-2">
+                      <Link href="/" passHref>
+                        <a className="inline-flex">
+                          <span className="mr-3 mt-1">
+                            <Image
+                              src="/nav-icons/adobephotoshop.svg"
+                              height="15"
+                              width="15"
+                              layout="fixed"
+                            ></Image>
+                          </span>
+                          <span className="font-semibold text-gray-800 group-hover:text-secondary 0 text-sm">
+                            Graphics
+                          </span>
+                        </a>
+                      </Link>
+                    </li>
+                    <li className="p-2">
+                      <Link href="/" passHref>
+                        <a className="inline-flex">
+                          <span className="mr-3 mt-1">
+                            <Image
+                              src="/nav-icons/equalizer.svg"
+                              height="15"
+                              width="15"
+                              layout="fixed"
+                            ></Image>
+                          </span>
+                          <span className="font-semibold text-gray-800 group-hover:text-secondary 0 text-sm">
+                            Audio
+                          </span>
+                        </a>
+                      </Link>
+                    </li>
+                    <li className="p-2">
+                      <Link href="/" passHref>
+                        <a className="inline-flex">
+                          <span className="mr-3 mt-1">
+                            <Image
+                              src="/nav-icons/pencil.svg"
+                              height="15"
+                              width="15"
+                              layout="fixed"
+                            ></Image>
+                          </span>
+                          <span className="font-semibold text-gray-800 group-hover:text-secondary 0 text-sm">
+                            Illustrations
+                          </span>
+                        </a>
+                      </Link>
+                    </li>
+                  </ul>
+                </section>
+                <section className="relative">
+                  <h1 className="font-semibold uppercase text-gray-400 text-sm mb-4">
+                    Portfolio
+                  </h1>
+                  <div className="p-4 sm:p-6"></div>
+                </section>
+                <section className="relative">
+                  <h1 className="font-semibold uppercase text-gray-400 text-sm mb-4">
+                    Portfolio
+                  </h1>
+                  <div className="p-4 sm:p-6"></div>
+                </section>
+              </div>
+            </section>
+            <button onClick={handleClick} className="absolute top-2 right-2">
+              <svg width="40" height="40" viewBox="0 0 40 40">
+                <title>Close mobile navigation</title>
+                <path
+                  d="M25.6 14.3a1 1 0 0 1 0 1.4l-4.24 4.25 4.25 4.24a1 1 0 1 1-1.42 1.42l-4.24-4.25-4.24 4.25a1 1 0 0 1-1.42-1.42l4.25-4.24-4.25-4.24a1 1 0 0 1 1.42-1.42l4.24 4.25 4.24-4.25a1 1 0 0 1 1.42 0z"
+                  fill="#8898AA"
+                  fill-rule="evenodd"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          {/* End of Mobile Navigation */}
+
+          {/* Desktop Navigation */}
+        </div>
+        <motion.div className="p-10 justify-end w-full hidden desktop:flex">
+          <MenuItem text={"Portfolio"}>
+            <div>
+              <ul>
+                <li>
+                  <SubItem
+                    title="PlaygroundBullys UK"
+                    text="Dog Breeder"
+                    icon="/client-logos/pgb-favicon.png"
+                    url="#"
+                  />
+                </li>
+                <li>
+                  <SubItem
+                    title="Grand Venue"
+                    text="Wedding Planner"
+                    icon="/client-logos/crown.png"
+                    url="#"
+                  />
+                </li>
+                <li>
+                  <SubItem
+                    title="Unite Cities"
+                    text="Logistics &amp; Storage"
+                    icon="/client-logos/unitecities-favicon.png"
+                    url="#"
+                  />
+                </li>
+              </ul>
+            </div>
+          </MenuItem>
+          <MenuItem text={"Services"}>
+            <div className="grid grid-cols-3 gap-16 p-4">
+              <section>
+                <h2 className="uppercase text-gray-500 font-bold">Marketing</h2>
+                <ul>
+                  <li>
+                    <SubItem
+                      title="Digital Marketing"
+                      text="Get to know us better"
+                      icon="/nav-icons/speakerphone.svg"
+                      url="#"
+                    />
+                  </li>
+                  <li>
+                    <SubItem
+                      title="Email Marketing"
+                      text="Get to know us better"
+                      icon="/nav-icons/forward_to_inbox.svg"
+                      url="#"
+                    />
+                  </li>
+                  <li>
+                    <SubItem
+                      title="Affiliate Marketing"
+                      text="Get to know us better"
+                      icon="/nav-icons/user-group.svg"
+                      url="#"
+                    />
+                  </li>
+                  <li>
+                    <SubItem
+                      title="Content Marketing"
+                      text="Get to know us better"
+                      icon="/nav-icons/phone_iphone.svg"
+                      url="#"
+                    />
+                  </li>
+                  <li>
+                    <SubItem
+                      title="SEO"
+                      text="Get to know us better"
+                      icon="/nav-icons/search.svg"
+                      url="#"
+                    />
+                  </li>
+                  <li>
+                    <SubItem
+                      title="Logo Design"
+                      text="Get to know us better"
+                      icon="/nav-icons/mountains_black.svg"
+                      url="#"
+                    />
+                  </li>
+                  <li>
+                    <SubItem
+                      title="Packaging Design"
+                      text="Get to know us better"
+                      icon="/nav-icons/cube.svg"
+                      url="#"
+                    />
+                  </li>
+                </ul>
+              </section>
+              <section>
+                <h2 className="uppercase text-gray-500 font-bold">Web</h2>
+                <ul>
+                  <li>
+                    <SubItem
+                      title="UI Design"
+                      text="Get to know us better"
+                      icon="/nav-icons/view_quilt.svg"
+                      url="#"
+                    />
+                  </li>
+                  <li>
+                    <SubItem
+                      title="UX Design"
+                      text="Get to know us better"
+                      icon="/nav-icons/smile.svg"
+                      url="#"
+                    />
+                  </li>
+                  <li>
+                    <SubItem
+                      title="Web Development"
+                      text="Get to know us better"
+                      icon="/nav-icons/code.svg"
+                      url="#"
+                    />
+                  </li>
+                </ul>
+              </section>
+              <section>
+                <h2 className="uppercase text-gray-500 font-bold">Content</h2>
+                <ul>
+                  <li>
+                    <SubItem
+                      title="Photography"
+                      text="Get to know us better"
+                      icon="/nav-icons/photo_camera.svg"
+                      url="#"
+                    />
+                  </li>
+                  <li>
+                    <SubItem
+                      title="Videography"
+                      text="Get to know us better"
+                      icon="/nav-icons/play_circle.svg"
+                      url="#"
+                    />
+                  </li>
+                  <li>
+                    <SubItem
+                      title="Graphics Design"
+                      text="Get to know us better"
+                      icon="/nav-icons/adobephotoshop.svg"
+                      url="#"
+                    />
+                  </li>
+                  <li>
+                    <SubItem
+                      title="Audio Content"
+                      text="Get to know us better"
+                      icon="/nav-icons/equalizer.svg"
+                      url="#"
+                    />
+                  </li>
+                  <li>
+                    <SubItem
+                      title="Illustrations"
+                      text="Get to know us better"
+                      icon="/nav-icons/pencil.svg"
+                      url="#"
+                    />
+                  </li>
+                </ul>
+              </section>
+            </div>
+          </MenuItem>
+          <MenuItem text={"About"}></MenuItem>
+          <MenuItem text={"Blog"}></MenuItem>
+          <MenuItem text={"Contact"}>
+            <div className="grid grid-cols-2 gap-12 p-2">
+              <section>
+                <SubItem
+                  title="Email"
+                  text="hello@gigawaffle.co.uk"
+                  icon="/nav-icons/email.svg"
+                  url="#"
+                />
+              </section>
+              <section>
+                <SubItem
+                  title="Phone"
+                  text="01772 376748"
+                  icon="/nav-icons/phone.svg"
+                  url="#"
+                />
+              </section>
+              <section>
+                <SubItem
+                  title="Facebook"
+                  text="Check us out on Facebook"
+                  icon="/facebook.svg"
+                  url="#"
+                />
+              </section>
+              <section>
+                <SubItem
+                  title="LinkedIn"
+                  text="Connect with us on LinkedIn"
+                  icon="/linkedin.svg"
+                  url="#"
+                />
+              </section>
+            </div>
+          </MenuItem>
+        </motion.div>
+        {/* End of Desktop Navigation */}
+      </div>
+    </div>
   );
 };
 
