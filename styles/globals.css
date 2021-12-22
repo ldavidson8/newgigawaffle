@@ -17,6 +17,11 @@
   h6 button {
     @apply font-sans tracking-wide;
   }
+  a,
+  p,
+  span {
+    @apply font-body;
+  }
 }
 
 html,
@@ -33,10 +38,6 @@ a {
 
 * {
   box-sizing: border-box;
-}
-
-p {
-  font-family: "Rubik", sans-serif;
 }
 
 input:focus-within ~ label,
