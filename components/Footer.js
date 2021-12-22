@@ -2,6 +2,8 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
+const today = new Date();
+
 const Footer = () => {
   return (
     <div className="text-white">
@@ -110,8 +112,8 @@ const Footer = () => {
       </div>
       <div className="bg-lighter-gray py-3 px-6">
         <span>
-          2021 &copy; gigawaffle | Gigawaffle Ltd 13704464 - Terms and Privacy
-          Policy
+          &copy; {today.getFullYear()} gigawaffle | Gigawaffle Ltd 13704464 -
+          Terms and Privacy Policy
         </span>
       </div>
     </div>

@@ -99,10 +99,14 @@ const SubItem = ({ title, text, icon, url }) => {
   );
 };
 
-// Mobile Navigation //
-// const [menuOpen, setMenuOpen] = useState(false);
-
 const NavTransparent = () => {
+  // Mobile Navigation //
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const handleClick = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
     <div className="w-full absolute top-0 left-0 z-max">
       <div className="max-w-screen-lg max-h-fit flex mx-auto justify-between items-center px-4">
@@ -114,7 +118,10 @@ const NavTransparent = () => {
             </a>
           </Link>
         </div>
-        <button className="absolute top-8 right-4 p-3 rounded-2xl bg-white bg-opacity-20 desktop:hidden">
+        <button
+          onClick={handleClick}
+          className="absolute top-8 right-4 p-3 rounded-2xl bg-white bg-opacity-20 desktop:hidden"
+        >
           <a>
             <svg width="30" height="15" viewBox="0 0 16 10">
               <title>Open mobile navigation</title>
@@ -126,6 +133,278 @@ const NavTransparent = () => {
             </svg>
           </a>
         </button>
+        <div
+          className={`p-4 absolute top-0 left-0 w-full desktop:hidden transition-all duration-300 origin-top-right ${
+            menuOpen ? "opacity-0" : "opacity-100"
+          }`}
+        >
+          <div className="bg-white relative rounded-lg min-w-full overflow-hidden shadow-2xl">
+            <section className="relative">
+              <div className="p-6">
+                <section>
+                  <h1 className="font-semibold uppercase text-gray-400 text-sm mb-4">
+                    Services
+                  </h1>
+                  <ul className="grid grid-cols-2 sm:grid-cols-3">
+                    <li className="p-2 inline-flex">
+                      <Link href="/" passHref>
+                        <a>
+                          <span className="mr-3 mt-1">
+                            <Image
+                              src="/nav-icons/speakerphone.svg"
+                              height="15"
+                              width="15"
+                            ></Image>
+                          </span>
+                          <span className="font-semibold text-gray-800 group-hover:text-secondary 0 text-sm">
+                            Digital Marketing
+                          </span>
+                        </a>
+                      </Link>
+                    </li>
+                    <li className="p-2 inline-flex">
+                      <Link href="/" passHref>
+                        <a>
+                          <span className="mr-3 mt-1">
+                            <Image
+                              src="/nav-icons/forward_to_inbox.svg"
+                              height="15"
+                              width="15"
+                            ></Image>
+                          </span>
+                          <span className="font-semibold text-gray-800 group-hover:text-secondary 0 text-sm">
+                            Email Marketing
+                          </span>
+                        </a>
+                      </Link>
+                    </li>
+                    <li className="p-2 inline-flex">
+                      <Link href="/" passHref>
+                        <a>
+                          <span className="mr-3 mt-1">
+                            <Image
+                              src="/nav-icons/user-group.svg"
+                              height="15"
+                              width="15"
+                            ></Image>
+                          </span>
+                          <span className="font-semibold text-gray-800 group-hover:text-secondary 0 text-sm">
+                            Affiliate Marketing
+                          </span>
+                        </a>
+                      </Link>
+                    </li>
+                    <li className="p-2 inline-flex">
+                      <Link href="/" passHref>
+                        <a>
+                          <span className="mr-3 mt-1">
+                            <Image
+                              src="/nav-icons/phone_iphone.svg"
+                              height="15"
+                              width="15"
+                            ></Image>
+                          </span>
+                          <span className="font-semibold text-gray-800 group-hover:text-secondary 0 text-sm">
+                            Content Marketing
+                          </span>
+                        </a>
+                      </Link>
+                    </li>
+                    <li className="p-2 inline-flex">
+                      <Link href="/" passHref>
+                        <a>
+                          <span className="mr-3 mt-1">
+                            <Image
+                              src="/nav-icons/search.svg"
+                              height="15"
+                              width="15"
+                            ></Image>
+                          </span>
+                          <span className="font-semibold text-gray-800 group-hover:text-secondary 0 text-sm">
+                            SEO
+                          </span>
+                        </a>
+                      </Link>
+                    </li>
+                    <li className="p-2 inline-flex">
+                      <Link href="/" passHref>
+                        <a>
+                          <span className="mr-3 mt-1">
+                            <Image
+                              src="/nav-icons/mountains_black.svg"
+                              height="15"
+                              width="15"
+                            ></Image>
+                          </span>
+                          <span className="font-semibold text-gray-800 group-hover:text-secondary 0 text-sm">
+                            Logo Design
+                          </span>
+                        </a>
+                      </Link>
+                    </li>
+                    <li className="p-2 inline-flex">
+                      <Link href="/" passHref>
+                        <a>
+                          <span className="mr-3 mt-1">
+                            <Image
+                              src="/nav-icons/cube.svg"
+                              height="15"
+                              width="15"
+                            ></Image>
+                          </span>
+                          <span className="font-semibold text-gray-800 group-hover:text-secondary 0 text-sm">
+                            Packaging Design
+                          </span>
+                        </a>
+                      </Link>
+                    </li>
+                    <li className="p-2 inline-flex">
+                      <Link href="/" passHref>
+                        <a>
+                          <span className="mr-3 mt-1">
+                            <Image
+                              src="/nav-icons/view_quilt.svg"
+                              height="15"
+                              width="15"
+                            ></Image>
+                          </span>
+                          <span className="font-semibold text-gray-800 group-hover:text-secondary 0 text-sm">
+                            UI Design
+                          </span>
+                        </a>
+                      </Link>
+                    </li>
+                    <li className="p-2 inline-flex">
+                      <Link href="/" passHref>
+                        <a>
+                          <span className="mr-3 mt-1">
+                            <Image
+                              src="/nav-icons/smile.svg"
+                              height="15"
+                              width="15"
+                            ></Image>
+                          </span>
+                          <span className="font-semibold text-gray-800 group-hover:text-secondary 0 text-sm">
+                            UX Design
+                          </span>
+                        </a>
+                      </Link>
+                    </li>
+                    <li className="p-2 inline-flex">
+                      <Link href="/" passHref>
+                        <a>
+                          <span className="mr-3 mt-1">
+                            <Image
+                              src="/nav-icons/code.svg"
+                              height="15"
+                              width="15"
+                            ></Image>
+                          </span>
+                          <span className="font-semibold text-gray-800 group-hover:text-secondary 0 text-sm">
+                            Web Development
+                          </span>
+                        </a>
+                      </Link>
+                    </li>
+                    <li className="p-2 inline-flex">
+                      <Link href="/" passHref>
+                        <a>
+                          <span className="mr-3 mt-1">
+                            <Image
+                              src="/nav-icons/photo_camera.svg"
+                              height="15"
+                              width="15"
+                            ></Image>
+                          </span>
+                          <span className="font-semibold text-gray-800 group-hover:text-secondary 0 text-sm">
+                            Photography
+                          </span>
+                        </a>
+                      </Link>
+                    </li>
+                    <li className="p-2 inline-flex">
+                      <Link href="/" passHref>
+                        <a>
+                          <span className="mr-3 mt-1">
+                            <Image
+                              src="/nav-icons/play_circle.svg"
+                              height="15"
+                              width="15"
+                            ></Image>
+                          </span>
+                          <span className="font-semibold text-gray-800 group-hover:text-secondary 0 text-sm">
+                            Videography
+                          </span>
+                        </a>
+                      </Link>
+                    </li>
+                    <li className="p-2 inline-flex">
+                      <Link href="/" passHref>
+                        <a>
+                          <span className="mr-3 mt-1">
+                            <Image
+                              src="/nav-icons/adobephotoshop.svg"
+                              height="15"
+                              width="15"
+                            ></Image>
+                          </span>
+                          <span className="font-semibold text-gray-800 group-hover:text-secondary 0 text-sm">
+                            Graphics Design
+                          </span>
+                        </a>
+                      </Link>
+                    </li>
+                    <li className="p-2 inline-flex">
+                      <Link href="/" passHref>
+                        <a>
+                          <span className="mr-3 mt-1">
+                            <Image
+                              src="/nav-icons/equalizer.svg"
+                              height="15"
+                              width="15"
+                            ></Image>
+                          </span>
+                          <span className="font-semibold text-gray-800 group-hover:text-secondary 0 text-sm">
+                            Audio Content
+                          </span>
+                        </a>
+                      </Link>
+                    </li>
+                    <li className="p-2 inline-flex">
+                      <Link href="/" passHref>
+                        <a>
+                          <span className="mr-3 mt-1">
+                            <Image
+                              src="/nav-icons/pencil.svg"
+                              height="15"
+                              width="15"
+                            ></Image>
+                          </span>
+                          <span className="font-semibold text-gray-800 group-hover:text-secondary 0 text-sm">
+                            Illustrations
+                          </span>
+                        </a>
+                      </Link>
+                    </li>
+                  </ul>
+                </section>
+              </div>
+            </section>
+            <button onClick={handleClick} className="absolute top-2 right-2">
+              <svg width="40" height="40" viewBox="0 0 40 40">
+                <title>Close mobile navigation</title>
+                <path
+                  d="M25.6 14.3a1 1 0 0 1 0 1.4l-4.24 4.25 4.25 4.24a1 1 0 1 1-1.42 1.42l-4.24-4.25-4.24 4.25a1 1 0 0 1-1.42-1.42l4.25-4.24-4.25-4.24a1 1 0 0 1 1.42-1.42l4.24 4.25 4.24-4.25a1 1 0 0 1 1.42 0z"
+                  fill="#8898AA"
+                  fill-rule="evenodd"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          {/* End of Mobile Navigation */}
+
+          {/* Desktop Navigation */}
+        </div>
         <motion.div className="p-10 justify-end w-full hidden desktop:flex">
           <MenuItem text={"Portfolio"}>
             <div>
@@ -335,6 +614,7 @@ const NavTransparent = () => {
             </div>
           </MenuItem>
         </motion.div>
+        {/* End of Desktop Navigation */}
       </div>
     </div>
   );

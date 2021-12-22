@@ -33,8 +33,8 @@ module.exports = {
         1: "1px",
       },
       fontFamily: {
-        sans: ["Poppins", "sans-serif"],
-        rubik: ["Rubik", "sans-serif"],
+        body: ["Poppins", "sans-serif"],
+        sans: ["Montserrat", "sans-serif"],
         blogheader: ["Feeling Passionate", "sans-serif"],
       },
       maxWidth: {
