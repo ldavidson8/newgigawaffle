@@ -1,10 +1,11 @@
 import { ServiceCard } from "./ServiceCard";
 import { Lines } from "./Lines";
+import Link from "next/link";
 
 export const SecondSection = () => {
   return (
     <div className="relative w-full skew">
-      <Lines/>
+      <Lines />
 
       <div className="bg-navy-blue w-32 md:w-56 xl:w-64 h-12 md:h-16 absolute bottom-0 xl:bottom-4 right-0 -skew-y-1"></div>
       <div className="bg-primary w-24 md:w-36 h-8 md:h-12 absolute bottom-0 xl:bottom-5 right-0 -skew-y-1"></div>
@@ -15,7 +16,7 @@ export const SecondSection = () => {
             <ServiceCard
               title="Brand Design"
               description="Make your brand stand out with our brilliant designers."
-              imageSrc="/service-icons/mountains.svg"
+              imageSrc="/service-icons/mountains-gradient.svg"
             />
 
             <ServiceCard
@@ -36,25 +37,25 @@ export const SecondSection = () => {
               imageSrc="/service-icons/film.svg"
             />
           </div>
-      </div>
-      <div className="col-span-2 flex flex-col sm:ml-4 sm:mr-4 all:ml-0 all:mr-0">
-        <div>
-          <h2 className="text-4xl mb-4 pt-2 font-bold text-navy-blue">
-              Digital Services to Take Your Business To The Next Level
-          </h2>
-          <div className="h-[8px] bg-primary bg-no-repeat bg-left-bottom w-1/3 mb-6"></div>
         </div>
-        <p className="text-lg leading-relaxed text-navy-blue row-span-1">
-          We're gigawaffle; we’re passionate about turning businesses into
-          brands. With plenty of options of services across branding, web
-          design, digital marketing and media, you're truly in control when it
-          comes to your business. Based in the heart of Preston’s city centre,
-          we’re an agency that is determined to make your digital journey as
-          simple as it should be.
-        </p>
-        <div className="flex flex-col lg:flex-row mt-2 gap-2">
-          <button
-            className="
+        <div className="col-span-2 flex flex-col sm:ml-4 sm:mr-4 all:ml-0 all:mr-0">
+          <div>
+            <h2 className="text-4xl mb-4 pt-2 font-bold text-navy-blue">
+              Digital Services to Take Your Business To The Next Level
+            </h2>
+            <div className="h-[8px] bg-primary bg-no-repeat bg-left-bottom w-1/3 mb-6"></div>
+          </div>
+          <p className="text-lg leading-relaxed text-navy-blue row-span-1">
+            We're gigawaffle; we’re passionate about turning businesses into
+            brands. With plenty of options of services across branding, web
+            design, digital marketing and media, you're truly in control when it
+            comes to your business. Based in the heart of Preston’s city centre,
+            we’re an agency that is determined to make your digital journey as
+            simple as it should be.
+          </p>
+          <div className="flex flex-col lg:flex-row mt-2 gap-2">
+            <button
+              className="
               text-sm   
               min-w-[180px]   
               min-h-[40px]
@@ -71,11 +72,13 @@ export const SecondSection = () => {
               font-bold
               uppercase
               "
-          >
-            About Gigawaffle
-          </button>
-          <button
-            className="   
+            >
+              About Gigawaffle
+            </button>
+            <Link href="/contact-us" passHref>
+              <a>
+                <button
+                  className="   
               text-sm   
               min-w-[180px]    
               min-h-[40px]
@@ -91,14 +94,15 @@ export const SecondSection = () => {
               font-bold
               uppercase
               "
-          >
-            Contact Us
-          </button>
+                >
+                  Contact Us
+                </button>
+              </a>
+            </Link>
+          </div>
+          <div className="lg:block md:hidden"></div>
         </div>
-        <div className="lg:block md:hidden">
-        </div>
-        </div>
-        </div>
+      </div>
     </div>
   );
 };

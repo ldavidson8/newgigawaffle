@@ -2,6 +2,8 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
+const today = new Date();
+
 const Footer = () => {
   return (
     <div className="text-white">
@@ -97,7 +99,7 @@ const Footer = () => {
         </div>
         <div className="bg-gradient-to-r from-primary to-secondary p-1 order-2 xl:order-last col-span-2 xl:col-span-1">
           <div className="bg-lighter-gray  h-full w-full items-end p-4">
-            <Link href="/">
+            <Link href="/contact-us">
               <a className="flex items-end h-full">
                 <span className="uppercase text-sm md:text-base mr-2">
                   Start Your Journey
@@ -110,8 +112,8 @@ const Footer = () => {
       </div>
       <div className="bg-lighter-gray py-3 px-6">
         <span>
-          2021 &copy; gigawaffle | Gigawaffle Ltd 13704464 - Terms and Privacy
-          Policy
+          &copy; {today.getFullYear()} gigawaffle | Gigawaffle Ltd 13704464 -
+          Terms and Privacy Policy
         </span>
       </div>
     </div>

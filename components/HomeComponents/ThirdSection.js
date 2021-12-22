@@ -18,9 +18,10 @@ export const ThirdSection = () => {
             </h2>
             <div className="pb-1.5 bg-primary bg-no-repeat bg-left-bottom w-1/4 my-2"></div>
             <p className="text-md lg:text-lg xl:text-xl mb-2">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed
-              egestas egestas fringilla phasellus.
+              The long term plan for your business needs to be clear and
+              concise. With our marketing team we'll research and provide
+              multiple tactics for increasing your potential reach and growth
+              plans across various channels of the web.
             </p>
             <a className="underline text-primary text-lg lg:text-xl font-bold">
               Find Out More
@@ -34,7 +35,12 @@ export const ThirdSection = () => {
               loop
               mode="normal"
               src="https://assets9.lottiefiles.com/packages/lf20_cwo7ql12.json"
-              style={{ width: "auto", height: "auto", maxWidth: "300px", maxHeight: "300px" }}
+              style={{
+                width: "auto",
+                height: "auto",
+                maxWidth: "300px",
+                maxHeight: "300px",
+              }}
             ></lottie-player>
           </div>
           <div className="order-1 mx-auto">
@@ -45,7 +51,12 @@ export const ThirdSection = () => {
               loop
               mode="normal"
               src="https://assets2.lottiefiles.com/packages/lf20_q6uvw3fy.json"
-              style={{ width: "auto", height: "auto", maxWidth: "300px", maxHeight: "300px" }}
+              style={{
+                width: "auto",
+                height: "auto",
+                maxWidth: "300px",
+                maxHeight: "300px",
+              }}
             ></lottie-player>
           </div>
           <div className="text-right md:order-2">
@@ -57,9 +68,10 @@ export const ThirdSection = () => {
             </h2>
             <div className="pb-1.5 bg-primary bg-no-repeat bg-right-bottom w-1/4 ml-auto my-2"></div>
             <p className="text-md lg:text-lg xl:text-xl mb-2">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed
-              egestas egestas fringilla phasellus.
+              Ideas in the shower come and go, with Gigawaffle we'll ensure the
+              idea can be executed effectively to reach your goals. We'll
+              document a lengthy plan and multiple campaign strategies to grasp
+              the local, nationwide and global audiences.
             </p>
             <a className="underline text-primary text-lg lg:text-xl font-bold">
               Find Out More

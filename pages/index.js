@@ -1,13 +1,12 @@
 import Head from "next/head";
-import Image from "next/image";
-import styles from "../styles/Home.module.css";
 import { HeroSection } from "../components/HomeComponents/HeroSection";
 import { SecondSection } from "../components/HomeComponents/SecondSection";
 import { ThirdSection } from "../components/HomeComponents/ThirdSection";
 import { FourthSection } from "../components/HomeComponents/FourthSection";
 import { FifthSection } from "../components/HomeComponents/FifthSection";
 import { SGrid } from "../components/SkewedGrid";
-import ContactSection from "../components/HomeComponents/ContactSection";
+import ContactSection from "../components/ContactSection";
+import HomeLayout from "../components/HomeLayout";
 
 export default function Home() {
   return (
@@ -32,3 +31,7 @@ export default function Home() {
     </>
   );
 }
+
+Home.getLayout = function getLayout(home) {
+  return <HomeLayout>{home}</HomeLayout>;
+};
