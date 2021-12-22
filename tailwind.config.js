@@ -47,6 +47,9 @@ module.exports = {
       zIndex: {
         max: "9999",
       },
+      screens: {
+        desktop: "900px",
+      },
     },
   },
   variants: {
