@@ -423,7 +423,6 @@ const NavBlue = () => {
                 <path
                   d="M25.6 14.3a1 1 0 0 1 0 1.4l-4.24 4.25 4.25 4.24a1 1 0 1 1-1.42 1.42l-4.24-4.25-4.24 4.25a1 1 0 0 1-1.42-1.42l4.25-4.24-4.25-4.24a1 1 0 0 1 1.42-1.42l4.24 4.25 4.24-4.25a1 1 0 0 1 1.42 0z"
                   fill="#8898AA"
-                  fill-rule="evenodd"
                 ></path>
               </svg>
             </button>
@@ -473,7 +472,7 @@ const NavBlue = () => {
                       title="Digital Marketing"
                       text="Get to know us better"
                       icon="/nav-icons/speakerphone.svg"
-                      url="#"
+                      url="/servicepage"
                     />
                   </li>
                   <li>
@@ -481,7 +480,7 @@ const NavBlue = () => {
                       title="Email Marketing"
                       text="Get to know us better"
                       icon="/nav-icons/forward_to_inbox.svg"
-                      url="#"
+                      url="/servicepage"
                     />
                   </li>
                   <li>
@@ -489,7 +488,7 @@ const NavBlue = () => {
                       title="Affiliate Marketing"
                       text="Get to know us better"
                       icon="/nav-icons/user-group.svg"
-                      url="#"
+                      url="/servicepage"
                     />
                   </li>
                   <li>
@@ -497,7 +496,7 @@ const NavBlue = () => {
                       title="Content Marketing"
                       text="Get to know us better"
                       icon="/nav-icons/phone_iphone.svg"
-                      url="#"
+                      url="/servicepage"
                     />
                   </li>
                   <li>
@@ -505,7 +504,7 @@ const NavBlue = () => {
                       title="SEO"
                       text="Get to know us better"
                       icon="/nav-icons/search.svg"
-                      url="#"
+                      url="/servicepage"
                     />
                   </li>
                   <li>
@@ -513,7 +512,7 @@ const NavBlue = () => {
                       title="Logo Design"
                       text="Get to know us better"
                       icon="/nav-icons/mountains_black.svg"
-                      url="#"
+                      url="/servicepage"
                     />
                   </li>
                   <li>
@@ -521,7 +520,7 @@ const NavBlue = () => {
                       title="Packaging Design"
                       text="Get to know us better"
                       icon="/nav-icons/cube.svg"
-                      url="#"
+                      url="/servicepage"
                     />
                   </li>
                 </ul>
@@ -534,7 +533,7 @@ const NavBlue = () => {
                       title="UI Design"
                       text="Get to know us better"
                       icon="/nav-icons/view_quilt.svg"
-                      url="#"
+                      url="/servicepage"
                     />
                   </li>
                   <li>
@@ -542,7 +541,7 @@ const NavBlue = () => {
                       title="UX Design"
                       text="Get to know us better"
                       icon="/nav-icons/smile.svg"
-                      url="#"
+                      url="/servicepage"
                     />
                   </li>
                   <li>
@@ -550,7 +549,7 @@ const NavBlue = () => {
                       title="Web Development"
                       text="Get to know us better"
                       icon="/nav-icons/code.svg"
-                      url="#"
+                      url="/servicepage"
                     />
                   </li>
                 </ul>
@@ -563,7 +562,7 @@ const NavBlue = () => {
                       title="Photography"
                       text="Get to know us better"
                       icon="/nav-icons/photo_camera.svg"
-                      url="#"
+                      url="/servicepage"
                     />
                   </li>
                   <li>
@@ -571,7 +570,7 @@ const NavBlue = () => {
                       title="Videography"
                       text="Get to know us better"
                       icon="/nav-icons/play_circle.svg"
-                      url="#"
+                      url="/servicepage"
                     />
                   </li>
                   <li>
@@ -579,7 +578,7 @@ const NavBlue = () => {
                       title="Graphics Design"
                       text="Get to know us better"
                       icon="/nav-icons/adobephotoshop.svg"
-                      url="#"
+                      url="/servicepage"
                     />
                   </li>
                   <li>
@@ -587,7 +586,7 @@ const NavBlue = () => {
                       title="Audio Content"
                       text="Get to know us better"
                       icon="/nav-icons/equalizer.svg"
-                      url="#"
+                      url="/servicepage"
                     />
                   </li>
                   <li>
@@ -595,7 +594,7 @@ const NavBlue = () => {
                       title="Illustrations"
                       text="Get to know us better"
                       icon="/nav-icons/pencil.svg"
-                      url="#"
+                      url="/servicepage"
                     />
                   </li>
                 </ul>
@@ -611,7 +610,7 @@ const NavBlue = () => {
                   title="Email"
                   text="hello@gigawaffle.co.uk"
                   icon="/nav-icons/email.svg"
-                  url="#"
+                  url="/"
                 />
               </section>
               <section>
@@ -619,7 +618,7 @@ const NavBlue = () => {
                   title="Phone"
                   text="01772 376748"
                   icon="/nav-icons/phone.svg"
-                  url="#"
+                  url="/"
                 />
               </section>
               <section>
@@ -627,7 +626,7 @@ const NavBlue = () => {
                   title="Facebook"
                   text="Check us out on Facebook"
                   icon="/facebook.svg"
-                  url="#"
+                  url="/"
                 />
               </section>
               <section>
@@ -635,7 +634,7 @@ const NavBlue = () => {
                   title="LinkedIn"
                   text="Connect with us on LinkedIn"
                   icon="/linkedin.svg"
-                  url="#"
+                  url="/"
                 />
               </section>
             </div>
