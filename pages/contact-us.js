@@ -129,6 +129,6 @@ const Contact = () => {
 
 export default Contact;
 
-Contact.getLayout = function getLayout(contact) {
-  return <SiteLayout>{contact}</SiteLayout>;
+Contact.getLayout = function getLayout(page) {
+  return <SiteLayout>{page}</SiteLayout>;
 };

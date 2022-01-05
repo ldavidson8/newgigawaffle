@@ -7,6 +7,7 @@ import { FifthSection } from "../components/HomeComponents/FifthSection";
 import { SGrid } from "../components/SkewedGrid";
 import ContactSection from "../components/ContactSection";
 import HomeLayout from "../components/HomeLayout";
+import NavBlue from "../components/NavBlue";
 
 export default function Home() {
   return (
@@ -15,11 +16,11 @@ export default function Home() {
         <title>Home | Gigawaffle</title>
         <meta
           name="keywords"
-          content="Marketing | Digital Marketing | Creative Design | Website Design &amp; Development | Branding | SEO | Copywriting |Preston | Marketing Agency | Hustle"
+          content="marketing, agency, design, web design, business, content, digital, email, preston, product, portfolio, website, unique, trends, performance, lightweight, perfect, fast"
         />
         <meta
           name="description"
-          content="Gigawaffle, Digital Marketing Company based in Preston City Centre. Web Design, Brand Design, SEO and Copywriting. grow your business and turn it into a brand"
+          content="Gigawaffle builds your online presence with unique and performative web services at an affordable range"
         />
       </Head>
       <HeroSection />
@@ -32,6 +33,6 @@ export default function Home() {
   );
 }
 
-Home.getLayout = function getLayout(home) {
-  return <HomeLayout>{home}</HomeLayout>;
+Home.getLayout = function getLayout(page) {
+  return <HomeLayout>{page}</HomeLayout>;
 };

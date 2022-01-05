@@ -1,5 +1,7 @@
 import { createClient } from "contentful";
 import BlogCard from "../../components/BlogCard";
+import SiteLayout from "../../components/SiteLayout";
+import Head from "next/head";
 
 export async function getStaticProps() {
   const client = createClient({
@@ -18,46 +20,49 @@ export async function getStaticProps() {
 }
 
 export default function Blog({ blogPosts }) {
-  console.log(blogPosts);
+  // console.log(blogPosts);
   return (
     <>
-      <div className="bg-white h-screen grid grid-cols-[300px_1fr]">
-        <div className="text-navy-blue bg-blue-500 h-full items-center flex flex-col gap-12">
+      <Head>
+        <title>The Waffle Corner</title>
+        <meta
+          name="keywords"
+          content="Marketing | Digital Marketing | Creative Design | Website Design &amp; Development | Branding | SEO | Copywriting |Preston | Marketing Agency | "
+        />
+        <meta
+          name="description"
+          content="Gigawaffle, Digital Marketing Company based in Preston City Centre. Web Design, Brand Design, SEO and Copywriting. grow your business and turn it into a brand"
+        />
+      </Head>
+      <div className="bg-white grid grid-cols-[minmax(200px,1fr),1fr]">
+        <div className="text-navy-blue h-full items-center flex flex-col gap-12">
           <label
             htmlFor="blog-search"
             className="text-white absolute z-10 flex"
-          >
-            Search...
-            <img
-              src="/search-alt.svg"
-              alt=""
-              height={"23px"}
-              width={"23px"}
-              className="right-0"
-            />
-          </label>
+          ></label>
           <input
             type="search"
             id="blog-search"
             aria-label="Search through blog"
             className="bg-navy-blue rounded-full relative"
+            placeholder="Search..."
           ></input>
           <h2 className="text-2xl font-medium">Categories</h2>
           <ul>
             <li>
-              <h3>Marketing</h3>
+              <h3 className="font-medium">Marketing</h3>
             </li>
             <li>
-              <h3>Web Design</h3>
+              <h3 className="font-medium">Web Design</h3>
             </li>
             <li>
-              <h3>Media</h3>
+              <h3 className="font-medium">Media</h3>
             </li>
             <li>
-              <h3>Branding</h3>
+              <h3 className="font-medium">Branding</h3>
             </li>
             <li>
-              <h3>Announcements</h3>
+              <h3 className="font-medium">Announcements</h3>
             </li>
           </ul>
           <h2 className="text-2xl font-medium">Top Posts</h2>
@@ -82,8 +87,10 @@ export default function Blog({ blogPosts }) {
             </div>
           </div>
         </div>
-        <div className="grid grid-cols-3 grid-rows-[50px_1fr] p-8 gap-8">
-          <h1 className="font-blogheader col-span-full">The Waffle Corner</h1>
+        <div className="grid grid-cols-1 sm:grid-cols-2 grid-rows-[50px_1fr] p-8 gap-8">
+          <h1 className="font-blogheader text-3xl text-primary col-span-full">
+            The Waffle Corner
+          </h1>
           {blogPosts.map((blogPost) => (
             <BlogCard key={blogPost.sys.id} blogPost={blogPost} />
           ))}
@@ -92,3 +99,7 @@ export default function Blog({ blogPosts }) {
     </>
   );
 }
+
+Blog.getLayout = function getLayout(blog) {
+  return <SiteLayout>{blog}</SiteLayout>;
+};

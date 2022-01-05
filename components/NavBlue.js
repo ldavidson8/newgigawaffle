@@ -108,9 +108,9 @@ const NavBlue = () => {
   };
 
   return (
-    <div className="w-full absolute top-0 left-0 z-max">
+    <div className="w-full bg-navy-blue max-h-16 z-max shadow-2xl">
       <div className="max-w-screen-lg max-h-fit flex mx-auto justify-between items-center px-4">
-        <div className="absolute top-8">
+        <div className="top-4 absolute">
           {/* Requires absolute or hover menus increase height and push logo down */}
           <Link href="/" passHref>
             <a>
@@ -120,7 +120,7 @@ const NavBlue = () => {
         </div>
         <button
           onClick={handleClick}
-          className="absolute top-8 right-4 p-3 rounded-2xl bg-white bg-opacity-20 desktop:hidden"
+          className="top-4 right-4 absolute p-3 rounded-2xl bg-white bg-opacity-20 desktop:hidden"
         >
           <a>
             <svg width="30" height="15" viewBox="0 0 16 10">
@@ -138,7 +138,7 @@ const NavBlue = () => {
             menuOpen ? "opacity-100" : "opacity-0"
           }`}
         >
-          <div className="bg-white relative rounded-lg min-w-full overflow-hidden shadow-2xl">
+          <div className="bg-white relative rounded-lg min-w-full overflow-hidden shadow-2xl z-max">
             <section className="relative">
               <div className="p-4 sm:p-6">
                 <section>
@@ -431,7 +431,7 @@ const NavBlue = () => {
 
           {/* Desktop Navigation */}
         </div>
-        <motion.div className="p-10 justify-end w-full hidden desktop:flex">
+        <motion.div className="p-6 justify-end w-full hidden desktop:flex">
           <MenuItem text={"Portfolio"}>
             <div>
               <ul>

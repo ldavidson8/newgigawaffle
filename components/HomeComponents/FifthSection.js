@@ -2,8 +2,9 @@ import { StepsCard } from "./StepsCard";
 
 export const FifthSection = () => {
   return (
-    <div className="w-full bg-light-navy h-screen relative skew">
-      <div className="grid max-w-section mx-auto grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-2 sm:px-10 all:px-4 -mt-20 pt-24">
+    <div className="overflow-hidden">
+      <div className="absolute w-full h-full bg-light-navy -skew-y-2"></div>
+      <div className="grid mx-auto grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-2 z-10 relative py-16  ">
         <StepsCard
           number="01"
           title="Web Design"
@@ -11,7 +12,7 @@ export const FifthSection = () => {
           creating a website that effectively shows off your brand. We will
           build you a website from the ground up, following your design and
           your style."
-          direction={[true,false,false,false]}
+          direction={[true, false, false, false]}
         />
         <StepsCard
           number="02"
@@ -20,13 +21,13 @@ export const FifthSection = () => {
           with certain aspects of your website. We will take all this into
           account in our designs, creating a site that all your customers
           will love."
-          direction={[false,false,false,true]}
+          direction={[false, false, false, true]}
         />
         <div className="relative h-64 xl:h-full">
           <img
             src=""
             alt="Grand Occasions"
-            className="w-full h-full object-cover absolute z-0"
+            className="w-full h-full object-cover relative z-0"
           />
           <p className="text-white z-10 absolute bottom-24 ml-4 lg:ml-8 text-xl font-medium">
             Client :
@@ -38,7 +39,6 @@ export const FifthSection = () => {
             Read More
           </h3>
         </div>
-
         <div className="relative h-64 xl:h-full">
           <img
             src=""
@@ -62,7 +62,7 @@ export const FifthSection = () => {
           desired results. We offer social media management, audits,
           graphics, photography and video content to ensure your social
           feeds look great and catch the eye."
-          direction={[false,false,true,false]}
+          direction={[false, false, true, false]}
         />
         <StepsCard
           number="04"
@@ -70,9 +70,8 @@ export const FifthSection = () => {
           description="SEO is a challenging hurdle to conquer. At Gigawaffle, we’ll work
           with you after your website is complete to analyse your SEO
           rankings and adjust keywords to find your target demographics."
-          direction={[false,true,false,false]}
+          direction={[false, true, false, false]}
         />
-        {/*}
         <div className="max-w-section mx-auto py-8">
           <h2 className="text-xl lg:text-2xl pb-4 text-white font-medium">
             We pride ourselves on making it easy for you to turn your business
@@ -84,7 +83,6 @@ export const FifthSection = () => {
             throughout the process, allowing you to see your image come to life.
           </p>
         </div>
-  */}
       </div>
     </div>
   );

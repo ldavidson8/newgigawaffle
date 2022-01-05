@@ -1,4 +1,3 @@
-import Navbar from "./Navbar";
 import Footer from "./Footer";
 import NavBlue from "./NavBlue";
 

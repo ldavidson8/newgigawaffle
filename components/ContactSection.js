@@ -20,7 +20,7 @@ const popupHeader = {
   },
   visible: {
     opacity: 1,
-    scale: 4,
+    scale: 3,
   },
 };
 
@@ -39,7 +39,7 @@ const popupH3 = {
   },
   visible: {
     opacity: 1,
-    scale: 2,
+    scale: 1.5,
   },
 };
 
@@ -81,7 +81,7 @@ const ContactSection = () => {
   // }
 
   return (
-    <div className="w-full h-screen skewT">
+    <div className="w-full">
       <div className="grid h-full md:grid-cols-2">
         <motion.div
           initial="hidden"

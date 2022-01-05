@@ -2,6 +2,7 @@ import Link from "next/link";
 import { useEffect } from "react";
 import Router, { useRouter } from "next/router";
 import Head from "next/head";
+import SiteLayout from "../components/SiteLayout";
 
 const NotFound = () => {
   const router = useRouter();
@@ -49,3 +50,7 @@ const NotFound = () => {
 };
 
 export default NotFound;
+
+NotFound.getLayout = function getLayout(page) {
+  return <SiteLayout>{page}</SiteLayout>;
+};

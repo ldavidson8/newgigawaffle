@@ -1,8 +1,5 @@
-import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-
-const today = new Date();
 
 const Footer = () => {
   return (
@@ -21,12 +18,12 @@ const Footer = () => {
           <h3 className="text-secondary uppercase mb-2">Company</h3>
           <ul className="space-y-4">
             <li>
-              <Link href="/">
+              <Link href="/about">
                 <a>About Us</a>
               </Link>
             </li>
             <li>
-              <Link href="/">
+              <Link href="/blog">
                 <a>Blog</a>
               </Link>
             </li>
@@ -36,8 +33,8 @@ const Footer = () => {
               </Link>
             </li>
             <li>
-              <Link href="/">
-                <a>Support</a>
+              <Link href="/contact">
+                <a>Contact Us</a>
               </Link>
             </li>
           </ul>
@@ -46,27 +43,27 @@ const Footer = () => {
           <h3 className="text-secondary uppercase mb-2">Services</h3>
           <ul className="space-y-4">
             <li>
-              <Link href="/">
+              <Link href="/services/digital-marketing">
                 <a>Digital Marketing</a>
               </Link>
             </li>
             <li>
-              <Link href="/">
+              <Link href="/services/web-design">
                 <a>Web Design</a>
               </Link>
             </li>
             <li>
-              <Link href="/">
+              <Link href="/services/seo">
                 <a>SEO</a>
               </Link>
             </li>
             <li>
-              <Link href="/">
+              <Link href="/services/social-media">
                 <a>Social Media</a>
               </Link>
             </li>
             <li>
-              <Link href="/">
+              <Link href="/services/copywriting">
                 <a>Copywriting</a>
               </Link>
             </li>
@@ -76,29 +73,29 @@ const Footer = () => {
           <h3 className="text-secondary uppercase mb-2">Connect</h3>
           <ul className="space-y-4">
             <li>
-              <Link href="/">
+              <Link href="https://www.facebook.com/gigawaffleuk">
                 <a>Facebook</a>
               </Link>
             </li>
             <li>
-              <Link href="/">
+              <Link href="https://www.linkedin.com/company/gigawaffle/">
                 <a>LinkedIn</a>
               </Link>
             </li>
             <li>
-              <Link href="/">
+              <Link href="https://www.instagram.com/gigawaffleuk/">
                 <a>Instagram</a>
               </Link>
             </li>
             <li>
               <Link href="/">
-                <a>Twitter</a>
+                <a>Spotify</a>
               </Link>
             </li>
           </ul>
         </div>
         <div className="bg-gradient-to-r from-primary to-secondary p-1 order-2 xl:order-last col-span-2 xl:col-span-1">
-          <div className="bg-lighter-gray  h-full w-full items-end p-4">
+          <div className="bg-lighter-gray h-full w-full items-end p-4">
             <Link href="/contact-us">
               <a className="flex items-end h-full">
                 <span className="uppercase text-sm md:text-base mr-2">
@@ -112,8 +109,8 @@ const Footer = () => {
       </div>
       <div className="bg-lighter-gray py-3 px-6">
         <span>
-          &copy; {today.getFullYear()} gigawaffle | Gigawaffle Ltd 13704464 -
-          Terms and Privacy Policy
+          &copy; 2022 gigawaffle | Gigawaffle Ltd 13704464 - Terms and Privacy
+          Policy
         </span>
       </div>
     </div>

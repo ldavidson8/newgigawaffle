@@ -1,7 +1,11 @@
-import React from "react";
+import SiteLayout from "../components/SiteLayout";
 
-const about = () => {
+const About = () => {
   return <div></div>;
 };
 
-export default about;
+export default About;
+
+About.getLayout = function getLayout(page) {
+  return <SiteLayout>{page}</SiteLayout>;
+};
