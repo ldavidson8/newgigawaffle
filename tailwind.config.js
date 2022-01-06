@@ -5,8 +5,8 @@ module.exports = {
   ],
   theme: {
     extend: {
-      height:{
-        '3/4': '3/4vh'
+      height: {
+        "3/4": "3/4vh",
       },
       screens: {
         all: { min: "0px", max: "640px" },
@@ -22,6 +22,7 @@ module.exports = {
       },
       boxShadow: {
         card: "0px 4px 4px 0px #00000040;",
+        clientCard: "inset 0 -7px 500px 20px rgba(0,0,0,1)",
       },
       backgroundImage: {
         heroImage: "url('/heroimage.png')",

@@ -1,9 +1,8 @@
 import { useForm } from "react-hook-form";
 import { motion } from "framer-motion";
-import Image from "next/image";
 
-const animatedSquare = {
-  hidden: { height: 0, width: 0, backgroundColor: "#fff" },
+const staggerText = {
+  hidden: { backgroundColor: "#E14985" },
   visible: {
     height: "100%",
     width: "100%",
@@ -39,7 +38,7 @@ const popupH3 = {
   },
   visible: {
     opacity: 1,
-    scale: 1.5,
+    scale: 1.2,
   },
 };
 
@@ -65,29 +64,15 @@ const ContactSection = () => {
     });
     console.log(data);
   };
-
-  // async function onSubmit(e) {
-  //   e.preventDefault();
-  //   const formData = {};
-  //   Array.from(e.currentTarget.elements).forEach((field) => {
-  //     if (!field.name) return;
-  //     formData[field.name] = field.value;
-  //   });
-  //   fetch("api/mail", {
-  //     method: "post",
-  //     body: JSON.stringify(formData),
-  //   });
-  //   console.log(formData);
-  // }
-
   return (
-    <div className="w-full">
-      <div className="grid h-full md:grid-cols-2">
+    <section className="overflow-hidden">
+      {/* <div className="absolute h-full w-full overflow-visible"></div> */}
+      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 justify-center">
         <motion.div
           initial="hidden"
           animate="visible"
-          variants={animatedSquare}
-          className="w-full flex flex-col gap-10 justify-center items-center font-bold text-white bg-primary"
+          variants={staggerText}
+          className="bg-primary w-full h-full flex flex-col gap-8 px-6 py-24 items-center justify-center text-white font-bold"
         >
           <motion.h2 variants={popupHeader} className="text-sm md:text-2xl">
             Let's Talk
@@ -99,7 +84,7 @@ const ContactSection = () => {
           <motion.h3 variants={popupH3} className="text-sm text-center">
             Find out what our experts can do
           </motion.h3>
-          <motion.p variants={fadeIn} className="text-lg text-center">
+          <motion.p variants={fadeIn} className="text-md text-center">
             Fill out the form, drop us a call or shoot us an email. We’ll be in
             contact soon.
           </motion.p>
@@ -220,12 +205,12 @@ const ContactSection = () => {
                 Message *
               </label>
             </div>
-            <div className="col-span-2 p-1 bg-gradient-to-br from-primary to-secondary w-fit">
+            <div className="col-span-full p-1 bg-gradient-to-br from-primary to-secondary rounded">
               <button
                 type="submit"
-                className="flex items-center justify-center h-16 p-8 bg-white rounded w-fit"
+                className="flex items-center justify-center h-16 p-8 bg-white rounded w-full"
               >
-                <span className="mr-4 text-sm font-bold text-transparent bg-gradient-to-r from-primary to-secondary bg-clip-text md:text-base lg:text-2xl">
+                <span className="mr-4 font-bold text-transparent bg-gradient-to-r from-primary to-secondary bg-clip-text lg:text-xl">
                   Send Message
                 </span>
                 <img src="/arrow-right.svg"></img>
@@ -234,7 +219,7 @@ const ContactSection = () => {
           </form>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -7,8 +7,8 @@ export const ThirdSection = () => {
   });
   return (
     <div className="relative w-full h-full skew">
-      <div className="min-w-full bg-gray-200 relative p-global">
-        <div className="max-w-section mx-auto sm:px-10 all:px-4 grid grid-cols-1 md:grid-cols-2 gap-12 pt-16 pb-16 justify-center">
+      <div className="min-w-full relative p-global before:absolute before:h-full before:w-full before:-z-10 before:top-0 before:left-0 before:-skew-y-2 before:origin-top-right before:bg-gray-200">
+        <div className="max-w-section mx-auto px-12 grid grid-cols-1 md:grid-cols-2 gap-12 pt-16 pb-16 justify-center">
           <div className="mt-8">
             <h3 className="text-primary font-bold text-lg lg:text-2xl mb-2">
               On Trend
@@ -60,7 +60,7 @@ export const ThirdSection = () => {
             ></lottie-player>
           </div>
           <div className="text-right md:order-2">
-            <h3 className=" text-primary font-bold text-lg lg:text-2xl mb-2">
+            <h3 className="text-primary font-bold text-lg lg:text-2xl mb-2">
               Strategic
             </h3>
             <h2 className="text-2xl lg:text-3xl xl:text-4xl font-bold">

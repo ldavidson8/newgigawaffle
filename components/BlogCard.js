@@ -28,7 +28,7 @@ export default function BlogCard({ blogPost }) {
               {category}
             </span>
             <h4 className="font-medium text-lg">{title}</h4>
-            <p className="font-medium text-sm">{excerpt}</p>
+            <p className="text-sm">{excerpt}</p>
             <p className="font-semibold text-primary">{publishedAt}</p>
           </div>
         </a>

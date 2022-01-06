@@ -7,11 +7,11 @@ export const SecondSection = () => {
     <div className="relative w-full skew">
       <Lines />
 
-      <div className="bg-navy-blue w-32 md:w-56 xl:w-64 h-12 md:h-16 absolute bottom-0 xl:bottom-4 right-0 -skew-y-1"></div>
-      <div className="bg-primary w-24 md:w-36 h-8 md:h-12 absolute bottom-0 xl:bottom-5 right-0 -skew-y-1"></div>
+      <div className="bg-navy-blue bg-opacity-90 w-32 w- md:w-48 xl:w-64 h-10 md:h-12 absolute bottom-0 right-0 -skew-y-2"></div>
+      <div className="bg-primary bg-opacity-80 w-24 md:w-36 h-8 md:h-10 absolute bottom-0 right-0 -skew-y-2"></div>
 
-      <div className="relative max-w-section mx-auto sm:px-10 all:px-4 top-1/3 grid all:grid-cols-1 md:grid-cols-4 sm:grid-cols-1 w-screen lg:py-32 md:py-20 sm:pt-10 sm:pb-16 all:pt-10 all:pb-16">
-        <div className="md:col-span-2 sm:col-span-1">
+      <div className="relative max-w-section mx-auto p-10 top-1/3 grid all:grid-cols-1 md:grid-cols-4 sm:grid-cols-1 w-screen lg:py-32 md:py-20 sm:pt-10 sm:pb-16 all:pt-10 all:pb-16">
+        <div className="col-span-2">
           <div className="grid grid-cols-1 grid-rows-2 md:grid-cols-2 lg:grid-cols-1 gap-3 w-auto">
             <ServiceCard
               title="Brand Design"
@@ -59,6 +59,7 @@ export const SecondSection = () => {
               text-sm   
               min-w-[180px]   
               min-h-[40px]
+              w-full
               bg-primary
               text-white        
               rounded-full
@@ -79,20 +80,22 @@ export const SecondSection = () => {
               <a>
                 <button
                   className="   
-              text-sm   
-              min-w-[180px]    
-              min-h-[40px]
-              text-primary
-              bg-white
-              border-primary
-              border-2      
-              rounded-full
-              items-center
-              px-4
-              py-2
-              mr-2
-              font-bold
-              uppercase
+                  text-sm   
+                  min-w-[180px]   
+                  min-h-[40px]
+                  w-full
+                  bg-white
+                  text-primary
+                  border-primary
+                  border-2            
+                  rounded-full
+                  items-center
+                  px-4
+                  md:px-4
+                  py-2
+                  mr-2
+                  font-bold
+                  uppercase
               "
                 >
                   Contact Us

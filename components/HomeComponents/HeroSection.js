@@ -1,7 +1,7 @@
 export const HeroSection = () => {
   return (
     <div className="h-screen text-white">
-      <div className="w-full h-full bg-heroImage bg-no-repeat text-white -skew-y-2 mb-6 origin-top-left absolute"></div>
+      <div className="w-full h-full bg-heroImage bg-center bg-cover bg-no-repeat text-white -skew-y-2 mb-6 origin-top-left absolute"></div>
       <div className="flex justify-center items-center h-full w-full relative">
         <div>
           <h1 className="text-4xl desktop:text-5xl text-center font-semibold mb-3 z-10">

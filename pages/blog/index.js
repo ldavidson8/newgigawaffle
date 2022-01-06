@@ -34,8 +34,8 @@ export default function Blog({ blogPosts }) {
           content="Gigawaffle, Digital Marketing Company based in Preston City Centre. Web Design, Brand Design, SEO and Copywriting. grow your business and turn it into a brand"
         />
       </Head>
-      <div className="bg-white grid grid-cols-[minmax(200px,1fr),1fr]">
-        <div className="text-navy-blue h-full items-center flex flex-col gap-12">
+      <div className="bg-white grid grid-cols-1 xl:grid-cols-2 p-8">
+        <div className="text-navy-blue h-full items-center flex flex-col gap-12 border-r-2 border-gray-200">
           <label
             htmlFor="blog-search"
             className="text-white absolute z-10 flex"
@@ -44,7 +44,7 @@ export default function Blog({ blogPosts }) {
             type="search"
             id="blog-search"
             aria-label="Search through blog"
-            className="bg-navy-blue rounded-full relative"
+            className="bg-navy-blue rounded-full relative text-center text-white"
             placeholder="Search..."
           ></input>
           <h2 className="text-2xl font-medium">Categories</h2>
