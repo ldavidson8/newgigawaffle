@@ -22,7 +22,7 @@ module.exports = {
       },
       boxShadow: {
         card: "0px 4px 4px 0px #00000040;",
-        clientCard: "inset 0 -7px 500px 20px rgba(0,0,0,1)",
+        clientCard: "inset 0 -20px 50px 2px rgba(0,0,0,1)",
       },
       backgroundImage: {
         heroImage: "url('/heroimage.png')",
@@ -53,6 +53,9 @@ module.exports = {
       },
       screens: {
         desktop: "900px",
+      },
+      height: {
+        "75%": "75vh",
       },
     },
   },

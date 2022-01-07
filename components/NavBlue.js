@@ -108,9 +108,9 @@ const NavBlue = () => {
   };
 
   return (
-    <div className="w-full bg-gradient-to-br from-navy-blue to-light-navy max-h-16 z-max shadow-4xl border-2 border-white border-opacity-70">
+    <div className="w-full bg-dark-gray p-2 desktop:max-h-16 z-max">
       <div className="max-w-screen-lg max-h-fit flex mx-auto justify-between items-center px-4">
-        <div className="top-4 absolute">
+        <div className="desktop:top-4 desktop:absolute">
           {/* Requires absolute or hover menus increase height and push logo down */}
           <Link href="/" passHref>
             <a>
@@ -120,7 +120,7 @@ const NavBlue = () => {
         </div>
         <button
           onClick={handleClick}
-          className="top-4 right-4 absolute p-3 rounded-2xl bg-white bg-opacity-20 desktop:hidden"
+          className="desktop:top-4 desktop:right-4 desktop:absolute p-3 rounded-2xl bg-white bg-opacity-20 desktop:hidden"
         >
           <a>
             <svg width="30" height="15" viewBox="0 0 16 10">

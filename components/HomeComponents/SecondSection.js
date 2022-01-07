@@ -54,8 +54,10 @@ export const SecondSection = () => {
             simple as it should be.
           </p>
           <div className="flex flex-col lg:flex-row mt-2 gap-2">
-            <button
-              className="
+            <Link href="/about" passHref>
+              <a>
+                <button
+                  className="
               text-sm   
               min-w-[180px]   
               min-h-[40px]
@@ -73,9 +75,11 @@ export const SecondSection = () => {
               font-bold
               uppercase
               "
-            >
-              About Gigawaffle
-            </button>
+                >
+                  About Gigawaffle
+                </button>
+              </a>
+            </Link>
             <Link href="/contact-us" passHref>
               <a>
                 <button

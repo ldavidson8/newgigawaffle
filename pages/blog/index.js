@@ -20,21 +20,21 @@ export async function getStaticProps() {
 }
 
 export default function Blog({ blogPosts }) {
-  // console.log(blogPosts);
+  console.log(blogPosts);
   return (
     <>
       <Head>
         <title>The Waffle Corner</title>
         <meta
           name="keywords"
-          content="Marketing | Digital Marketing | Creative Design | Website Design &amp; Development | Branding | SEO | Copywriting |Preston | Marketing Agency | "
+          content="marketing, agency, design, web design, business, content, digital, email, preston, blog, portfolio, website, performance, lightweight, perfect, fast, article, tutorials, guides, ui design, ux design, user experience"
         />
         <meta
           name="description"
           content="Gigawaffle, Digital Marketing Company based in Preston City Centre. Web Design, Brand Design, SEO and Copywriting. grow your business and turn it into a brand"
         />
       </Head>
-      <div className="bg-white grid grid-cols-1 xl:grid-cols-2 p-8">
+      {/* <div className="bg-white grid grid-cols-1 xl:grid-cols-2 p-8">
         <div className="text-navy-blue h-full items-center flex flex-col gap-12 border-r-2 border-gray-200">
           <label
             htmlFor="blog-search"
@@ -86,20 +86,19 @@ export default function Blog({ blogPosts }) {
               </p>
             </div>
           </div>
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 grid-rows-[50px_1fr] p-8 gap-8">
-          <h1 className="font-blogheader text-3xl text-primary col-span-full">
-            The Waffle Corner
-          </h1>
-          {blogPosts.map((blogPost) => (
-            <BlogCard key={blogPost.sys.id} blogPost={blogPost} />
-          ))}
-        </div>
+        </div> */}
+      <div className="grid grid-cols-1 sm:grid-cols-3 grid-rows-[50px_1fr] p-24 gap-8">
+        <h1 className="font-blogheader text-3xl text-primary col-span-full">
+          The Waffle Corner
+        </h1>
+        {blogPosts.map((blogPost) => (
+          <BlogCard key={blogPost.sys.id} blogPost={blogPost} />
+        ))}
       </div>
     </>
   );
 }
 
-Blog.getLayout = function getLayout(blog) {
-  return <SiteLayout>{blog}</SiteLayout>;
+Blog.getLayout = function getLayout(page) {
+  return <SiteLayout>{page}</SiteLayout>;
 };

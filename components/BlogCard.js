@@ -12,8 +12,8 @@ export default function BlogCard({ blogPost }) {
           <div>
             <Image
               src={"https:" + thumbnail.fields.file.url}
-              width={thumbnail.fields.file.details.image.width}
-              height={thumbnail.fields.file.details.image.height}
+              width="300"
+              height="200"
               layout="responsive"
               objectFit="cover"
             ></Image>
@@ -24,10 +24,10 @@ export default function BlogCard({ blogPost }) {
             </p>
           </div>
           <div className="p-4 flex flex-col gap-3">
-            <span className="bg-gradient-to-r from-primary to-secondary text-center text-white rounded-full p-2 w-24 font-medium text-sm">
+            <span className="bg-gradient-to-r from-primary to-secondary text-center text-white rounded-full p-2 w-1/2 lg:w-1/4 font-medium text-sm">
               {category}
             </span>
-            <h4 className="font-medium text-lg">{title}</h4>
+            <h4 className="font-medium text-xl">{title}</h4>
             <p className="text-sm">{excerpt}</p>
             <p className="font-semibold text-primary">{publishedAt}</p>
           </div>

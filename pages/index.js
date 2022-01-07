@@ -13,7 +13,6 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Home | Gigawaffle</title>
         <meta
           name="keywords"
           content="marketing, agency, design, web design, business, content, digital, email, preston, product, portfolio, website, unique, trends, performance, lightweight, perfect, fast"
