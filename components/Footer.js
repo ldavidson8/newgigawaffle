@@ -109,8 +109,10 @@ const Footer = () => {
       </div>
       <div className="bg-lighter-gray py-3 px-6">
         <span>
-          &copy; 2022 gigawaffle | Gigawaffle Ltd 13704464 - Terms and Privacy
-          Policy
+          &copy; 2022 gigawaffle | Gigawaffle Ltd 13704464 -
+          <Link href="/privacy-policy">
+            <a class="hover:text-secondary"> Terms and Privacy Policy</a>
+          </Link>
         </span>
       </div>
     </div>

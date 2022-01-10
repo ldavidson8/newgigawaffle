@@ -2,22 +2,66 @@ import { createClient } from "contentful";
 import BlogCard from "../../components/BlogCard";
 import SiteLayout from "../../components/SiteLayout";
 import Head from "next/head";
+import Link from "next/link";
+import Image from "next/image";
 
 export async function getStaticProps() {
-  const client = createClient({
-    space: process.env.CONTENTFUL_SPACE_ID,
-    accessToken: process.env.CONTENTFUL_ACCESS_KEY,
-  });
-
-  const res = await client.getEntries({ content_type: "blogPost" });
+  const result = await fetch(
+    `https://graphql.contentful.com/content/v1/spaces/${process.env.CONTENTFUL_SPACE_ID}/environments/master`,
+    {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${process.env.CONTENTFUL_ACCESS_KEY}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        query: `
+        query {
+          blogPostCollection {
+            items {
+              title
+              slug
+              thumbnail {
+                url
+              }
+              excerpt
+              isFeatured
+              category
+              publishedAt
+            }
+          }
+        }
+        `,
+      }),
+    }
+  );
+  if (!result.ok) {
+    console.error(result);
+    return {};
+  }
+  const { data } = await result.json();
+  const blogPosts = data.blogPostCollection.items;
 
   return {
     props: {
-      blogPosts: res.items,
+      blogPosts,
     },
-    revalidate: 60,
   };
 }
+
+// blogPostCollection {
+//   items {
+//     title
+//     slug
+//     thumbnail {
+//       url
+//     }
+//     excerpt
+//     isFeatured
+//     category
+//     publishedAt
+//   }
+// }
 
 export default function Blog({ blogPosts }) {
   console.log(blogPosts);
@@ -34,8 +78,8 @@ export default function Blog({ blogPosts }) {
           content="Gigawaffle, Digital Marketing Company based in Preston City Centre. Web Design, Brand Design, SEO and Copywriting. grow your business and turn it into a brand"
         />
       </Head>
-      {/* <div className="bg-white grid grid-cols-1 xl:grid-cols-2 p-8">
-        <div className="text-navy-blue h-full items-center flex flex-col gap-12 border-r-2 border-gray-200">
+      <div className="bg-white grid grid-cols-1 p-8">
+        {/* <div className="text-navy-blue h-full items-center flex flex-col gap-12 border-r-2 border-gray-200">
           <label
             htmlFor="blog-search"
             className="text-white absolute z-10 flex"
@@ -87,13 +131,43 @@ export default function Blog({ blogPosts }) {
             </div>
           </div>
         </div> */}
-      <div className="grid grid-cols-1 sm:grid-cols-3 grid-rows-[50px_1fr] p-24 gap-8">
-        <h1 className="font-blogheader text-3xl text-primary col-span-full">
-          The Waffle Corner
-        </h1>
-        {blogPosts.map((blogPost) => (
-          <BlogCard key={blogPost.sys.id} blogPost={blogPost} />
-        ))}
+        <div className="grid grid-cols-1 sm:grid-cols-3 grid-rows-[50px_1fr] p-24 gap-8">
+          <h1 className="font-blogheader text-3xl text-primary col-span-full">
+            The Waffle Corner
+          </h1>
+          {blogPosts.map((blogPost) => (
+            <div className="shadow-card rounded-l h-min">
+              <Link href={"/blog/" + blogPost.slug}>
+                <a>
+                  <div>
+                    <Image
+                      src={blogPost.thumbnail.url}
+                      width="300"
+                      height="200"
+                      layout="responsive"
+                      objectFit="cover"
+                    ></Image>
+                  </div>
+                  <div className="w-full bg-navy-blue text-white p-2">
+                    <p className="text-sm text-right">
+                      Read more at www.gigawaffle.co.uk
+                    </p>
+                  </div>
+                  <div className="p-4 flex flex-col gap-3">
+                    <span className="bg-gradient-to-r from-primary to-secondary text-center text-white rounded-full p-2 w-1/2 lg:w-1/4 font-medium text-sm">
+                      {blogPost.category}
+                    </span>
+                    <h4 className="font-medium text-xl">{blogPost.title}</h4>
+                    <p className="text-sm">{blogPost.excerpt}</p>
+                    <p className="font-semibold text-primary">
+                      {blogPost.publishedAt}
+                    </p>
+                  </div>
+                </a>
+              </Link>
+            </div>
+          ))}
+        </div>
       </div>
     </>
   );

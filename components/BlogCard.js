@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function BlogCard({ blogPost }) {
   const { title, slug, thumbnail, category, publishedAt, excerpt } =
-    blogPost.fields;
+    blogPost.items;
 
   return (
     <div className="shadow-card rounded-l h-min">

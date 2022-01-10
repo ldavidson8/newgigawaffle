@@ -1,7 +1,7 @@
 import SiteLayout from "../components/SiteLayout";
 
 const About = () => {
-  return <div></div>;
+  return <div className="h-full"></div>;
 };
 
 export default About;
