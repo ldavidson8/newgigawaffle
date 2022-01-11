@@ -1,9 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
+import {
+  formatPublishedDateForDateTime,
+  formatPublishedDateForDisplay,
+} from "../utils/Date";
 
 export default function BlogCard({ blogPost }) {
-  const { title, slug, thumbnail, category, publishedAt, excerpt } =
-    blogPost.items;
+  const { title, date, slug, thumbnail, excerpt, category } = blogPost.items;
 
   return (
     <div className="shadow-card rounded-l h-min">
@@ -11,7 +14,7 @@ export default function BlogCard({ blogPost }) {
         <a>
           <div>
             <Image
-              src={"https:" + thumbnail.fields.file.url}
+              src={thumbnail}
               width="300"
               height="200"
               layout="responsive"
@@ -29,7 +32,12 @@ export default function BlogCard({ blogPost }) {
             </span>
             <h4 className="font-medium text-xl">{title}</h4>
             <p className="text-sm">{excerpt}</p>
-            <p className="font-semibold text-primary">{publishedAt}</p>
+            <time
+              className="font-semibold text-primary"
+              dateTime={formatPublishedDateForDateTime(date)}
+            >
+              {formatPublishedDateForDisplay(date)}
+            </time>
           </div>
         </a>
       </Link>

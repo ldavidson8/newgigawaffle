@@ -1,9 +1,11 @@
-import { createClient } from "contentful";
-import BlogCard from "../../components/BlogCard";
 import SiteLayout from "../../components/SiteLayout";
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
+import {
+  formatPublishedDateForDateTime,
+  formatPublishedDateForDisplay,
+} from "../../utils/Date";
 
 export async function getStaticProps() {
   const result = await fetch(
@@ -11,15 +13,19 @@ export async function getStaticProps() {
     {
       method: "POST",
       headers: {
-        Authorization: `Bearer ${process.env.CONTENTFUL_ACCESS_KEY}`,
+        Authorization: `Bearer ${process.env.CONTENTFUL_ACCESS_TOKEN}`,
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
         query: `
-        query {
+        {
           blogPostCollection {
             items {
+              sys {
+                id
+              }
               title
+              date
               slug
               thumbnail {
                 url
@@ -27,7 +33,6 @@ export async function getStaticProps() {
               excerpt
               isFeatured
               category
-              publishedAt
             }
           }
         }
@@ -131,7 +136,7 @@ export default function Blog({ blogPosts }) {
             </div>
           </div>
         </div> */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 grid-rows-[50px_1fr] p-24 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 grid-rows-[50px_1fr] p-24 gap-8">
           <h1 className="font-blogheader text-3xl text-primary col-span-full">
             The Waffle Corner
           </h1>
@@ -159,9 +164,12 @@ export default function Blog({ blogPosts }) {
                     </span>
                     <h4 className="font-medium text-xl">{blogPost.title}</h4>
                     <p className="text-sm">{blogPost.excerpt}</p>
-                    <p className="font-semibold text-primary">
-                      {blogPost.publishedAt}
-                    </p>
+                    <time
+                      className="font-semibold text-primary"
+                      dateTime={formatPublishedDateForDateTime(blogPost.date)}
+                    >
+                      {formatPublishedDateForDisplay(blogPost.date)}
+                    </time>
                   </div>
                 </a>
               </Link>

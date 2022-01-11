@@ -111,7 +111,7 @@ const Footer = () => {
         <span>
           &copy; 2022 gigawaffle | Gigawaffle Ltd 13704464 -
           <Link href="/privacy-policy">
-            <a class="hover:text-secondary"> Terms and Privacy Policy</a>
+            <a className="hover:text-secondary"> Terms and Privacy Policy</a>
           </Link>
         </span>
       </div>
