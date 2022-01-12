@@ -136,7 +136,7 @@ export default function Blog({ blogPosts }) {
             </div>
           </div>
         </div> */}
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 grid-rows-[50px_1fr] p-24 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 grid-rows-[50px_1fr] sm:p-16 md:p-24 gap-8">
           <h1 className="font-blogheader text-3xl text-primary col-span-full">
             The Waffle Corner
           </h1>
@@ -159,7 +159,7 @@ export default function Blog({ blogPosts }) {
                     </p>
                   </div>
                   <div className="p-4 flex flex-col gap-3">
-                    <span className="bg-gradient-to-r from-primary to-secondary text-center text-white rounded-full p-2 w-1/2 lg:w-1/4 font-medium text-sm">
+                    <span className="bg-gradient-to-r from-primary to-secondary text-center text-white rounded-full p-2 w-1/3 font-medium text-sm">
                       {blogPost.category}
                     </span>
                     <h4 className="font-medium text-xl">{blogPost.title}</h4>

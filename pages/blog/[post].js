@@ -1,6 +1,10 @@
 import Image from "next/image";
 import SiteLayout from "../../components/SiteLayout";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import {
+  formatPublishedDateForDateTime,
+  formatPublishedDateForDisplay,
+} from "../../utils/Date";
 
 export async function getStaticPaths() {
   const result = await fetch(
@@ -101,14 +105,22 @@ export async function getStaticProps({ params }) {
 export default function BlogPost({ post }) {
   console.log(post);
   return (
-    <div className="pt-32 pb-52 px-64">
-      <div>
-        <Image src={post.featuredImage.url} height="500" width="400" />
-      </div>
-      <div>
-        <h1 className="text-3xl py-8">{post.title}</h1>
-      </div>
-      <div></div>
+    <div className="mt-10 mx-auto max-w-3xl">
+      <Image src={post.featuredImage.url} height="700" width="1000" priority />
+      <article className="p-4">
+        <div>
+          <time
+            className="font-semibold text-xl mb-4 text-primary"
+            dateTime={formatPublishedDateForDateTime(post.date)}
+          >
+            {formatPublishedDateForDisplay(post.date)}
+          </time>
+          <h1 className="text-3xl mb-12">{post.title}</h1>
+        </div>
+        <div className="mb-16">
+          {documentToReactComponents(post.content.json)}
+        </div>
+      </article>
     </div>
   );
 }

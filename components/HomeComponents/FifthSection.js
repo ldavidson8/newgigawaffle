@@ -6,7 +6,7 @@ export const FifthSection = () => {
       <div className="overflow-hidden flex flex-col">
         <div className="relative z-10 flex justify-center before:absolute before:h-full before:w-full before:-z-10 before:top-0 before:left-0 before:-skew-y-2 before:origin-top-right before:bg-light-navy">
           <div className="w-full">
-            <div className="md:p-20 py-8">
+            <div className="md:p-20 lg:p-32 py-8">
               <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-2 px-4">
                 <StepsCard
                   number="01"

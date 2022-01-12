@@ -19,22 +19,22 @@ const Footer = () => {
           <ul className="space-y-4">
             <li>
               <Link href="/about">
-                <a>About Us</a>
+                <a className="hover:text-secondary">About Us</a>
               </Link>
             </li>
             <li>
               <Link href="/blog">
-                <a>Blog</a>
+                <a className="hover:text-secondary">Blog</a>
               </Link>
             </li>
             <li>
               <Link href="/">
-                <a>Case Studies</a>
+                <a className="hover:text-secondary">Case Studies</a>
               </Link>
             </li>
             <li>
               <Link href="/contact-us">
-                <a>Contact Us</a>
+                <a className="hover:text-secondary">Contact Us</a>
               </Link>
             </li>
           </ul>
@@ -44,27 +44,27 @@ const Footer = () => {
           <ul className="space-y-4">
             <li>
               <Link href="/services/digital-marketing">
-                <a>Digital Marketing</a>
+                <a className="hover:text-secondary">Digital Marketing</a>
               </Link>
             </li>
             <li>
               <Link href="/services/web-design">
-                <a>Web Design</a>
+                <a className="hover:text-secondary">Web Design</a>
               </Link>
             </li>
             <li>
               <Link href="/services/seo">
-                <a>SEO</a>
+                <a className="hover:text-secondary">SEO</a>
               </Link>
             </li>
             <li>
               <Link href="/services/social-media">
-                <a>Social Media</a>
+                <a className="hover:text-secondary">Social Media</a>
               </Link>
             </li>
             <li>
               <Link href="/services/copywriting">
-                <a>Copywriting</a>
+                <a className="hover:text-secondary">Copywriting</a>
               </Link>
             </li>
           </ul>
@@ -74,22 +74,22 @@ const Footer = () => {
           <ul className="space-y-4">
             <li>
               <Link href="https://www.facebook.com/gigawaffleuk">
-                <a>Facebook</a>
+                <a className="hover:text-secondary">Facebook</a>
               </Link>
             </li>
             <li>
               <Link href="https://www.linkedin.com/company/gigawaffle/">
-                <a>LinkedIn</a>
+                <a className="hover:text-secondary">LinkedIn</a>
               </Link>
             </li>
             <li>
               <Link href="https://www.instagram.com/gigawaffleuk/">
-                <a>Instagram</a>
+                <a className="hover:text-secondary">Instagram</a>
               </Link>
             </li>
             <li>
               <Link href="/">
-                <a>Spotify</a>
+                <a className="hover:text-secondary">Spotify</a>
               </Link>
             </li>
           </ul>

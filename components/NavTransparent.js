@@ -163,7 +163,7 @@ const NavTransparent = () => {
                         </a>
                       </Link>
                     </li>
-                    <li className="p-2">
+                    {/* <li className="p-2">
                       <Link href="/servicepage" passHref>
                         <a className="inline-flex">
                           <span className="mr-3 mt-1">
@@ -213,7 +213,7 @@ const NavTransparent = () => {
                           </span>
                         </a>
                       </Link>
-                    </li>
+                    </li> */}
                     <li className="p-2">
                       <Link href="/servicepage" passHref>
                         <a className="inline-flex">
@@ -248,7 +248,7 @@ const NavTransparent = () => {
                         </a>
                       </Link>
                     </li>
-                    <li className="p-2">
+                    {/* <li className="p-2">
                       <Link href="/servicepage" passHref>
                         <a className="inline-flex">
                           <span className="mr-3 mt-1">
@@ -264,7 +264,7 @@ const NavTransparent = () => {
                           </span>
                         </a>
                       </Link>
-                    </li>
+                    </li> */}
                     <li className="p-2">
                       <Link href="/servicepage" passHref>
                         <a className="inline-flex">
@@ -328,12 +328,12 @@ const NavTransparent = () => {
                             ></Image>
                           </span>
                           <span className="font-semibold text-gray-800 group-hover:text-secondary 0 text-sm">
-                            Photography
+                            Photos &amp; Videos
                           </span>
                         </a>
                       </Link>
                     </li>
-                    <li className="p-2">
+                    {/* <li className="p-2">
                       <Link href="/servicepage" passHref>
                         <a className="inline-flex">
                           <span className="mr-3 mt-1">
@@ -349,7 +349,7 @@ const NavTransparent = () => {
                           </span>
                         </a>
                       </Link>
-                    </li>
+                    </li> */}
                     <li className="p-2">
                       <Link href="/servicepage" passHref>
                         <a className="inline-flex">
@@ -367,7 +367,7 @@ const NavTransparent = () => {
                         </a>
                       </Link>
                     </li>
-                    <li className="p-2">
+                    {/* <li className="p-2">
                       <Link href="/servicepage" passHref>
                         <a className="inline-flex">
                           <span className="mr-3 mt-1">
@@ -383,7 +383,7 @@ const NavTransparent = () => {
                           </span>
                         </a>
                       </Link>
-                    </li>
+                    </li> */}
                     <li className="p-2">
                       <Link href="/servicepage" passHref>
                         <a className="inline-flex">
@@ -475,7 +475,7 @@ const NavTransparent = () => {
                       url="/servicepage"
                     />
                   </li>
-                  <li>
+                  {/* <li>
                     <SubItem
                       title="Email Marketing"
                       text="Get to know us better"
@@ -498,7 +498,7 @@ const NavTransparent = () => {
                       icon="/nav-icons/phone_iphone.svg"
                       url="/servicepage"
                     />
-                  </li>
+                  </li> */}
                   <li>
                     <SubItem
                       title="SEO"
@@ -515,14 +515,14 @@ const NavTransparent = () => {
                       url="/servicepage"
                     />
                   </li>
-                  <li>
+                  {/* <li>
                     <SubItem
                       title="Packaging Design"
                       text="Get to know us better"
                       icon="/nav-icons/cube.svg"
                       url="/servicepage"
                     />
-                  </li>
+                  </li> */}
                 </ul>
               </section>
               <section>
@@ -559,20 +559,20 @@ const NavTransparent = () => {
                 <ul>
                   <li>
                     <SubItem
-                      title="Photography"
+                      title="Photos &amp; Videos"
                       text="Get to know us better"
                       icon="/nav-icons/photo_camera.svg"
                       url="/servicepage"
                     />
                   </li>
-                  <li>
+                  {/* <li>
                     <SubItem
                       title="Videography"
                       text="Get to know us better"
                       icon="/nav-icons/play_circle.svg"
                       url="/servicepage"
                     />
-                  </li>
+                  </li> */}
                   <li>
                     <SubItem
                       title="Graphics Design"
@@ -581,14 +581,14 @@ const NavTransparent = () => {
                       url="/servicepage"
                     />
                   </li>
-                  <li>
+                  {/* <li>
                     <SubItem
                       title="Audio Content"
                       text="Get to know us better"
                       icon="/nav-icons/equalizer.svg"
                       url="/servicepage"
                     />
-                  </li>
+                  </li> */}
                   <li>
                     <SubItem
                       title="Illustrations"
@@ -604,7 +604,7 @@ const NavTransparent = () => {
           <MenuItem text={"About"}></MenuItem>
           <MenuItem text={"Blog"}></MenuItem>
           <MenuItem text={"Contact"}>
-            <div className="grid grid-cols-2 gap-12 p-2">
+            <div className="grid grid-cols-2 gap-2 p-2">
               <section>
                 <SubItem
                   title="Email"

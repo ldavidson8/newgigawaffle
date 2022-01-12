@@ -2,9 +2,9 @@ import SiteLayout from "../components/SiteLayout";
 
 const privacyPolicy = () => {
   return (
-    <div class="grid grid-cols-1 gap-8 place-items-center px-8 md:px-60 py-32">
+    <div className="grid grid-cols-1 gap-8 place-items-center px-8 md:px-60 py-32">
       <div>
-        <h1 class="text-2xl font-bold">Privacy Policy for Gigawaffle</h1>
+        <h1 className="text-2xl font-bold">Privacy Policy for Gigawaffle</h1>
 
         <p>
           At Gigawaffle, accessible from https://www.gigawaffle.co.uk/, one of
@@ -25,15 +25,15 @@ const privacyPolicy = () => {
           website.
         </p>
       </div>
-      <div class="w-full">
-        <h2 class="text-xl font-bold">Consent</h2>
+      <div className="w-full">
+        <h2 className="text-xl font-bold">Consent</h2>
         <p>
           By using our website, you hereby consent to our Privacy Policy and
           agree to its terms.
         </p>
       </div>
       <div>
-        <h2 class="text-xl font-bold">Information we collect</h2>
+        <h2 className="text-xl font-bold">Information we collect</h2>
         <p>
           The personal information that you are asked to provide, and the
           reasons why you are asked to provide it, will be made clear to you at
@@ -48,7 +48,7 @@ const privacyPolicy = () => {
       </div>
 
       <div>
-        <h2 class="text-xl font-bold">How we use your information</h2>
+        <h2 className="text-xl font-bold">How we use your information</h2>
         <p>We use the information we collect in various ways, including to:</p>
         <ul>
           <li>Provide, operate, and maintain our website</li>
@@ -67,7 +67,7 @@ const privacyPolicy = () => {
       </div>
 
       <div>
-        <h2 class="text-xl font-bold">Log Files</h2>
+        <h2 className="text-xl font-bold">Log Files</h2>
         <p>
           Gigawaffle follows a standard procedure of using log files. These
           files log visitors when they visit websites. All hosting companies do
@@ -83,7 +83,9 @@ const privacyPolicy = () => {
       </div>
 
       <div>
-        <h2 class="text-xl font-bold">Advertising Partners Privacy Policies</h2>
+        <h2 className="text-xl font-bold">
+          Advertising Partners Privacy Policies
+        </h2>
         <p>
           You may consult this list to find the Privacy Policy for each of the
           advertising partners of Gigawaffle.
@@ -104,7 +106,7 @@ const privacyPolicy = () => {
       </div>
 
       <div>
-        <h2 class="text-xl font-bold">Third Party Privacy Policies</h2>
+        <h2 className="text-xl font-bold">Third Party Privacy Policies</h2>
         <p>
           Gigawaffle's Privacy Policy does not apply to other advertisers or
           websites. Thus, we are advising you to consult the respective Privacy
@@ -121,7 +123,7 @@ const privacyPolicy = () => {
       </div>
 
       <div>
-        <h2 class="text-xl font-bold">
+        <h2 className="text-xl font-bold">
           CCPA Privacy Rights (Do Not Sell My Personal Information)
         </h2>
         <p>
@@ -148,7 +150,7 @@ const privacyPolicy = () => {
       </div>
 
       <div>
-        <h2 class="text-xl font-bold">GDPR Data Protection Rights</h2>
+        <h2 className="text-xl font-bold">GDPR Data Protection Rights</h2>
         <p>
           We would like to make sure you are fully aware of all of your data
           protection rights. Every user is entitled to the following:
@@ -188,7 +190,7 @@ const privacyPolicy = () => {
       </div>
 
       <div>
-        <h2 class="text-xl font-bold">Children's Information</h2>
+        <h2 className="text-xl font-bold">Children's Information</h2>
 
         <p>
           Another part of our priority is adding protection for children while
