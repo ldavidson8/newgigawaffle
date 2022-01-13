@@ -46,7 +46,6 @@ const Contact = () => {
                 className="block w-full appearance-none focus:outline-none bg-transparent"
                 {...register("name", { required: true })}
                 disabled={isSubmitting}
-                disabled={isSubmitting}
               ></input>
               <label
                 htmlFor="name"
