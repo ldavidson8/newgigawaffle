@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import ContactSection from "../../components/ContactSection";
 import { Lines } from "../../components/HomeComponents/Lines";
 import SiteLayout from "../../components/SiteLayout";
@@ -28,26 +29,30 @@ const ServicesPage = () => {
                   approach? Don't worry, we can help. Just click "Help Me
                   Decide" below and fill in the form.
                 </p>
-                <button
-                  className="   
-                    text-xs     
-                    xl:text-xl
-                    w-1/2
-                    sm:w-2/5
-                    text-primary
-                    bg-white
-                    border-primary
-                    border-2      
-                    rounded-full
-                    items-center
-                    px-4            
-                    py-3
-                    md:px-4
-                    font-bold
-                    uppercase"
-                >
-                  Contact Us
-                </button>
+                <Link href="/contact-us" passHref>
+                  <a>
+                    <button
+                      className="   
+                      text-xs     
+                      xl:text-xl
+                      w-1/2
+                      sm:w-2/5
+                      text-primary
+                      bg-white
+                      border-primary
+                      border-2      
+                      rounded-full
+                      items-center
+                      px-4            
+                      py-3
+                      md:px-4
+                      font-bold
+                      uppercase"
+                    >
+                      Contact Us
+                    </button>
+                  </a>
+                </Link>
               </div>
 
               <div className="col-span-1 mx-auto my-auto pl-10 pt-10">

@@ -19,7 +19,7 @@ const Footer = () => {
           <ul className="space-y-4">
             <li>
               <Link href="/about">
-                <a className="hover:text-secondary">About Us</a>
+                <a className="hover:text-secondary hidden">About Us</a>
               </Link>
             </li>
             <li>
@@ -29,7 +29,7 @@ const Footer = () => {
             </li>
             <li>
               <Link href="/">
-                <a className="hover:text-secondary">Case Studies</a>
+                <a className="hover:text-secondary hidden">Case Studies</a>
               </Link>
             </li>
             <li>
@@ -43,27 +43,32 @@ const Footer = () => {
           <h3 className="text-secondary uppercase mb-2">Services</h3>
           <ul className="space-y-4">
             <li>
-              <Link href="/services/digital-marketing">
+              {/*Needs changing when individual page created*/}
+              <Link href="/services">
                 <a className="hover:text-secondary">Digital Marketing</a>
               </Link>
             </li>
             <li>
-              <Link href="/services/web-design">
+              {/*Needs changing when individual page created*/}
+              <Link href="/services">
                 <a className="hover:text-secondary">Web Design</a>
               </Link>
             </li>
             <li>
-              <Link href="/services/seo">
+              {/*Needs changing when individual page created*/}
+              <Link href="/services">
                 <a className="hover:text-secondary">SEO</a>
               </Link>
             </li>
             <li>
-              <Link href="/services/social-media">
+              {/*Needs changing when individual page created*/}
+              <Link href="/services">
                 <a className="hover:text-secondary">Social Media</a>
               </Link>
             </li>
             <li>
-              <Link href="/services/copywriting">
+              {/*Needs changing when individual page created*/}
+              <Link href="/services">
                 <a className="hover:text-secondary">Copywriting</a>
               </Link>
             </li>
@@ -89,7 +94,7 @@ const Footer = () => {
             </li>
             <li>
               <Link href="/">
-                <a className="hover:text-secondary">Spotify</a>
+                <a className="hover:text-secondary hidden">Spotify</a>
               </Link>
             </li>
           </ul>

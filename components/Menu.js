@@ -13,12 +13,12 @@ const Menu = () => {
             <a>Services</a>
           </Link>
         </li>
-        <li className="mr-24">
+        <li className="mr-24 hidden">
           <Link href="/about">
             <a>About</a>
           </Link>
         </li>
-        <li className="mr-24">
+        <li className="mr-24 hidden">
           <Link href="/blog">
             <a>Blog</a>
           </Link>

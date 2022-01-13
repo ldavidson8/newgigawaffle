@@ -53,7 +53,7 @@ export const SecondSection = () => {
             we’re an agency that is determined to make your digital journey as
             simple as it should be.
           </p>
-          <div className="flex flex-col lg:flex-row mt-2 gap-2">
+          <div className="flex flex-col lg:flex-row mt-2">
             <Link href="/about" passHref>
               <a>
                 <button
@@ -73,7 +73,8 @@ export const SecondSection = () => {
               mb-4
               sm:mb-0
               font-bold
-              uppercase
+              uppercase 
+              hidden
               "
                 >
                   About Gigawaffle
@@ -94,8 +95,6 @@ export const SecondSection = () => {
                   border-2            
                   rounded-full
                   items-center
-                  px-4
-                  md:px-4
                   py-2
                   mr-2
                   font-bold

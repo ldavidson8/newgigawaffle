@@ -147,7 +147,7 @@ const NavTransparent = () => {
                   </h1>
                   <ul className="grid grid-cols-2 sm:grid-cols-3">
                     <li className="p-2">
-                      <Link href="/servicepage" passHref>
+                      <Link href="/services" passHref>
                         <a className="inline-flex">
                           <span className="mr-3 mt-1">
                             <Image
@@ -215,7 +215,7 @@ const NavTransparent = () => {
                       </Link>
                     </li> */}
                     <li className="p-2">
-                      <Link href="/servicepage" passHref>
+                      <Link href="/services" passHref>
                         <a className="inline-flex">
                           <span className="mr-3 mt-1">
                             <Image
@@ -232,7 +232,7 @@ const NavTransparent = () => {
                       </Link>
                     </li>
                     <li className="p-2">
-                      <Link href="/servicepage" passHref>
+                      <Link href="/services" passHref>
                         <a className="inline-flex">
                           <span className="mr-3 mt-1">
                             <Image
@@ -266,7 +266,7 @@ const NavTransparent = () => {
                       </Link>
                     </li> */}
                     <li className="p-2">
-                      <Link href="/servicepage" passHref>
+                      <Link href="/services" passHref>
                         <a className="inline-flex">
                           <span className="mr-3 mt-1">
                             <Image
@@ -283,7 +283,7 @@ const NavTransparent = () => {
                       </Link>
                     </li>
                     <li className="p-2">
-                      <Link href="/servicepage" passHref>
+                      <Link href="/services" passHref>
                         <a className="inline-flex">
                           <span className="mr-3 mt-1">
                             <Image
@@ -300,7 +300,7 @@ const NavTransparent = () => {
                       </Link>
                     </li>
                     <li className="p-2">
-                      <Link href="/servicepage" passHref>
+                      <Link href="/services" passHref>
                         <a className="inline-flex">
                           <span className="mr-3 mt-1">
                             <Image
@@ -317,7 +317,7 @@ const NavTransparent = () => {
                       </Link>
                     </li>
                     <li className="p-2">
-                      <Link href="/servicepage" passHref>
+                      <Link href="/services" passHref>
                         <a className="inline-flex">
                           <span className="mr-3 mt-1">
                             <Image
@@ -351,7 +351,7 @@ const NavTransparent = () => {
                       </Link>
                     </li> */}
                     <li className="p-2">
-                      <Link href="/servicepage" passHref>
+                      <Link href="/services" passHref>
                         <a className="inline-flex">
                           <span className="mr-3 mt-1">
                             <Image
@@ -385,7 +385,7 @@ const NavTransparent = () => {
                       </Link>
                     </li> */}
                     <li className="p-2">
-                      <Link href="/servicepage" passHref>
+                      <Link href="/services" passHref>
                         <a className="inline-flex">
                           <span className="mr-3 mt-1">
                             <Image
@@ -431,7 +431,7 @@ const NavTransparent = () => {
 
           {/* Desktop Navigation */}
         </div>
-        <motion.div className="p-10 justify-end w-full hidden desktop:flex">
+        <motion.div className="p-10 justify-center w-full hidden desktop:flex">
           <MenuItem text={"Portfolio"}>
             <div>
               <ul>
@@ -440,7 +440,7 @@ const NavTransparent = () => {
                     title="PlaygroundBullys UK"
                     text="Dog Breeder"
                     icon="/client-logos/pgb-favicon.png"
-                    url="/servicepage"
+                    url="/portfolio"
                   />
                 </li>
                 <li>
@@ -448,7 +448,7 @@ const NavTransparent = () => {
                     title="Grand Venue"
                     text="Wedding Planner"
                     icon="/client-logos/crown.png"
-                    url="/servicepage"
+                    url="/portfolio"
                   />
                 </li>
                 <li>
@@ -456,7 +456,7 @@ const NavTransparent = () => {
                     title="Unite Cities"
                     text="Logistics &amp; Storage"
                     icon="/client-logos/unitecities-favicon.png"
-                    url="/servicepage"
+                    url="/portfolio"
                   />
                 </li>
               </ul>
@@ -472,7 +472,7 @@ const NavTransparent = () => {
                       title="Digital Marketing"
                       text="Get to know us better"
                       icon="/nav-icons/speakerphone.svg"
-                      url="/servicepage"
+                      url="/services"
                     />
                   </li>
                   {/* <li>
@@ -504,7 +504,7 @@ const NavTransparent = () => {
                       title="SEO"
                       text="Get to know us better"
                       icon="/nav-icons/search.svg"
-                      url="/servicepage"
+                      url="/services"
                     />
                   </li>
                   <li>
@@ -512,7 +512,7 @@ const NavTransparent = () => {
                       title="Logo Design"
                       text="Get to know us better"
                       icon="/nav-icons/mountains_black.svg"
-                      url="/servicepage"
+                      url="/services"
                     />
                   </li>
                   {/* <li>
@@ -533,7 +533,7 @@ const NavTransparent = () => {
                       title="UI Design"
                       text="Get to know us better"
                       icon="/nav-icons/view_quilt.svg"
-                      url="/servicepage"
+                      url="/services"
                     />
                   </li>
                   <li>
@@ -541,7 +541,7 @@ const NavTransparent = () => {
                       title="UX Design"
                       text="Get to know us better"
                       icon="/nav-icons/smile.svg"
-                      url="/servicepage"
+                      url="/services"
                     />
                   </li>
                   <li>
@@ -549,7 +549,7 @@ const NavTransparent = () => {
                       title="Web Development"
                       text="Get to know us better"
                       icon="/nav-icons/code.svg"
-                      url="/servicepage"
+                      url="/services"
                     />
                   </li>
                 </ul>
@@ -562,7 +562,7 @@ const NavTransparent = () => {
                       title="Photos &amp; Videos"
                       text="Get to know us better"
                       icon="/nav-icons/photo_camera.svg"
-                      url="/servicepage"
+                      url="/services"
                     />
                   </li>
                   {/* <li>
@@ -578,7 +578,7 @@ const NavTransparent = () => {
                       title="Graphics Design"
                       text="Get to know us better"
                       icon="/nav-icons/adobephotoshop.svg"
-                      url="/servicepage"
+                      url="/services"
                     />
                   </li>
                   {/* <li>
@@ -594,15 +594,15 @@ const NavTransparent = () => {
                       title="Illustrations"
                       text="Get to know us better"
                       icon="/nav-icons/pencil.svg"
-                      url="/servicepage"
+                      url="/services"
                     />
                   </li>
                 </ul>
               </section>
             </div>
           </MenuItem>
-          <MenuItem text={"About"}></MenuItem>
-          <MenuItem text={"Blog"}></MenuItem>
+          {/* <MenuItem className="hidden" text={"About"}></MenuItem>
+          <MenuItem className="hidden" text={"Blog"}></MenuItem> */}
           <MenuItem text={"Contact"}>
             <div className="grid grid-cols-2 gap-2 p-2">
               <section>

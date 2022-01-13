@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export const HeroSection = () => {
   return (
     <div className="h-screen text-white">
@@ -9,9 +11,13 @@ export const HeroSection = () => {
           </h1>
           <h2 className="text-4xl text-center mb-6">without the waffle</h2>
           <div className="text-center">
-            <button className="text-2xl bg-primary mx-auto px-6 py-2 uppercase font-bold rounded-full items-center">
-              View Services
-            </button>
+            <Link href="/services" passHref>
+              <a>
+                <button className="text-2xl bg-primary mx-auto px-6 py-2 uppercase font-bold rounded-full items-center">
+                  View Services
+                </button>
+              </a>
+            </Link>
           </div>
         </div>
       </div>
