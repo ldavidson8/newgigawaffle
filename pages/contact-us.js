@@ -1,14 +1,21 @@
 import { useForm } from "react-hook-form";
 import SiteLayout from "../components/SiteLayout";
 import Head from "next/head";
+import Image from "next/image";
 
 const Contact = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, isSubmitting, isSubmitSuccessful },
   } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => {
+    fetch("api/mail", {
+      method: "post",
+      body: JSON.stringify(data),
+    });
+    // console.log(data);
+  };
   return (
     <>
       <Head>
@@ -22,13 +29,13 @@ const Contact = () => {
           content="Get in touch with our marketing and web design team to discuss how we can bring your ideas to fruition"
         />
       </Head>
-      <div className="flex justify-center items-end xl:items-center md:justify-end bg-mapImage bg-no-repeat bg-[bottom_-10rem_right_-120rem] md:bg-[bottom_-30rem_right_-90rem] xl:bg-center h-4/5 w-screen pt-52 md:py-6">
-        <div className="bg-white rounded-2xl h-min md:h-full w-full md:w-1/2 xl:w-1/3 font-bold text-gray-600 p-4 md:p-12 pb-24 relative">
+      <div className="pt-96 bg-mapMobile lg:bg-mapDesktop min-h-screen bg-cover flex sm:justify-end pb-4 px-2 md:px-8">
+        <div className="bg-white rounded-2xl w-full lg:w-1/2 font-bold text-gray-600 p-4 md:p-12 shadow-2xl">
           <form
             onSubmit={handleSubmit(onSubmit)}
-            className="xl:space-y-10 w-3/4 mx-auto"
+            className="space-y-7 xl:space-y-10 w-full mx-auto"
           >
-            <h1 className="text-black uppercase mb-2">Let's Talk</h1>
+            <h1 className="text-black mb-4">Let's Talk</h1>
             {errors.name && <p className="text-red-600">This is required</p>}
             <div className="relative my-4 border-b-2 focus-within:border-primary">
               <input
@@ -38,6 +45,8 @@ const Contact = () => {
                 placeholder=" "
                 className="block w-full appearance-none focus:outline-none bg-transparent"
                 {...register("name", { required: true })}
+                disabled={isSubmitting}
+                disabled={isSubmitting}
               ></input>
               <label
                 htmlFor="name"
@@ -54,6 +63,7 @@ const Contact = () => {
                 placeholder=" "
                 className="block w-full appearance-none focus:outline-none bg-transparent"
                 {...register("email", { required: true })}
+                disabled={isSubmitting}
               ></input>
               <label
                 htmlFor="email"
@@ -117,6 +127,7 @@ const Contact = () => {
                 placeholder=" "
                 className="block w-full appearance-none focus:outline-none bg-transparent"
                 {...register("message", { required: true })}
+                disabled={isSubmitting}
               ></textarea>
               <label
                 htmlFor="message"
@@ -127,12 +138,33 @@ const Contact = () => {
             </div>
             <button
               type="submit"
-              className="bg-dark-gray w-fit p-8 h-16 flex justify-center items-center rounded"
+              className="rounded-full w-full mx-auto flex justify-center items-center bg-primary p-4 text-white"
+              disabled={isSubmitting || isSubmitSuccessful}
             >
-              <span className="bg-gradient-to-r from-primary to-secondary text-transparent bg-clip-text font-bold text-sm md:text-base lg:text-2xl mr-4">
-                Send Message
-              </span>
-              <img src="/arrow-right.svg"></img>
+              {isSubmitting && (
+                <svg
+                  class="animate-spin -ml-1 mr-3 h-6 w-6 text-white"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <circle
+                    class="opacity-25"
+                    cx="12"
+                    cy="12"
+                    r="10"
+                    stroke="currentColor"
+                    stroke-width="4"
+                  ></circle>
+                  <path
+                    class="opacity-75"
+                    fill="currentColor"
+                    d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                  ></path>
+                </svg>
+              )}
+              {!isSubmitting && !isSubmitSuccessful && <span>Submit</span>}
+              {isSubmitSuccessful && <span>Message Sent!</span>}
             </button>
           </form>
         </div>

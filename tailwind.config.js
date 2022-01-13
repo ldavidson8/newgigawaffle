@@ -27,7 +27,8 @@ module.exports = {
       },
       backgroundImage: {
         heroImage: "url('/heroimage.png')",
-        mapImage: "url('/map.png')",
+        mapDesktop: "url('/contact_desktop.png')",
+        mapMobile: "url('/contact_mobile.png')",
         dash: "linear-gradient(180deg,#e5e7eb,#e5e7eb 50%,transparent 0,transparent);",
       },
       backgroundSize: {
