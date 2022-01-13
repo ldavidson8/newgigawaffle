@@ -58,3 +58,8 @@ textarea:focus-within ~ label {
 .pointer {
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
 }
+
+video {
+  object-fit: cover !important;
+  object-position: left;
+}

@@ -10,6 +10,7 @@ module.exports = {
       },
       screens: {
         all: { min: "0px", max: "640px" },
+        mb: { min: "0px", max: "768px" },
       },
       colors: {
         primary: "#E14985",
