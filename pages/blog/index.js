@@ -141,7 +141,7 @@ export default function Blog({ blogPosts }) {
             The Waffle Corner
           </h1>
           {blogPosts.map((blogPost) => (
-            <div className="shadow-card rounded-l h-min">
+            <div key={blogPost.sys.id} className="shadow-card rounded-l h-min">
               <Link href={"/blog/" + blogPost.slug}>
                 <a>
                   <div>
