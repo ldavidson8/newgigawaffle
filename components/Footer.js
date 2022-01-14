@@ -18,17 +18,17 @@ const Footer = () => {
           <h3 className="text-secondary uppercase mb-2">Company</h3>
           <ul className="space-y-4">
             <li>
-              <Link href="/about">
+              <Link href="/about" className="hidden">
                 <a className="hover:text-secondary hidden">About Us</a>
               </Link>
             </li>
             <li>
-              <Link href="/blog">
+              <Link href="/blog" className="hidden">
                 <a className="hover:text-secondary hidden">Blog</a>
               </Link>
             </li>
             <li>
-              <Link href="/">
+              <Link href="/" className="hidden">
                 <a className="hover:text-secondary hidden">Case Studies</a>
               </Link>
             </li>
