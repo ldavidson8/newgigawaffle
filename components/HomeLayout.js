@@ -1,5 +1,6 @@
 import Footer from "./Footer";
 import NavTransparent from "./NavTransparent";
+import NavBlue from "./NavBlue";
 import Head from "next/head";
 import { useRouter } from "next/router";
 
@@ -49,7 +50,7 @@ const HomeLayout = ({ children, pageMeta }) => {
         <meta property="og:description" content={meta.description} />
         <meta property="og:title" content={meta.title} />
       </Head>
-      <NavTransparent />
+      <NavBlue />
       {children}
       <Footer />
     </>
