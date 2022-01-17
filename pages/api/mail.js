@@ -27,8 +27,8 @@
 //   res.status(200).json({ status: "Ok" });
 // };
 
-import sendgrid from "@sendgrid/mail";
-sendgrid.setApiKey(process.env.SENDGRID_API_KEY);
+const sgMail = require("@sendgrid/mail");
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 export default async (req, res) => {
   const body = JSON.parse(req.body);
@@ -44,13 +44,21 @@ export default async (req, res) => {
 
   const data = {
     to: "hello@gigawaffle.co.uk",
-    from: "contact@gigawaffle.co.uk",
+    from: "hello@gigawaffle.co.uk",
     subject: `Email from ${body.name}`,
     text: message,
     html: message.replace(/\r\n/g, "<br />"),
   };
 
-  sendgrid.send(data);
+  sgMail
+    .send(data)
+    .then((response) => {
+      console.log(response[0].statusCode);
+      console.log(response[0].headers);
+    })
+    .catch((error) => {
+      console.error(error);
+    });
 
   return res.status(200).json({ status: "Ok" });
 };

@@ -9,12 +9,12 @@ const Contact = () => {
     handleSubmit,
     formState: { errors, isSubmitting, isSubmitSuccessful },
   } = useForm();
-  const onSubmit = (data) => {
-    fetch("api/mail", {
-      method: "post",
+
+  const sendEmail = (data) => {
+    fetch("/api/mail", {
+      method: "POST",
       body: JSON.stringify(data),
     });
-    // console.log(data);
   };
   return (
     <>
@@ -32,7 +32,7 @@ const Contact = () => {
       <div className="pt-96 bg-mapMobile lg:bg-mapDesktop min-h-screen bg-cover flex sm:justify-end pb-4 px-2 md:px-8">
         <div className="bg-white rounded-2xl w-full lg:w-1/2 font-bold text-gray-600 p-4 md:p-12 shadow-2xl">
           <form
-            onSubmit={handleSubmit(onSubmit)}
+            onSubmit={handleSubmit(sendEmail)}
             className="space-y-7 xl:space-y-10 w-full mx-auto"
           >
             <h1 className="text-black mb-4">Let's Talk</h1>

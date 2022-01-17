@@ -58,7 +58,7 @@ const ContactSection = () => {
     formState: { errors, isSubmitting, isSubmitSuccessful },
   } = useForm();
 
-  const onSubmit = (data) => {
+  const sendEmail = (data) => {
     fetch("/api/mail", {
       method: "POST",
       body: JSON.stringify(data),
@@ -93,7 +93,7 @@ const ContactSection = () => {
         <div className="flex items-center h-full py-12 px-8 font-bold bg-white">
           <form
             method="post"
-            onSubmit={handleSubmit(onSubmit)}
+            onSubmit={handleSubmit(sendEmail)}
             className="w-full mx-auto grid grid-cols-2 gap-12"
             autoComplete="off"
           >
