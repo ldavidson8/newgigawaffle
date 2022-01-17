@@ -59,11 +59,12 @@ const ContactSection = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    fetch("api/mail", {
-      method: "post",
+    fetch("/api/mail", {
+      method: "POST",
       body: JSON.stringify(data),
     });
   };
+
   return (
     <section className="overflow-hidden">
       {/* <div className="absolute h-full w-full overflow-visible"></div> */}
@@ -157,36 +158,33 @@ const ContactSection = () => {
             </div>
             <div className="relative border-b-2 focus-within:border-primary">
               <input
-                id="companyName"
-                name="companyName"
+                id="company"
+                name="company"
                 type="text"
                 placeholder=" "
                 className="block w-full bg-transparent appearance-none focus:outline-none"
-                {...register("companyName")}
+                {...register("company")}
                 disabled={isSubmitting}
               ></input>
-              <label
-                htmlFor="companyName"
-                className="absolute top-0 duration-300 origin-0 cursor-text"
-              >
+              <label className="absolute top-0 duration-300 origin-0 cursor-text">
                 Company
               </label>
             </div>
             <div className="relative border-b-2 focus-within:border-primary">
               <input
-                id="siteurl"
-                name="siteurl"
+                id="website"
+                name="website"
                 type="url"
                 placeholder=" "
                 className="block w-full bg-transparent appearance-none focus:outline-none"
-                {...register("siteurl")}
+                {...register("website")}
                 disabled={isSubmitting}
               ></input>
               <label
-                htmlFor="siteurl"
+                htmlFor="website"
                 className="absolute top-0 duration-300 origin-0 cursor-text"
               >
-                Website URL
+                Website
               </label>
             </div>
             <div className="relative border-b-2 focus-within:border-primary">
