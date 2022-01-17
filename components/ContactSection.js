@@ -92,11 +92,27 @@ const ContactSection = () => {
         </motion.div>
         <div className="flex items-center h-full py-12 px-8 font-bold bg-white">
           <form
-            method="post"
-            onSubmit={handleSubmit(sendEmail)}
-            className="w-full mx-auto grid grid-cols-2 gap-12"
+            name="Contact Form"
+            method="POST"
+            onSubmit={handleSubmit}
+            netlify
+            netlify-honeypot="fullname"
             autoComplete="off"
+            className="w-full mx-auto grid grid-cols-2 gap-12"
           >
+            <p className="hidden">
+              <label
+                aria-hidden="true"
+                className="opacity-0 absolute top-0 left-0"
+              >
+                Enter your full name:
+                <input
+                  name="fullname"
+                  aria-hidden="true"
+                  className="opacity-0 absolute top-0 left-0"
+                />
+              </label>
+            </p>
             <div className="relative border-b-2 focus-within:border-primary">
               <input
                 id="name"
