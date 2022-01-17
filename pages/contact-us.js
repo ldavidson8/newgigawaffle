@@ -9,12 +9,12 @@ const Contact = () => {
     handleSubmit,
     formState: { errors, isSubmitting, isSubmitSuccessful },
   } = useForm();
-  const onSubmit = (data) => {
-    fetch("api/mail", {
-      method: "post",
+
+  const sendEmail = (data) => {
+    fetch("/api/mail", {
+      method: "POST",
       body: JSON.stringify(data),
     });
-    // console.log(data);
   };
   return (
     <>
@@ -32,9 +32,27 @@ const Contact = () => {
       <div className="pt-96 bg-mapMobile lg:bg-mapDesktop min-h-screen bg-cover flex sm:justify-end pb-4 px-2 md:px-8">
         <div className="bg-white rounded-2xl w-full lg:w-1/2 font-bold text-gray-600 p-4 md:p-12 shadow-2xl">
           <form
-            onSubmit={handleSubmit(onSubmit)}
+            name="Contact Form"
+            method="POST"
+            onSubmit={handleSubmit}
+            data-netlify="true"
+            netlify-honeypot="fullname"
+            autoComplete="off"
             className="space-y-7 xl:space-y-10 w-full mx-auto"
           >
+            <p className="hidden">
+              <label
+                aria-hidden="true"
+                className="opacity-0 absolute top-0 left-0"
+              >
+                Enter your full name:
+                <input
+                  name="fullname"
+                  aria-hidden="true"
+                  className="opacity-0 absolute top-0 left-0"
+                />
+              </label>
+            </p>
             <h1 className="text-black mb-4">Let's Talk</h1>
             {errors.name && <p className="text-red-600">This is required</p>}
             <div className="relative my-4 border-b-2 focus-within:border-primary">

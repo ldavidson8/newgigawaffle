@@ -57,13 +57,14 @@ const ContactSection = () => {
     handleSubmit,
     formState: { errors, isSubmitting, isSubmitSuccessful },
   } = useForm();
-  const onSubmit = (data) => {
-    fetch("api/mail", {
-      method: "post",
+
+  const sendEmail = (data) => {
+    fetch("/api/mail", {
+      method: "POST",
       body: JSON.stringify(data),
     });
-    // console.log(data);
   };
+
   return (
     <section className="overflow-hidden">
       {/* <div className="absolute h-full w-full overflow-visible"></div> */}
@@ -91,11 +92,27 @@ const ContactSection = () => {
         </motion.div>
         <div className="flex items-center h-full py-12 px-8 font-bold bg-white">
           <form
-            method="post"
-            onSubmit={handleSubmit(onSubmit)}
-            className="w-full mx-auto grid grid-cols-2 gap-12"
+            name="Contact Form"
+            method="POST"
+            onSubmit={handleSubmit}
+            data-netlify="true"
+            netlify-honeypot="fullname"
             autoComplete="off"
+            className="w-full mx-auto grid grid-cols-2 gap-12"
           >
+            <p className="hidden">
+              <label
+                aria-hidden="true"
+                className="opacity-0 absolute top-0 left-0"
+              >
+                Enter your full name:
+                <input
+                  name="fullname"
+                  aria-hidden="true"
+                  className="opacity-0 absolute top-0 left-0"
+                />
+              </label>
+            </p>
             <div className="relative border-b-2 focus-within:border-primary">
               <input
                 id="name"
@@ -157,36 +174,33 @@ const ContactSection = () => {
             </div>
             <div className="relative border-b-2 focus-within:border-primary">
               <input
-                id="companyName"
-                name="companyName"
+                id="company"
+                name="company"
                 type="text"
                 placeholder=" "
                 className="block w-full bg-transparent appearance-none focus:outline-none"
-                {...register("companyName")}
+                {...register("company")}
                 disabled={isSubmitting}
               ></input>
-              <label
-                htmlFor="companyName"
-                className="absolute top-0 duration-300 origin-0 cursor-text"
-              >
+              <label className="absolute top-0 duration-300 origin-0 cursor-text">
                 Company
               </label>
             </div>
             <div className="relative border-b-2 focus-within:border-primary">
               <input
-                id="siteurl"
-                name="siteurl"
+                id="website"
+                name="website"
                 type="url"
                 placeholder=" "
                 className="block w-full bg-transparent appearance-none focus:outline-none"
-                {...register("siteurl")}
+                {...register("website")}
                 disabled={isSubmitting}
               ></input>
               <label
-                htmlFor="siteurl"
+                htmlFor="website"
                 className="absolute top-0 duration-300 origin-0 cursor-text"
               >
-                Website URL
+                Website
               </label>
             </div>
             <div className="relative border-b-2 focus-within:border-primary">
