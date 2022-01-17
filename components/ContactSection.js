@@ -57,12 +57,12 @@ const ContactSection = () => {
     handleSubmit,
     formState: { errors, isSubmitting, isSubmitSuccessful },
   } = useForm();
+
   const onSubmit = (data) => {
     fetch("api/mail", {
       method: "post",
       body: JSON.stringify(data),
     });
-    // console.log(data);
   };
   return (
     <section className="overflow-hidden">

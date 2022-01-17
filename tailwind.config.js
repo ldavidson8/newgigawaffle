@@ -1,3 +1,5 @@
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
@@ -39,9 +41,9 @@ module.exports = {
         1: "1px",
       },
       fontFamily: {
-        body: ["Poppins", "sans-serif"],
-        sans: ["Montserrat", "sans-serif"],
-        blogheader: ["Feeling Passionate", "sans-serif"],
+        body: ["Poppins", ...defaultTheme.fontFamily.sans],
+        sans: ["Montserrat", ...defaultTheme.fontFamily.sans],
+        blogheader: ["Feeling Passionate", ...defaultTheme.fontFamily.sans],
       },
       maxWidth: {
         section: "1250px",
