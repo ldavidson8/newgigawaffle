@@ -3,7 +3,7 @@ import { Lines } from "../../components/HomeComponents/Lines";
 import ReactPlayer from "react-player";
 import { StepsCard } from "../../components/HomeComponents/StepsCard";
 import ContactSection from "../../components/ContactSection";
-export default function SocialMedia() {
+export default function DigitalMarketing() {
   return (
     <div>
       <div className="relative w-full h-[650px] skewB">
@@ -19,10 +19,10 @@ export default function SocialMedia() {
           <div className="w-[2px] ml-0 bg-primary"></div>
           <div className="pl-4">
             <span className="text-base font-bold text-primary font-rubik">
-              Engaging
+              Results-driven
             </span>
             <h1 className="pb-2 text-5xl font-bold text-white font-rubik">
-              Social Media
+              Digital Marketing
             </h1>
             <p className="text-md text-white font-rubik">
               We love creating content that people will love and that will help
@@ -38,9 +38,9 @@ export default function SocialMedia() {
             className="relative right-0 object-fill scale-125 p-2 w-full mx-auto mt-20 z-2"
           />
           <img
-            src="/service-images/mcboverlay.png"
+            src="/service-images/smoverlay.png"
             alt=""
-            className="absolute right-6 top-10 translate-x-1/4 translate-y-1/3 z-100"
+            className="absolute right-6 top-10 translate-x-[6%] translate-y-1/3 z-100"
           />
         </div>
       </div>
@@ -53,11 +53,11 @@ export default function SocialMedia() {
           <div className="relative h-[420px] mt-20">
             <div className="absolute right-0 h-[420px] w-px bg-dash bg-dashGap"></div>
           </div>
-          <div className="relative h-[420px] mt-20">
-            <div className="absolute right-0 h-[420px] w-px bg-dash bg-dashGap"></div>
+          <div className="relative h-[360px] mt-36">
+            <div className="absolute right-0 h-[360px] w-px bg-dash bg-dashGap"></div>
           </div>
-          <div className="relative h-[370px] mt-32">
-            <div className="absolute right-0 h-[370px] w-px bg-gray-200"></div>
+          <div className="relative h-[420px] mt-20">
+            <div className="absolute right-0 h-[420px] w-px bg-gray-200"></div>
           </div>
         </div>
         <h3 className="relative pt-40 mx-auto text-3xl font-bold text-center text-black font-rubik">
@@ -99,22 +99,21 @@ export default function SocialMedia() {
       <div className="w-full h-full bg-light-navy skewT">
         <div className="pt-28 pb-20 mx-auto max-w-section sm:px-10 all:px-4">
           <h3 className="text-4xl font-bold font-rubik mb-10 text-white border-solid border-l-8 pl-2 border-primary ">
-            Web Design
+            Digital Marketing
           </h3>
           <div className="grid grid-cols-3 gap-2">
             <div>
-              <ReactPlayer
-                url="/pgb.mp4"
+              <img
+                src="/mycabinbedstats.png"
                 width="100%"
                 height="100%"
-                className="h-full w-full overflow-clip"
-                playing
+                className="h-full w-full object-cover"
               />
             </div>
             <StepsCard
               number="01"
-              title="Scope Definition"
-              description="We collaborate with the client to decide what objectives the new website must achieve. i.e., what is its purpose? We can determine the scope of the project once we know what the site's purpose is. I.e., what web pages and features the site will need to achieve the goal, as well as the timeframe for implementing them."
+              title="Custom Strategy"
+              description="Our team of creatives and strategists develop a social media strategy which suits your business specifically. We design content from the ground up and look to build a personal relationship between your business and its customers."
               direction={[
                 true,
                 false,
@@ -124,8 +123,8 @@ export default function SocialMedia() {
             />
             <StepsCard
               number="02"
-              title="Wireframe Creation"
-              description="Wireframes allow us to plan out how each page will be structured and how people will interact with the website. Planning out the interaction from a wide range of potential users, allows us to consider differing ease of use for different users, maintaining good User Experience (UX)."
+              title="Social Media Audit"
+              description="We look into the history and the current status of your social media accounts and build a strategy that grows your businesses presence and creates relationships with your customers that last."
               direction={[
                 false,
                 false,
@@ -135,8 +134,8 @@ export default function SocialMedia() {
             />
             <StepsCard
               number="03"
-              title="Content Creation"
-              description="Now that we have a clearer picture of the site, we can begin creating content for individual pages, keeping in mind search engine optimization (SEO) to keep pages focused on a single topic."
+              title="Advertisements"
+              description="Our experts can plan and create advertisements to showcase your products or services, bring traffic to your website, and/or to promote brand awareness, all with a targetted audience across Facebook & Instagram."
               direction={[
                 false,
                 false,
@@ -146,8 +145,8 @@ export default function SocialMedia() {
             />
             <StepsCard
               number="04"
-              title="Visual Elements"
-              description="We begin working on the client's branding after we have the site architecture and some content in place. This allows us to work out the visual aspect of the website and what design elements work well, e.g. navbar, buttons, inputs, etc."
+              title="Email Marketing"
+              description="Promote your business directly to your customers using the power of email. Whether its for one-off promos or whether you want to provide a weekly newsletter, our team can create engaging email content to suit your business and what you have to offer."
               direction={[
                 false,
                 true,
@@ -157,8 +156,8 @@ export default function SocialMedia() {
             />
             <StepsCard
               number="05"
-              title="Testing"
-              description="Next, we check that everything is working as it should. Our QA team check for issues around visuals, user experience, functionality, performance, responsiveness and more, to ensure that your website is in the best state that it can be in."
+              title="Content Marketing"
+              description="We love content; we're consumers, engagers and producers of content and we like produce content that drives engagement and promotes products/services. Whether its photo, video, audio, long-form, short-form or something different that you're, we've got the expertise on hand."
               direction={[
                 false,
                 false,
@@ -168,8 +167,8 @@ export default function SocialMedia() {
             />
             <StepsCard
               number="06"
-              title="Launch"
-              description="Once the website is ready to launch, we finalise everything with the client and agree when to launch the clients shiny new website. Once the website is live, you should be able to find it both here and on our social media (@gigawaffleuk)."
+              title="Management"
+              description="We can take away the stress of social media, so you can focus on your business. We can deal with the content, strategy, enquiries, partnership and more, whilst keeping you in the loop."
               direction={[
                 false,
                 false,
@@ -177,11 +176,11 @@ export default function SocialMedia() {
                 true,
               ]} /*[Top-right,bottom-right,bottom-left,top-left]*/
             />
-            <ReactPlayer
-              url="/mcb.mp4"
+            <img
+              src="/client-card-banner/grandvenue.jpg"
               width="100%"
               height="100%"
-              className="h-full w-full overflow-clip col-span-2"
+              className="h-[375px] w-full object-cover object-bottom col-span-2"
               playing
             />
           </div>
@@ -192,6 +191,6 @@ export default function SocialMedia() {
   );
 }
 
-SocialMedia.getLayout = function getLayout(socialmedia) {
-  return <SiteLayout>{socialmedia}</SiteLayout>;
+DigitalMarketing.getLayout = function getLayout(digitalmarketing) {
+  return <SiteLayout>{digitalmarketing}</SiteLayout>;
 };
