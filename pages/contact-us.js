@@ -35,7 +35,7 @@ const Contact = () => {
             name="Contact Form"
             method="POST"
             onSubmit={handleSubmit}
-            netlify
+            data-netlify="true"
             netlify-honeypot="fullname"
             autoComplete="off"
             className="space-y-7 xl:space-y-10 w-full mx-auto"
