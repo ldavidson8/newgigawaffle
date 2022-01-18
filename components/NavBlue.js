@@ -76,7 +76,7 @@ const SubItem = ({ title, text, icon, url }) => {
       layout
       variants={SubItemVariants}
     >
-      <Link href={url} passHref>
+      <Link href={url}>
         <a>
           <div className="grid grid-cols-[50px_1fr] gap-0">
             <div>
@@ -112,7 +112,7 @@ const NavBlue = () => {
       <div className="max-w-screen-lg max-h-fit flex mx-auto justify-between items-center px-4">
         <div className="desktop:top-4 desktop:absolute">
           {/* Requires absolute or hover menus increase height and push logo down */}
-          <Link href="/" passHref>
+          <Link href="/">
             <a>
               <Image src="/logo.png" width="150" height="35"></Image>
             </a>
@@ -147,7 +147,7 @@ const NavBlue = () => {
                   </h1>
                   <ul className="grid grid-cols-2 sm:grid-cols-3">
                     <li className="p-2">
-                      <Link href="/services" passHref>
+                      <Link href="/services">
                         <a className="inline-flex">
                           <span className="mr-3 mt-1">
                             <Image
@@ -164,7 +164,7 @@ const NavBlue = () => {
                       </Link>
                     </li>
                     {/* <li className="p-2">
-                      <Link href="/" passHref>
+                      <Link href="/">
                         <a className="inline-flex">
                           <span className="mr-3 mt-1">
                             <Image
@@ -181,7 +181,7 @@ const NavBlue = () => {
                       </Link>
                     </li>
                     <li className="p-2">
-                      <Link href="/" passHref>
+                      <Link href="/">
                         <a className="inline-flex">
                           <span className="mr-3 mt-1">
                             <Image
@@ -198,7 +198,7 @@ const NavBlue = () => {
                       </Link>
                     </li>
                     <li className="p-2">
-                      <Link href="/" passHref>
+                      <Link href="/">
                         <a className="inline-flex">
                           <span className="mr-3 mt-1">
                             <Image
@@ -215,7 +215,7 @@ const NavBlue = () => {
                       </Link>
                     </li> */}
                     <li className="p-2">
-                      <Link href="/services" passHref>
+                      <Link href="/services">
                         <a className="inline-flex">
                           <span className="mr-3 mt-1">
                             <Image
@@ -232,7 +232,7 @@ const NavBlue = () => {
                       </Link>
                     </li>
                     <li className="p-2">
-                      <Link href="/services" passHref>
+                      <Link href="/services">
                         <a className="inline-flex">
                           <span className="mr-3 mt-1">
                             <Image
@@ -249,7 +249,7 @@ const NavBlue = () => {
                       </Link>
                     </li>
                     {/* <li className="p-2">
-                      <Link href="/" passHref>
+                      <Link href="/">
                         <a className="inline-flex">
                           <span className="mr-3 mt-1">
                             <Image
@@ -266,7 +266,7 @@ const NavBlue = () => {
                       </Link>
                     </li> */}
                     <li className="p-2">
-                      <Link href="/services" passHref>
+                      <Link href="/services">
                         <a className="inline-flex">
                           <span className="mr-3 mt-1">
                             <Image
@@ -283,7 +283,7 @@ const NavBlue = () => {
                       </Link>
                     </li>
                     <li className="p-2">
-                      <Link href="/services" passHref>
+                      <Link href="/services">
                         <a className="inline-flex">
                           <span className="mr-3 mt-1">
                             <Image
@@ -300,7 +300,7 @@ const NavBlue = () => {
                       </Link>
                     </li>
                     <li className="p-2">
-                      <Link href="/services" passHref>
+                      <Link href="/services">
                         <a className="inline-flex">
                           <span className="mr-3 mt-1">
                             <Image
@@ -317,7 +317,7 @@ const NavBlue = () => {
                       </Link>
                     </li>
                     <li className="p-2">
-                      <Link href="/services" passHref>
+                      <Link href="/services">
                         <a className="inline-flex">
                           <span className="mr-3 mt-1">
                             <Image
@@ -334,7 +334,7 @@ const NavBlue = () => {
                       </Link>
                     </li>
                     {/* <li className="p-2">
-                      <Link href="/" passHref>
+                      <Link href="/">
                         <a className="inline-flex">
                           <span className="mr-3 mt-1">
                             <Image
@@ -351,7 +351,7 @@ const NavBlue = () => {
                       </Link>
                     </li> */}
                     <li className="p-2">
-                      <Link href="/services" passHref>
+                      <Link href="/services">
                         <a className="inline-flex">
                           <span className="mr-3 mt-1">
                             <Image
@@ -368,7 +368,7 @@ const NavBlue = () => {
                       </Link>
                     </li>
                     {/* <li className="p-2">
-                      <Link href="/" passHref>
+                      <Link href="/">
                         <a className="inline-flex">
                           <span className="mr-3 mt-1">
                             <Image
@@ -385,7 +385,7 @@ const NavBlue = () => {
                       </Link>
                     </li> */}
                     <li className="p-2">
-                      <Link href="/services" passHref>
+                      <Link href="/services">
                         <a className="inline-flex">
                           <span className="mr-3 mt-1">
                             <Image
@@ -411,9 +411,81 @@ const NavBlue = () => {
                 </section>
                 <section className="relative">
                   <h1 className="font-semibold uppercase text-gray-400 text-sm mb-4">
-                    Portfolio
+                    Contact
                   </h1>
-                  <div className="p-4 sm:p-6"></div>
+                  <div className="sm:p-2">
+                    <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                      <li>
+                        <Link href="mailto:hello@gigawaffle.co.uk">
+                          <a className="inline-flex">
+                            <span className="mr-3">
+                              <Image
+                                src="/nav-icons/email.svg"
+                                height="20"
+                                width="20"
+                                layout="fixed"
+                              ></Image>
+                            </span>
+                            <span className="font-semibold text-gray-800 group-hover:text-secondary text-sm sm:text-base">
+                              Email - hello@gigawaffle.co.uk
+                            </span>
+                          </a>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="tel:01772 376748">
+                          <a className="inline-flex">
+                            <span className="mr-3">
+                              <Image
+                                src="/nav-icons/phone.svg"
+                                height="20"
+                                width="20"
+                                layout="fixed"
+                              ></Image>
+                            </span>
+                            <span className="font-semibold text-gray-800 group-hover:text-secondary text-sm sm:text-base">
+                              Call - 01772 376748
+                            </span>
+                          </a>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="https://www.facebook.com/gigawaffleuk">
+                          <a className="inline-flex">
+                            {" "}
+                            <span className="mr-3">
+                              <Image
+                                src="/facebook.svg"
+                                height="20"
+                                width="20"
+                                layout="fixed"
+                              ></Image>
+                            </span>
+                            <span className="font-semibold text-gray-800 group-hover:text-secondary text-sm sm:text-base">
+                              Facebook
+                            </span>
+                          </a>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="https://www.linkedin.com/company/gigawaffle/">
+                          <a className="inline-flex">
+                            <span className="mr-3">
+                              <Image
+                                src="/linkedin.svg"
+                                height="20"
+                                width="20"
+                                layout="fixed"
+                              ></Image>
+                            </span>
+                            <span className="font-semibold text-gray-800 group-hover:text-secondary text-sm sm:text-base">
+                              LinkedIn
+                            </span>
+                          </a>
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
                 </section>
               </div>
             </section>

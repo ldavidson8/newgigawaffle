@@ -8,7 +8,7 @@ const NetflixHero = (props) => {
         {props.title}
       </h2>
       <div className="absolute top-2/3 left-14 flex">
-        <Link href={props.clienturl} passHref>
+        <Link href={props.clienturl}>
           <a>
             <button className="rounded-full bg-secondary py-2 px-4 border-white border-2 flex gap-2">
               Visit Site

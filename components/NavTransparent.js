@@ -76,7 +76,7 @@ const SubItem = ({ title, text, icon, url }) => {
       layout
       variants={SubItemVariants}
     >
-      <Link href={url} passHref>
+      <Link href={url}>
         <a>
           <div className="grid grid-cols-[50px_1fr] gap-0">
             <div>
@@ -112,7 +112,7 @@ const NavTransparent = () => {
       <div className="max-w-screen-lg max-h-fit flex mx-auto justify-between items-center px-4">
         <div className="absolute top-8">
           {/* Requires absolute or hover menus increase height and push logo down */}
-          <Link href="/" passHref>
+          <Link href="/">
             <a>
               <Image src="/logo.png" width="150" height="35"></Image>
             </a>
@@ -147,7 +147,7 @@ const NavTransparent = () => {
                   </h1>
                   <ul className="grid grid-cols-2 sm:grid-cols-3">
                     <li className="p-2">
-                      <Link href="/services" passHref>
+                      <Link href="/services">
                         <a className="inline-flex">
                           <span className="mr-3 mt-1">
                             <Image
@@ -164,7 +164,7 @@ const NavTransparent = () => {
                       </Link>
                     </li>
                     {/* <li className="p-2">
-                      <Link href="/servicepage" passHref>
+                      <Link href="/servicepage">
                         <a className="inline-flex">
                           <span className="mr-3 mt-1">
                             <Image
@@ -181,7 +181,7 @@ const NavTransparent = () => {
                       </Link>
                     </li>
                     <li className="p-2">
-                      <Link href="/servicepage" passHref>
+                      <Link href="/servicepage">
                         <a className="inline-flex">
                           <span className="mr-3 mt-1">
                             <Image
@@ -198,7 +198,7 @@ const NavTransparent = () => {
                       </Link>
                     </li>
                     <li className="p-2">
-                      <Link href="/servicepage" passHref>
+                      <Link href="/servicepage">
                         <a className="inline-flex">
                           <span className="mr-3 mt-1">
                             <Image
@@ -215,7 +215,7 @@ const NavTransparent = () => {
                       </Link>
                     </li> */}
                     <li className="p-2">
-                      <Link href="/services" passHref>
+                      <Link href="/services">
                         <a className="inline-flex">
                           <span className="mr-3 mt-1">
                             <Image
@@ -232,7 +232,7 @@ const NavTransparent = () => {
                       </Link>
                     </li>
                     <li className="p-2">
-                      <Link href="/services" passHref>
+                      <Link href="/services">
                         <a className="inline-flex">
                           <span className="mr-3 mt-1">
                             <Image
@@ -249,7 +249,7 @@ const NavTransparent = () => {
                       </Link>
                     </li>
                     {/* <li className="p-2">
-                      <Link href="/servicepage" passHref>
+                      <Link href="/servicepage">
                         <a className="inline-flex">
                           <span className="mr-3 mt-1">
                             <Image
@@ -266,7 +266,7 @@ const NavTransparent = () => {
                       </Link>
                     </li> */}
                     <li className="p-2">
-                      <Link href="/services" passHref>
+                      <Link href="/services">
                         <a className="inline-flex">
                           <span className="mr-3 mt-1">
                             <Image
@@ -283,7 +283,7 @@ const NavTransparent = () => {
                       </Link>
                     </li>
                     <li className="p-2">
-                      <Link href="/services" passHref>
+                      <Link href="/services">
                         <a className="inline-flex">
                           <span className="mr-3 mt-1">
                             <Image
@@ -300,7 +300,7 @@ const NavTransparent = () => {
                       </Link>
                     </li>
                     <li className="p-2">
-                      <Link href="/services" passHref>
+                      <Link href="/services">
                         <a className="inline-flex">
                           <span className="mr-3 mt-1">
                             <Image
@@ -317,7 +317,7 @@ const NavTransparent = () => {
                       </Link>
                     </li>
                     <li className="p-2">
-                      <Link href="/services" passHref>
+                      <Link href="/services">
                         <a className="inline-flex">
                           <span className="mr-3 mt-1">
                             <Image
@@ -334,7 +334,7 @@ const NavTransparent = () => {
                       </Link>
                     </li>
                     {/* <li className="p-2">
-                      <Link href="/servicepage" passHref>
+                      <Link href="/servicepage">
                         <a className="inline-flex">
                           <span className="mr-3 mt-1">
                             <Image
@@ -351,7 +351,7 @@ const NavTransparent = () => {
                       </Link>
                     </li> */}
                     <li className="p-2">
-                      <Link href="/services" passHref>
+                      <Link href="/services">
                         <a className="inline-flex">
                           <span className="mr-3 mt-1">
                             <Image
@@ -368,7 +368,7 @@ const NavTransparent = () => {
                       </Link>
                     </li>
                     {/* <li className="p-2">
-                      <Link href="/servicepage" passHref>
+                      <Link href="/servicepage">
                         <a className="inline-flex">
                           <span className="mr-3 mt-1">
                             <Image
@@ -385,7 +385,7 @@ const NavTransparent = () => {
                       </Link>
                     </li> */}
                     <li className="p-2">
-                      <Link href="/services" passHref>
+                      <Link href="/services">
                         <a className="inline-flex">
                           <span className="mr-3 mt-1">
                             <Image
@@ -403,15 +403,15 @@ const NavTransparent = () => {
                     </li>
                   </ul>
                 </section>
-                <section className="relative">
+                {/* <section className="relative">
                   <h1 className="font-semibold uppercase text-gray-400 text-sm mb-4">
                     Portfolio
                   </h1>
                   <div className="p-4 sm:p-6"></div>
-                </section>
+                </section> */}
                 <section className="relative">
                   <h1 className="font-semibold uppercase text-gray-400 text-sm mb-4">
-                    Portfolio
+                    Contact
                   </h1>
                   <div className="p-4 sm:p-6"></div>
                 </section>
@@ -610,7 +610,7 @@ const NavTransparent = () => {
                   title="Email"
                   text="hello@gigawaffle.co.uk"
                   icon="/nav-icons/email.svg"
-                  url="#"
+                  url="mailto:hello@gigawaffle.co.uk"
                 />
               </section>
               <section>
@@ -618,7 +618,7 @@ const NavTransparent = () => {
                   title="Phone"
                   text="01772 376748"
                   icon="/nav-icons/phone.svg"
-                  url="#"
+                  url="tel:01772 376748"
                 />
               </section>
               <section>
@@ -626,7 +626,7 @@ const NavTransparent = () => {
                   title="Facebook"
                   text="Check us out on Facebook"
                   icon="/facebook.svg"
-                  url="#"
+                  url="https://www.facebook.com/gigawaffleuk"
                 />
               </section>
               <section>
@@ -634,7 +634,7 @@ const NavTransparent = () => {
                   title="LinkedIn"
                   text="Connect with us on LinkedIn"
                   icon="/linkedin.svg"
-                  url="#"
+                  url="https://www.linkedin.com/company/gigawaffle/"
                 />
               </section>
             </div>

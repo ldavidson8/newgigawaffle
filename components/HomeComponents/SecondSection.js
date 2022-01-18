@@ -54,7 +54,7 @@ export const SecondSection = () => {
             simple as it should be.
           </p>
           <div className="flex flex-col lg:flex-row mt-2">
-            <Link href="/about" passHref>
+            <Link href="/about">
               <a>
                 <button
                   className="
@@ -81,7 +81,7 @@ export const SecondSection = () => {
                 </button>
               </a>
             </Link>
-            <Link href="/contact-us" passHref>
+            <Link href="/contact-us">
               <a>
                 <button
                   className="   

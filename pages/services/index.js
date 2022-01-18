@@ -29,7 +29,7 @@ const ServicesPage = () => {
                   approach? Don't worry, we can help. Just click "Help Me
                   Decide" below and fill in the form.
                 </p>
-                <Link href="/contact-us" passHref>
+                <Link href="/contact-us">
                   <a>
                     <button
                       className="   
