@@ -1,7 +1,6 @@
 import { useForm } from "react-hook-form";
 import SiteLayout from "../components/SiteLayout";
 import Head from "next/head";
-import Image from "next/image";
 
 const Contact = () => {
   const {
@@ -10,8 +9,8 @@ const Contact = () => {
     formState: { errors, isSubmitting, isSubmitSuccessful },
   } = useForm();
 
-  const sendEmail = (data) => {
-    fetch("/api/mail", {
+  const submitHandler = async (data) => {
+    await fetch("/api/mail", {
       method: "POST",
       body: JSON.stringify(data),
     });
@@ -34,9 +33,7 @@ const Contact = () => {
           <form
             name="Contact Form"
             method="POST"
-            onSubmit={handleSubmit}
-            data-netlify="true"
-            netlify-honeypot="fullname"
+            onSubmit={handleSubmit(submitHandler)}
             autoComplete="off"
             className="space-y-7 xl:space-y-10 w-full mx-auto"
           >
@@ -107,15 +104,15 @@ const Contact = () => {
             </div>
             <div className="relative my-4 border-b-2 focus-within:border-primary">
               <input
-                id="companyName"
-                name="companyName"
+                id="company"
+                name="company"
                 type="text"
                 placeholder=" "
                 className="block w-full appearance-none focus:outline-none bg-transparent"
-                {...register("companyName")}
+                {...register("company")}
               ></input>
               <label
-                htmlFor="companyName"
+                htmlFor="company"
                 className="absolute top-0 duration-300 origin-0 cursor-text"
               >
                 Company Name
@@ -123,15 +120,15 @@ const Contact = () => {
             </div>
             <div className="relative my-4 border-b-2 focus-within:border-primary">
               <input
-                id="siteurl"
-                name="siteurl"
+                id="website"
+                name="website"
                 type="url"
                 placeholder=" "
                 className="block w-full appearance-none focus:outline-none bg-transparent"
-                {...register("siteurl")}
+                {...register("website")}
               ></input>
               <label
-                htmlFor="siteurl"
+                htmlFor="website"
                 className="absolute top-0 duration-300 origin-0 cursor-text"
               >
                 Website URL

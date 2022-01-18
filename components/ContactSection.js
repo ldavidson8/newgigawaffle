@@ -58,8 +58,8 @@ const ContactSection = () => {
     formState: { errors, isSubmitting, isSubmitSuccessful },
   } = useForm();
 
-  const sendEmail = (data) => {
-    fetch("/api/mail", {
+  const submitHandler = async (data) => {
+    await fetch("/api/mail", {
       method: "POST",
       body: JSON.stringify(data),
     });
@@ -94,25 +94,10 @@ const ContactSection = () => {
           <form
             name="Contact Form"
             method="POST"
-            onSubmit={handleSubmit}
-            data-netlify="true"
-            netlify-honeypot="fullname"
+            onSubmit={handleSubmit(submitHandler)}
             autoComplete="off"
             className="w-full mx-auto grid grid-cols-2 gap-12"
           >
-            <p className="hidden">
-              <label
-                aria-hidden="true"
-                className="opacity-0 absolute top-0 left-0"
-              >
-                Enter your full name:
-                <input
-                  name="fullname"
-                  aria-hidden="true"
-                  className="opacity-0 absolute top-0 left-0"
-                />
-              </label>
-            </p>
             <div className="relative border-b-2 focus-within:border-primary">
               <input
                 id="name"
