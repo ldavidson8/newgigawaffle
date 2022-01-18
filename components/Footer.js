@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="order-3">
           <h3 className="text-secondary uppercase mb-2">Preston HQ</h3>
           <Link href="tel:01772 376748">
-            <a class="hover:text-secondary">
+            <a className="hover:text-secondary">
               <span>01772 376748</span>
             </a>
           </Link>
