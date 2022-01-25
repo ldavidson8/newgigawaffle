@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { StepsCard } from "./StepsCard";
 
 export const FifthSection = () => {
@@ -39,9 +40,13 @@ export const FifthSection = () => {
                   <h2 className="text-white z-10 relative bottom-44 xl:-2 ml-4 lg:ml-8 py-1 text-2xl sm:text-3xl font-medium">
                     Grand Venue
                   </h2>
-                  <h3 className="text-primary z-10 relative bottom-40 ml-4 lg:ml-8 text-xl font-medium">
-                    Read More
-                  </h3>
+                  <Link href="/portfolio">
+                    <a>
+                      <h3 className="text-primary z-10 relative bottom-40 ml-4 lg:ml-8 text-xl font-medium">
+                        Read More
+                      </h3>
+                    </a>
+                  </Link>
                 </div>
                 <div className="lg:h-full h-60 relative">
                   <img
@@ -56,9 +61,13 @@ export const FifthSection = () => {
                   <h2 className="text-white z-10 relative bottom-44 ml-4 lg:ml-8 py-1 text-2xl sm:text-3xl font-medium">
                     PlaygroundBullys UK
                   </h2>
-                  <h3 className="text-primary z-10 relative bottom-40 ml-4 lg:ml-8 text-xl font-medium">
-                    Read More
-                  </h3>
+                  <Link href="/portfolio">
+                    <a>
+                      <h3 className="text-primary z-10 relative bottom-40 ml-4 lg:ml-8 text-xl font-medium">
+                        Read More
+                      </h3>
+                    </a>
+                  </Link>
                 </div>
                 <StepsCard
                   number="03"

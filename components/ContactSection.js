@@ -94,10 +94,15 @@ const ContactSection = () => {
           <form
             name="Contact Form"
             method="POST"
-            onSubmit={handleSubmit(submitHandler)}
+            data-netlify="true"
             autoComplete="off"
             className="w-full mx-auto grid grid-cols-2 gap-12"
           >
+            <p class="hidden">
+              <label>
+                Don’t fill this out if you’re human: <input name="bot-field" />
+              </label>
+            </p>
             <div className="relative border-b-2 focus-within:border-primary">
               <input
                 id="name"

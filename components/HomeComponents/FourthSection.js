@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import { Lines } from "./Lines";
+import Link from "next/link";
 
 export const FourthSection = () => {
   const ref = useRef(null);
@@ -27,9 +28,11 @@ export const FourthSection = () => {
             outreach suitable for your business and retaining loyal customers
             &amp; clients will require time and a mindset of said clientele.
           </p>
-          <a className="underline text-primary text-lg lg:text-xl font-bold">
-            Find Out More
-          </a>
+          <Link href="/services">
+            <a className="underline text-primary text-lg lg:text-xl font-bold">
+              Find Out More
+            </a>
+          </Link>
         </div>
         <div className="mx-auto">
           <lottie-player
@@ -66,9 +69,11 @@ export const FourthSection = () => {
             multimedia. Our designers can create whatever you can imagine for a
             fresh look and feeling whether you're a new or old business.
           </p>
-          <a className="underline text-primary text-lg lg:text-xl font-bold">
-            Find Out More
-          </a>
+          <Link href="/services">
+            <a className="underline text-primary text-lg lg:text-xl font-bold">
+              Find Out More
+            </a>
+          </Link>
         </div>
       </div>
     </div>

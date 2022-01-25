@@ -33,10 +33,15 @@ const Contact = () => {
           <form
             name="Contact Form"
             method="POST"
-            onSubmit={handleSubmit(submitHandler)}
+            data-netlify="true"
             autoComplete="off"
             className="space-y-7 xl:space-y-10 w-full mx-auto"
           >
+            <p class="hidden">
+              <label>
+                Don’t fill this out if you’re human: <input name="bot-field" />
+              </label>
+            </p>
             <p className="hidden">
               <label
                 aria-hidden="true"

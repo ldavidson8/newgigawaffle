@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import Link from "next/link";
 
 export const ThirdSection = () => {
   const ref = useRef(null);
@@ -23,9 +24,11 @@ export const ThirdSection = () => {
               multiple tactics for increasing your potential reach and growth
               plans across various channels of the web.
             </p>
-            <a className="underline text-primary text-lg lg:text-xl font-bold">
-              Find Out More
-            </a>
+            <Link href="/services">
+              <a className="underline text-primary text-lg lg:text-xl font-bold">
+                Find Out More
+              </a>
+            </Link>
           </div>
           <div className="mx-auto">
             <lottie-player
@@ -73,9 +76,11 @@ export const ThirdSection = () => {
               document a lengthy plan and multiple campaign strategies to grasp
               the local, nationwide and global audiences.
             </p>
-            <a className="underline text-primary text-lg lg:text-xl font-bold">
-              Find Out More
-            </a>
+            <Link href="/services">
+              <a className="underline text-primary text-lg lg:text-xl font-bold">
+                Find Out More
+              </a>
+            </Link>
           </div>
         </div>
       </div>
