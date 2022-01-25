@@ -33,7 +33,9 @@ const Contact = () => {
           <form
             name="Contact Form"
             method="POST"
+            action="/"
             data-netlify="true"
+            netlify-honeypot="bot-field"
             autoComplete="off"
             className="space-y-7 xl:space-y-10 w-full mx-auto"
           >
