@@ -13,6 +13,12 @@ const Footer = () => {
           <Link href="tel:01772 376748">
             <a className="hover:text-secondary">
               <span>01772 376748</span>
+              <br />
+            </a>
+          </Link>
+          <Link href="mailto:hello@gigawaffle.co.uk">
+            <a className="hover:text-secondary">
+              <span>hello@gigawaffle.co.uk</span>
             </a>
           </Link>
           <address className="not-italic">

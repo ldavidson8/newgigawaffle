@@ -98,7 +98,7 @@ const ContactSection = () => {
             autoComplete="off"
             className="w-full mx-auto grid grid-cols-2 gap-12"
           >
-            <p class="hidden">
+            <p className="hidden">
               <label>
                 Don’t fill this out if you’re human: <input name="bot-field" />
               </label>

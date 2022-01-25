@@ -37,7 +37,7 @@ const Contact = () => {
             autoComplete="off"
             className="space-y-7 xl:space-y-10 w-full mx-auto"
           >
-            <p class="hidden">
+            <p className="hidden">
               <label>
                 Don’t fill this out if you’re human: <input name="bot-field" />
               </label>
