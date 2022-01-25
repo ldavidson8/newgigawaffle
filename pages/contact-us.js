@@ -33,7 +33,7 @@ const Contact = () => {
           <form
             name="Contact Form"
             method="POST"
-            data-netlify="true"
+            onSubmit={handleSubmit(submitHandler)}
             autoComplete="off"
             className="space-y-7 xl:space-y-10 w-full mx-auto"
           >

@@ -94,7 +94,7 @@ const ContactSection = () => {
           <form
             name="Contact Form"
             method="POST"
-            data-netlify="true"
+            onSubmit={handleSubmit(submitHandler)}
             autoComplete="off"
             className="w-full mx-auto grid grid-cols-2 gap-12"
           >
