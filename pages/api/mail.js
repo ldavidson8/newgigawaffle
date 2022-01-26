@@ -15,7 +15,7 @@ export default async (req, res) => {
   `;
 
   await mail.send({
-    to: "hello@gigawaffle.co.uk",
+    to: "sendgridtesting@gmail.com",
     from: "hello@gigawaffle.co.uk",
     subject: `New Contact Form Submission from ${body.name}`,
     text: message,
