@@ -6,7 +6,7 @@ import { FourthSection } from "../components/HomeComponents/FourthSection";
 import { FifthSection } from "../components/HomeComponents/FifthSection";
 import { SGrid } from "../components/SkewedGrid";
 import ContactPromo from "../components/ContactPromo";
-import HomeLayout from "../components/HomeLayout";
+import PromoLayout from "../components/PromoLayout";
 import NavBlue from "../components/NavBlue";
 
 export default function Promo() {
@@ -23,11 +23,10 @@ export default function Promo() {
         />
       </Head>
       <HeroPromo />
-      <ContactPromo />
     </>
   );
 }
 
 Promo.getLayout = function getLayout(page) {
-  return <HomeLayout>{page}</HomeLayout>;
+  return <PromoLayout>{page}</PromoLayout>;
 };

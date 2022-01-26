@@ -68,7 +68,7 @@ const ContactPromo = () => {
   return (
     <section className="overflow-hidden">
       {/* <div className="absolute h-full w-full overflow-visible"></div> */}
-      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 justify-center">
+      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-1 max-w-screen-xl mx-auto justify-center">
         <div className="flex items-center h-full py-12 px-8 font-bold bg-white">
           <form
             name="Contact Form"
