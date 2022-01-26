@@ -54,8 +54,8 @@ export default function WebDesign() {
           <div className="relative h-[420px] mt-20">
             <div className="absolute right-0 h-[420px] w-px bg-dash bg-dashGap"></div>
           </div>
-          <div className="relative h-[420px] mt-20">
-            <div className="absolute right-0 h-[420px] w-px bg-dash bg-dashGap"></div>
+          <div className="relative h-[420px] mt-20 serviceXL:hidden">
+            <div className="absolute right-0 h-[420px] w-px bg-dash bg-dashGap serviceXL:hidden"></div>
           </div>
           <div className="relative h-[370px] mt-32">
             <div className="absolute right-0 h-[370px] w-px bg-gray-200"></div>

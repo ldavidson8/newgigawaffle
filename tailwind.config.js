@@ -13,6 +13,7 @@ module.exports = {
       screens: {
         all: { min: "0px", max: "640px" },
         mb: { min: "0px", max: "768px" },
+        serviceXL: { min: "0px", max: "1500px" },
       },
       colors: {
         primary: "#E14985",
