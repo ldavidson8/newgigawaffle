@@ -3,7 +3,24 @@ import { Lines } from "../../components/HomeComponents/Lines";
 import ReactPlayer from "react-player";
 import { StepsCard } from "../../components/HomeComponents/StepsCard";
 import ContactSection from "../../components/ContactSection";
+import { useState } from "react";
+import { ClientCard } from "../../components/ClientCard";
 export default function WebDesign() {
+  const [currentClient, setCurrentClient] = useState(0);
+  const [showCurrent, setShowCurrent] = useState(false);
+
+  const toggleCurrent = () => {
+    if (!showCurrent) {
+      setShowCurrent(true);
+      return;
+    }
+  };
+
+  const setCurrent = (index) => {
+    setCurrentClient(index);
+    toggleCurrent();
+  };
+
   return (
     <div>
       <div className="relative w-full h-[650px] skewB">
@@ -69,33 +86,42 @@ export default function WebDesign() {
             src="/client-logos/pgb.png"
             alt="Playground Bullys UK Logo"
             className="h-[100px] object-cover mx-auto"
+            onClick={() => setCurrentClient(0)}
           />
           <img
             src="/client-logos/mycabinbed.png"
             alt="My Cabin Bed Logo"
             className="h-[100px] object-cover mx-auto"
+            onClick={() => setCurrentClient(1)}
           />
           <img
             src="/client-logos/grandvenue.png"
             alt="Grand Venue Logo"
             className="h-[100px] object-cover mx-auto"
+            onClick={() => setCurrentClient(2)}
           />
           <img
             src="/client-logos/swapmyenergy.png"
             alt="Swap My Energy Logo"
             className="h-[100px] object-cover mx-auto"
+            onClick={() => setCurrentClient(3)}
           />
           <img
             src="/client-logos/unitecities.png"
             alt="Unite Cities Logo"
             className="h-[100px] object-cover mx-auto"
+            onClick={() => setCurrentClient(4)}
           />
           <img
             src="/client-logos/scs.png"
             alt="Specialist Coating Logo"
             className="h-[100px] object-cover mx-auto"
+            onClick={() => setCurrentClient(5)}
           />
         </div>
+      </div>
+      <div className="bg-gray-200 h-[300px]">
+        <ClientCard />
       </div>
       <div className="w-full h-full bg-light-navy skewT">
         <div className="pt-28 pb-20 mx-auto max-w-section sm:px-10 all:px-4">
