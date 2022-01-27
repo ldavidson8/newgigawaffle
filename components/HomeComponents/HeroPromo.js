@@ -15,36 +15,42 @@ export const HeroPromo = () => {
     });
   };
   return (
-    <div className="h-screen text-white">
-      <div className="w-full h-full bg-heroImage bg-center bg-cover bg-no-repeat text-white mb-6 origin-top-left absolute"></div>
+    <div className="text-white">
+      <div className="w-full h-[100%] md:min-h-[100%] min-h-[200%] bg-heroImage bg-center bg-cover bg-no-repeat text-white mb-6 origin-top-left absolute"></div>
       <div className="flex flex-col justify-center items-center h-full w-full relative px-4">
-        <div>
-          <h1 className="text-5xl desktop:text-7xl text-right font-semibold mb-3 z-10">
-            50% OFF
-          </h1>
-          <h2 className="text-4xl ml-56 text-right">
-            digital marketing,
-            <br /> web design &<br />
-            branding services
-          </h2>
-          <div className="">
+        <img
+          src="/logo.png"
+          width="200px"
+          height="150px"
+          className="mt-10"
+        ></img>
+        <Link href="https://gigawaffle.co.uk">
+          <a className="mt-2 cursor-pointer underline">
+            Visit gigawaffle.co.uk
+          </a>
+        </Link>
+        <div className="md:mb-10 mb-4 mt-10 flex sm:gap-10 gap-4 justify-center">
+          <div className="relative">
             <img
-              className="absolute -translate-y-[255px] z-10
+              className="z-10 -translate-y-5 sm:h-[250px] h-[300px] sm:w-[150px] w-[180px] object-contain
               "
               src="/monkeypromo.png"
               width="150px"
               height="250px"
             />
-            <Link href="/services">
-              <a>
-                <button className="-translate-y-[50px] text-2xl bg-primary ml-auto px-6 py-2 uppercase font-bold rounded-full items-center">
-                  Get 50% off
-                </button>
-              </a>
-            </Link>
+          </div>
+          <div>
+            <h1 className="text-5xl desktop:text-7xl text-right font-semibold mb-3 z-10">
+              50% OFF
+            </h1>
+            <h2 className="text-3xl text-right">
+              digital marketing,
+              <br /> web design &<br />
+              branding services
+            </h2>
           </div>
         </div>
-        <div className="grid grid-cols-2 px-40 gap-10">
+        <div className="grid md:grid-cols-2 grid-cols-1 xl:px-40 lg:px-20 sn:px-10 px-4 gap-10">
           <p className="text-lg text-left text-white max-w-screen-xl">
             We are gigawaffle; we aim to remove all the "waffle" from your
             business's marketing, branding and social media management.
@@ -63,13 +69,13 @@ export const HeroPromo = () => {
             </span>
           </p>
           <div>
-            <div className="flex items-center h-full px-8 font-bold">
+            <div className="flex items-center h-full md:px-8 font-bold">
               <form
                 name="Contact Form"
                 method="POST"
                 onSubmit={handleSubmit(submitHandler)}
                 autoComplete="off"
-                className="w-full mx-auto grid grid-cols-2 gap-12"
+                className="w-full mx-auto grid lg:grid-cols-2 grid-cols-1 gap-12"
                 data-netlify="true"
               >
                 <p className="hidden">
