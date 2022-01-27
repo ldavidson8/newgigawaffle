@@ -51,7 +51,7 @@ export const HeroPromo = () => {
           </div>
         </div>
         <div className="grid md:grid-cols-2 grid-cols-1 xl:px-40 lg:px-20 sn:px-10 px-4 gap-10">
-          <p className="text-lg text-left text-white max-w-screen-xl">
+          <p className="text-md text-left text-white max-w-screen-xl">
             We are gigawaffle; we aim to remove all the "waffle" from your
             business's marketing, branding and social media management.
             <br />
