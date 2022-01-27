@@ -71,7 +71,7 @@ export const HeroPromo = () => {
           <div>
             <div className="flex items-center h-full md:px-8 font-bold">
               <form
-                name="Contact Form"
+                name="Promo Form"
                 method="POST"
                 onSubmit={handleSubmit(submitHandler)}
                 autoComplete="off"
