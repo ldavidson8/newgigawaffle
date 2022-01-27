@@ -73,6 +73,7 @@ export const HeroPromo = () => {
               <form
                 name="Promo Form"
                 method="POST"
+                onSubmit={handleSubmit(submitHandler)}
                 action="/success"
                 autoComplete="off"
                 className="w-full mx-auto grid lg:grid-cols-2 grid-cols-1 gap-12"
