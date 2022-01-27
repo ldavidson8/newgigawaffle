@@ -79,12 +79,6 @@ export const HeroPromo = () => {
                 className="w-full mx-auto grid lg:grid-cols-2 grid-cols-1 gap-12"
                 data-netlify="true"
               >
-                <p className="hidden">
-                  <label>
-                    Don’t fill this out if you’re human:{" "}
-                    <input name="bot-field" />
-                  </label>
-                </p>
                 <div className="relative border-b-2 focus-within:border-primary">
                   <input
                     id="name"
