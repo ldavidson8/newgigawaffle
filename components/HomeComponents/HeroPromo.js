@@ -2,18 +2,6 @@ import Link from "next/link";
 import { useForm } from "react-hook-form";
 
 export const HeroPromo = () => {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors, isSubmitting, isSubmitSuccessful },
-  } = useForm();
-
-  const submitHandler = async (data) => {
-    await fetch("/api/mail", {
-      method: "POST",
-      body: JSON.stringify(data),
-    });
-  };
   return (
     <div className="text-white">
       <div className="w-full h-[100%] md:min-h-[100%] min-h-[200%] bg-heroImage bg-center bg-cover bg-no-repeat text-white mb-6 origin-top-left absolute"></div>
@@ -73,8 +61,6 @@ export const HeroPromo = () => {
               <form
                 name="Promo Form"
                 method="POST"
-                onSubmit={handleSubmit(submitHandler)}
-                action="/success"
                 autoComplete="off"
                 className="w-full mx-auto grid lg:grid-cols-2 grid-cols-1 gap-12"
                 data-netlify="true"
@@ -85,19 +71,11 @@ export const HeroPromo = () => {
                     name="name"
                     type="text"
                     placeholder=" "
-                    className={`block w-full bg-transparent appearance-none focus:outline-none ${
-                      errors.name ? "ring-2 ring-red-500 rounded" : null
-                    }`}
-                    {...register("name", { required: true })}
-                    disabled={isSubmitting}
+                    className="block w-full bg-transparent appearance-none focus:outline-none"
                   ></input>
                   <label
                     htmlFor="name"
-                    className={`absolute top-0 duration-300 origin-0 cursor-text ${
-                      errors.name
-                        ? "text-red-500 focus-within:text-red-500"
-                        : null
-                    }`}
+                    className="absolute top-0 duration-300 origin-0 cursor-text"
                   >
                     Name *
                   </label>
@@ -108,19 +86,11 @@ export const HeroPromo = () => {
                     name="email"
                     type="email"
                     placeholder=" "
-                    className={`block w-full bg-transparent appearance-none focus:outline-none ${
-                      errors.email ? "ring-2 ring-red-500 rounded" : null
-                    }`}
-                    {...register("email", { required: true })}
-                    disabled={isSubmitting}
+                    className="block w-full bg-transparent appearance-none focus:outline-none"
                   ></input>
                   <label
                     htmlFor="email"
-                    className={`absolute top-0 duration-300 origin-0 cursor-text ${
-                      errors.email
-                        ? "text-red-500 focus-within:text-red-500"
-                        : null
-                    }`}
+                    className="absolute top-0 duration-300 origin-0 cursor-text"
                   >
                     Email *
                   </label>
@@ -132,8 +102,6 @@ export const HeroPromo = () => {
                     type="tel"
                     placeholder=" "
                     className="block w-full bg-transparent appearance-none focus:outline-none"
-                    {...register("tel")}
-                    disabled={isSubmitting}
                   ></input>
                   <label
                     htmlFor="tel"
@@ -149,8 +117,6 @@ export const HeroPromo = () => {
                     type="text"
                     placeholder=" "
                     className="block w-full bg-transparent appearance-none focus:outline-none"
-                    {...register("company")}
-                    disabled={isSubmitting}
                   ></input>
                   <label className="absolute top-0 duration-300 origin-0 cursor-text">
                     Company
@@ -163,8 +129,6 @@ export const HeroPromo = () => {
                     type="url"
                     placeholder=" "
                     className="block w-full bg-transparent appearance-none focus:outline-none"
-                    {...register("website")}
-                    disabled={isSubmitting}
                   ></input>
                   <label
                     htmlFor="website"
@@ -178,19 +142,11 @@ export const HeroPromo = () => {
                     id="message"
                     name="message"
                     placeholder=" "
-                    className={`block w-full bg-transparent appearance-none focus:outline-none ${
-                      errors.message ? "ring-2 ring-red-500 rounded" : null
-                    }`}
-                    {...register("message", { required: true })}
-                    disabled={isSubmitting}
+                    className="block w-full bg-transparent appearance-none focus:outline-none"
                   ></textarea>
                   <label
                     htmlFor="message"
-                    className={`absolute top-0 duration-300 origin-0 cursor-text ${
-                      errors.message
-                        ? "text-red-500 focus-within:text-red-500"
-                        : null
-                    }`}
+                    className="absolute top-0 duration-300 origin-0 cursor-text"
                   >
                     Message *
                   </label>
@@ -198,41 +154,9 @@ export const HeroPromo = () => {
                 <div className="col-span-full p-1 bg-gradient-to-br from-primary to-secondary rounded">
                   <button
                     type="submit"
-                    className="flex items-center justify-center h-16 p-8 bg-white rounded w-full"
-                    disabled={isSubmitting || isSubmitSuccessful}
+                    className="flex items-center justify-center h-16 p-8 bg-white rounded w-full text-primary font-bold"
                   >
-                    {isSubmitting && (
-                      <svg
-                        className="animate-spin -ml-1 mr-3 h-6 w-6 text-pink-500"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                      >
-                        <circle
-                          className="opacity-25"
-                          cx="12"
-                          cy="12"
-                          r="10"
-                          stroke="currentColor"
-                          strokeWidth="4"
-                        ></circle>
-                        <path
-                          className="opacity-75"
-                          fill="currentColor"
-                          d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-                        ></path>
-                      </svg>
-                    )}
-                    {!isSubmitting && !isSubmitSuccessful && (
-                      <span className="mr-4 font-bold text-transparent bg-gradient-to-br from-primary to-secondary bg-clip-text lg:text-2xl">
-                        Send Message
-                      </span>
-                    )}
-                    {isSubmitSuccessful && (
-                      <span className="mr-4 font-bold text-primary lg:text-2xl">
-                        Message Sent!
-                      </span>
-                    )}
+                    Submit
                   </button>
                 </div>
               </form>
