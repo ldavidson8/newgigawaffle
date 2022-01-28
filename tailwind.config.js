@@ -14,6 +14,8 @@ module.exports = {
         all: { min: "0px", max: "640px" },
         mb: { min: "0px", max: "768px" },
         serviceXL: { min: "0px", max: "1500px" },
+        scxl: { min: "1500px" },
+        desktop: "900px",
       },
       colors: {
         primary: "#E14985",
@@ -55,9 +57,6 @@ module.exports = {
       },
       zIndex: {
         max: "9999",
-      },
-      screens: {
-        desktop: "900px",
       },
       height: {
         "75%": "75vh",

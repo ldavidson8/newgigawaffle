@@ -108,7 +108,7 @@ const NavBlue = () => {
   };
 
   return (
-    <div className="w-full bg-gradient-to-b from-dark-gray to-transparent absolute top-0 left-0 max-h-16 z-max">
+    <div className="w-full pt-4 bg-gradient-to-b from-dark-gray to-transparent absolute top-0 left-0 max-h-16 z-max">
       <div className="max-w-screen-lg max-h-fit flex mx-auto justify-between items-center px-4">
         <div className="desktop:top-4 desktop:absolute">
           {/* Requires absolute or hover menus increase height and push logo down */}

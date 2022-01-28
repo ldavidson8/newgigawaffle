@@ -177,7 +177,7 @@ export default function DigitalMarketing() {
               ]} /*[Top-right,bottom-right,bottom-left,top-left]*/
             />
             <img
-              src="/client-card-banner/grandvenue.jpg"
+              src="/grandvenuepromo.png"
               width="100%"
               height="100%"
               className="h-[375px] w-full object-cover object-bottom col-span-2"

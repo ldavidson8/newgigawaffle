@@ -110,8 +110,8 @@ export default function SEO() {
             />
             <StepsCard
               number="02"
-              title="Social Media Audit"
-              description="We look into the history and the current status of your social media accounts and build a strategy that grows your businesses presence and creates relationships with your customers that last."
+              title="Blogging"
+              description="Got a blog on your website? We can create relevant, SEO-focused blog posts to promote your products/services."
               direction={[
                 false,
                 false,
@@ -121,46 +121,13 @@ export default function SEO() {
             />
             <StepsCard
               number="03"
-              title="Advertisements"
-              description="Our experts can plan and create advertisements to showcase your products or services, bring traffic to your website, and/or to promote brand awareness, all with a targetted audience across Facebook & Instagram."
+              title="Google My Business"
+              description="Just as Google's search engine is an incredible way to promote your business, Google Maps is becoming increasingly important for getting your business found. We can get your business setup with Google My Business to ensure that Google Map searchers can find your business."
               direction={[
                 false,
                 false,
                 true,
                 false,
-              ]} /*[Top-right,bottom-right,bottom-left,top-left]*/
-            />
-            <StepsCard
-              number="04"
-              title="Email Marketing"
-              description="Promote your business directly to your customers using the power of email. Whether its for one-off promos or whether you want to provide a weekly newsletter, our team can create engaging email content to suit your business and what you have to offer."
-              direction={[
-                false,
-                true,
-                false,
-                false,
-              ]} /*[Top-right,bottom-right,bottom-left,top-left]*/
-            />
-            <StepsCard
-              number="05"
-              title="Content Marketing"
-              description="We love content; we're consumers, engagers and producers of content and we like produce content that drives engagement and promotes products/services. Whether its photo, video, audio, long-form, short-form or something different that you're, we've got the expertise on hand."
-              direction={[
-                false,
-                false,
-                true,
-                false,
-              ]} /*[Top-right,bottom-right,bottom-left,top-left]*/
-            />
-            <StepsCard
-              number="06"
-              title="Management"
-              description="We can take away the stress of social media, so you can focus on your business. We can deal with the content, strategy, enquiries, partnership and more, whilst keeping you in the loop."
-              direction={[
-                false,
-                false,
-                false,
-                true,
               ]} /*[Top-right,bottom-right,bottom-left,top-left]*/
             />
           </div>

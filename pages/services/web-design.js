@@ -23,16 +23,30 @@ export default function WebDesign() {
 
   return (
     <div>
-      <div className="relative w-full h-[650px] skewB">
-        <Lines />
+      <div className="relative w-full desktop:h-[650px] h-[600px] skewB">
+        <div className="absolute lg:grid hidden top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-w-section mx-auto scxl:px-10 px-40 all:px-4 grid-cols-4 h-full w-screen z-0">
+          <div className="relative h-full">
+            <div className="absolute left-0 h-full w-px bg-gray-200"></div>
+            <div className="absolute right-0 h-full w-px bg-dash bg-dashGap"></div>
+          </div>
+          <div className="relative h-full">
+            <div className="absolute right-0 h-full w-px bg-dash bg-dashGap"></div>
+          </div>
+          <div className="relative h-full">
+            <div className="absolute right-0 h-full w-px bg-dash bg-dashGap"></div>
+          </div>
+          <div className="relative h-full">
+            <div className="absolute right-0 h-full w-px bg-gray-200"></div>
+          </div>
+        </div>
         <img
           src="/service-banners/webdesign.png"
           alt=""
           className="object-fill w-full h-full mx-auto"
         />
       </div>
-      <div className="absolute top-[56px] grid h-[550px] grid-cols-4 -translate-x-1/2 left-1/2 min-w-section -pt-[56px] sm:px-10 all:px-4">
-        <div className="flex col-span-2 pb-28 my-auto ">
+      <div className="absolute top-[56px] scxl:flex hidden h-[650px] -translate-x-1/2 left-1/2 max-w-section w-full -pt-[56px] px-10">
+        <div className="flex col-span-2 pb-28 my-auto w-[75%]">
           <div className="w-[2px] ml-0 bg-primary"></div>
           <div className="pl-4">
             <span className="text-base font-bold text-primary font-rubik">
@@ -41,24 +55,55 @@ export default function WebDesign() {
             <h1 className="pb-2 text-5xl font-bold text-white font-rubik">
               Web Design
             </h1>
-            <p className="text-md text-white font-rubik">
+            <p className="text-md text-white font-rubik scxl:max-w-[66%] max-w-[100%]">
               We love playing about with the latest technologies, following the
               latest design trends and building websites that we’re sure you’ll
               love!
             </p>
           </div>
         </div>
-        <div></div>
-        <div className="pt-10">
+        <div className=""></div>
+        <div className="pt-10 w-[25%]">
           <img
             src="/service-images/mcbphone.png"
             alt=""
-            className="relative right-0 object-fill w-full mx-auto mt-8 z-2"
+            className="relative right-0 w-full object-fill mx-auto mt-8 z-2"
           />
           <img
             src="/service-images/mcboverlay.png"
             alt=""
             className="absolute right-6 top-10 translate-x-1/4 translate-y-1/3 z-100"
+          />
+        </div>
+      </div>
+      <div className="absolute top-[56px] scxl:opacity-0 desktop:grid desktop:grid-cols-4 flex lg:hidden h-[650px] -translate-x-1/2 left-1/2 max-w-section desktop:w-full w-full -pt-[56px] lg:px-40 px-10 all:pl-4">
+        <div className="flex col-span-2 pb-28 my-auto">
+          <div className="w-[2px] ml-0 bg-primary"></div>
+          <div className="pl-4 w-1/2 desktop:w-auto">
+            <span className="text-base font-bold text-primary font-rubik">
+              Responsive
+            </span>
+            <h1 className="pb-2 text-5xl font-bold text-white font-rubik">
+              Web Design
+            </h1>
+            <p className="text-md text-white font-rubik w-full">
+              We love playing about with the latest technologies, following the
+              latest design trends and building websites that we’re sure you’ll
+              love!
+            </p>
+          </div>
+        </div>
+        <div className=""></div>
+        <div className="pt-10 scxl:w-full desktop:w-full w-[60%]">
+          <img
+            src="/service-images/mcbphone.png"
+            alt=""
+            className="relative lg:right-0 right-24 md:w-full object-cover mx-auto mt-8 z-2 md:h-auto min-h-[370px] min-w-[190px]"
+          />
+          <img
+            src="/service-images/mcboverlay.png"
+            alt=""
+            className="absolute lg:w-[30%] desktop:w-[40%] w-[50%] scxl:right-6 lg:right-16 md:h-auto min-h-[250px] min-w-[350px] right-10 lg:top-10 top-0 scxl:translate-y-1/3 translate-y-1/2 z-100"
           />
         </div>
       </div>
@@ -86,42 +131,33 @@ export default function WebDesign() {
             src="/client-logos/pgb.png"
             alt="Playground Bullys UK Logo"
             className="h-[100px] object-cover mx-auto"
-            onClick={() => setCurrentClient(0)}
           />
           <img
             src="/client-logos/mycabinbed.png"
             alt="My Cabin Bed Logo"
             className="h-[100px] object-cover mx-auto"
-            onClick={() => setCurrentClient(1)}
           />
           <img
             src="/client-logos/grandvenue.png"
             alt="Grand Venue Logo"
             className="h-[100px] object-cover mx-auto"
-            onClick={() => setCurrentClient(2)}
           />
           <img
             src="/client-logos/swapmyenergy.png"
             alt="Swap My Energy Logo"
             className="h-[100px] object-cover mx-auto"
-            onClick={() => setCurrentClient(3)}
           />
           <img
             src="/client-logos/unitecities.png"
             alt="Unite Cities Logo"
             className="h-[100px] object-cover mx-auto"
-            onClick={() => setCurrentClient(4)}
           />
           <img
             src="/client-logos/scs.png"
             alt="Specialist Coating Logo"
             className="h-[100px] object-cover mx-auto"
-            onClick={() => setCurrentClient(5)}
           />
         </div>
-      </div>
-      <div className="bg-gray-200 h-[300px]">
-        <ClientCard />
       </div>
       <div className="w-full h-full bg-light-navy skewT">
         <div className="pt-28 pb-20 mx-auto max-w-section sm:px-10 all:px-4">
@@ -130,12 +166,11 @@ export default function WebDesign() {
           </h3>
           <div className="grid grid-cols-3 gap-2">
             <div>
-              <ReactPlayer
-                url="/pgb.mp4"
+              <img
+                src="/pgbweb.png"
                 width="100%"
                 height="100%"
-                className="h-full w-full overflow-clip"
-                playing
+                className="h-full w-full object-cover"
               />
             </div>
             <StepsCard
@@ -210,6 +245,8 @@ export default function WebDesign() {
               height="100%"
               className="h-full w-full overflow-clip col-span-2"
               playing
+              loop
+              muted
             />
           </div>
         </div>
