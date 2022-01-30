@@ -124,9 +124,9 @@ export default function SEO() {
               title="Google My Business"
               description="Just as Google's search engine is an incredible way to promote your business, Google Maps is becoming increasingly important for getting your business found. We can get your business setup with Google My Business to ensure that Google Map searchers can find your business."
               direction={[
-                false,
-                false,
                 true,
+                false,
+                false,
                 false,
               ]} /*[Top-right,bottom-right,bottom-left,top-left]*/
             />

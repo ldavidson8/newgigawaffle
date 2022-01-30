@@ -55,32 +55,32 @@ const Footer = () => {
           <ul className="space-y-4">
             <li>
               {/*Needs changing when individual page created*/}
-              <Link href="/services">
+              <Link href="/digital-marketing">
                 <a className="hover:text-secondary">Digital Marketing</a>
               </Link>
             </li>
             <li>
               {/*Needs changing when individual page created*/}
-              <Link href="/services">
+              <Link href="/web-design">
                 <a className="hover:text-secondary">Web Design</a>
               </Link>
             </li>
             <li>
               {/*Needs changing when individual page created*/}
-              <Link href="/services">
+              <Link href="/seo">
                 <a className="hover:text-secondary">SEO</a>
               </Link>
             </li>
             <li>
               {/*Needs changing when individual page created*/}
-              <Link href="/services">
-                <a className="hover:text-secondary">Social Media</a>
+              <Link href="/brand-design">
+                <a className="hover:text-secondary">Brand Design</a>
               </Link>
             </li>
             <li>
               {/*Needs changing when individual page created*/}
-              <Link href="/services">
-                <a className="hover:text-secondary">Copywriting</a>
+              <Link href="/ecommerce-design">
+                <a className="hover:text-secondary">E-Commerce Design</a>
               </Link>
             </li>
           </ul>

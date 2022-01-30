@@ -27,34 +27,73 @@ const MenuItemVariants = {
   },
 };
 
-const MenuItem = ({ text, children, ...props }) => {
+const MenuItem = ({ text, children, link, hover, ...props }) => {
   const [isBeingHovered, setIsBeingHovered] = useState(false);
 
   return (
-    <motion.div
-      className="px-10 relative"
-      onHoverStart={() => setIsBeingHovered(true)}
-      onHoverEnd={() => setIsBeingHovered(false)}
-    >
-      <button className="relative text-white font-bold cursor-default">
-        {text}
-        {isBeingHovered && <Underline />}
-      </button>
-      {isBeingHovered && (
-        <div className="h-[1000px] w-full">
-          <motion.div
-            {...props}
-            layoutId="menu"
-            className="absolute top-12 shadow-xl bg-white rounded-lg min-w-max gap-4 justify-center p-4 z-max"
-            variants={MenuItemVariants}
-            initial="hidden"
-            animate="visible"
-          >
-            {children}
-          </motion.div>
-        </div>
-      )}
-    </motion.div>
+    <Link href={link} passHref>
+      <a>
+        <motion.div
+          className="px-10 relative"
+          onHoverStart={() => setIsBeingHovered(true)}
+          onHoverEnd={() => setIsBeingHovered(false)}
+        >
+          <button className="relative text-white font-bold cursor-default">
+            {text}
+            {isBeingHovered && <Underline />}
+          </button>
+          {isBeingHovered && (
+            <div className="h-[1000px] w-full">
+              <motion.div
+                {...props}
+                layoutId="menu"
+                className="absolute top-12 shadow-xl bg-white rounded-lg min-w-max gap-4 justify-center p-4 z-max"
+                variants={MenuItemVariants}
+                initial="hidden"
+                animate="visible"
+              >
+                {children}
+              </motion.div>
+            </div>
+          )}
+        </motion.div>
+      </a>
+    </Link>
+  );
+};
+
+const EmptyMenuItem = ({ text, children, link, hover, ...props }) => {
+  const [isBeingHovered, setIsBeingHovered] = useState(false);
+
+  return (
+    <Link href={link} passHref>
+      <a>
+        <motion.div
+          className="px-10 relative"
+          onHoverStart={() => setIsBeingHovered(true)}
+          onHoverEnd={() => setIsBeingHovered(false)}
+        >
+          <button className="relative text-white font-bold cursor-default">
+            {text}
+            {isBeingHovered && <Underline />}
+          </button>
+          {isBeingHovered && (
+            <div className="h-[1000px] w-full">
+              <motion.div
+                {...props}
+                layoutId="menu"
+                className="absolute top-12 shadow-xl bg-white rounded-lg min-w-max gap-4 justify-center p-4 z-max"
+                variants={MenuItemVariants}
+                initial="hidden"
+                animate="hidden"
+              >
+                {children}
+              </motion.div>
+            </div>
+          )}
+        </motion.div>
+      </a>
+    </Link>
   );
 };
 
@@ -99,6 +138,36 @@ const SubItem = ({ title, text, icon, url }) => {
   );
 };
 
+const SubItemMob = ({ title, text, icon, url }) => {
+  return (
+    <div
+      className="my-6 group cursor-pointer"
+      layout
+      variants={SubItemVariants}
+    >
+      <Link href={url}>
+        <a>
+          <div className="grid grid-cols-[50px_1fr] gap-0">
+            <div>
+              <Image src={icon} height="30" width="30"></Image>
+            </div>
+            <div>
+              <p className="font-semibold text-gray-800 group-hover:text-secondary 0 text-md">
+                {title}
+              </p>
+            </div>
+            <div className="col-start-2">
+              <p className="text-gray-400 group-hover:text-blue-400 text-sm">
+                {text}
+              </p>
+            </div>
+          </div>
+        </a>
+      </Link>
+    </div>
+  );
+};
+
 const NavBlue = () => {
   // Mobile Navigation //
   const [menuOpen, setMenuOpen] = useState(false);
@@ -110,7 +179,7 @@ const NavBlue = () => {
   return (
     <div className="w-full pt-4 bg-gradient-to-b from-dark-gray to-transparent absolute top-0 left-0 max-h-16 z-max">
       <div className="max-w-screen-lg max-h-fit flex mx-auto justify-between items-center px-4">
-        <div className="desktop:top-4 desktop:absolute">
+        <div className="desktop:top-10 desktop:absolute">
           {/* Requires absolute or hover menus increase height and push logo down */}
           <Link href="/">
             <a>
@@ -135,7 +204,7 @@ const NavBlue = () => {
         </button>
         <div
           className={`p-4 absolute top-0 left-0 w-full desktop:hidden transition-all duration-300 origin-top-right ${
-            menuOpen ? "opacity-100" : "opacity-0"
+            menuOpen ? "block" : "hidden"
           }`}
         >
           <div className="bg-white relative rounded-lg min-w-full overflow-hidden shadow-2xl z-max">
@@ -147,7 +216,7 @@ const NavBlue = () => {
                   </h1>
                   <ul className="grid grid-cols-2 sm:grid-cols-3">
                     <li className="p-2">
-                      <Link href="/services">
+                      <Link href="/digital-marketing">
                         <a className="inline-flex">
                           <span className="mr-3 mt-1">
                             <Image
@@ -215,7 +284,7 @@ const NavBlue = () => {
                       </Link>
                     </li> */}
                     <li className="p-2">
-                      <Link href="/services">
+                      <Link href="/seo">
                         <a className="inline-flex">
                           <span className="mr-3 mt-1">
                             <Image
@@ -232,7 +301,7 @@ const NavBlue = () => {
                       </Link>
                     </li>
                     <li className="p-2">
-                      <Link href="/services">
+                      <Link href="/brand-design">
                         <a className="inline-flex">
                           <span className="mr-3 mt-1">
                             <Image
@@ -243,7 +312,7 @@ const NavBlue = () => {
                             ></Image>
                           </span>
                           <span className="font-semibold text-gray-800 group-hover:text-secondary 0 text-sm">
-                            Logo Design
+                            Brand Design
                           </span>
                         </a>
                       </Link>
@@ -265,7 +334,7 @@ const NavBlue = () => {
                         </a>
                       </Link>
                     </li> */}
-                    <li className="p-2">
+                    {/* <li className="p-2">
                       <Link href="/services">
                         <a className="inline-flex">
                           <span className="mr-3 mt-1">
@@ -281,7 +350,8 @@ const NavBlue = () => {
                           </span>
                         </a>
                       </Link>
-                    </li>
+                    </li> */}
+                    {/*
                     <li className="p-2">
                       <Link href="/services">
                         <a className="inline-flex">
@@ -298,9 +368,9 @@ const NavBlue = () => {
                           </span>
                         </a>
                       </Link>
-                    </li>
+                    </li> */}
                     <li className="p-2">
-                      <Link href="/services">
+                      <Link href="/web-design">
                         <a className="inline-flex">
                           <span className="mr-3 mt-1">
                             <Image
@@ -311,13 +381,30 @@ const NavBlue = () => {
                             ></Image>
                           </span>
                           <span className="font-semibold text-gray-800 group-hover:text-secondary 0 text-sm">
-                            Web Dev
+                            Web Design
                           </span>
                         </a>
                       </Link>
                     </li>
                     <li className="p-2">
-                      <Link href="/services">
+                      <Link href="/ecommerce-design">
+                        <a className="inline-flex">
+                          <span className="mr-3 mt-1">
+                            <Image
+                              src="/service-icons/shopping-cart-solid.svg"
+                              height="15"
+                              width="15"
+                              layout="fixed"
+                            ></Image>
+                          </span>
+                          <span className="font-semibold text-gray-800 group-hover:text-secondary 0 text-sm">
+                            E-Commerce Design
+                          </span>
+                        </a>
+                      </Link>
+                    </li>
+                    <li className="p-2">
+                      <Link href="/photosandvideos">
                         <a className="inline-flex">
                           <span className="mr-3 mt-1">
                             <Image
@@ -350,6 +437,7 @@ const NavBlue = () => {
                         </a>
                       </Link>
                     </li> */}
+                    {/* 
                     <li className="p-2">
                       <Link href="/services">
                         <a className="inline-flex">
@@ -366,7 +454,7 @@ const NavBlue = () => {
                           </span>
                         </a>
                       </Link>
-                    </li>
+                    </li> */}
                     {/* <li className="p-2">
                       <Link href="/">
                         <a className="inline-flex">
@@ -385,7 +473,7 @@ const NavBlue = () => {
                       </Link>
                     </li> */}
                     <li className="p-2">
-                      <Link href="/services">
+                      <Link href="/illustrations">
                         <a className="inline-flex">
                           <span className="mr-3 mt-1">
                             <Image
@@ -407,7 +495,34 @@ const NavBlue = () => {
                   <h1 className="font-semibold uppercase text-gray-400 text-sm mb-4">
                     Portfolio
                   </h1>
-                  <div className="p-4 sm:p-6"></div>
+                  <div className="">
+                    <ul>
+                      <li>
+                        <SubItemMob
+                          title="PlaygroundBullys UK"
+                          text="Dog Breeder"
+                          icon="/client-logos/pgb-favicon.png"
+                          url="/portfolio"
+                        />
+                      </li>
+                      <li>
+                        <SubItemMob
+                          title="Grand Venue"
+                          text="Wedding Planner"
+                          icon="/client-logos/crown.png"
+                          url="/portfolio"
+                        />
+                      </li>
+                      <li>
+                        <SubItemMob
+                          title="Unite Cities"
+                          text="Logistics &amp; Storage"
+                          icon="/client-logos/unitecities-favicon.png"
+                          url="/portfolio"
+                        />
+                      </li>
+                    </ul>
+                  </div>
                 </section>
                 <section className="relative">
                   <h1 className="font-semibold uppercase text-gray-400 text-sm mb-4">
@@ -504,7 +619,7 @@ const NavBlue = () => {
           {/* Desktop Navigation */}
         </div>
         <motion.div className="p-6 justify-center w-full hidden desktop:flex">
-          <MenuItem text={"Portfolio"}>
+          <MenuItem text={"Portfolio"} link={"/portfolio"}>
             <div>
               <ul>
                 <li>
@@ -534,7 +649,7 @@ const NavBlue = () => {
               </ul>
             </div>
           </MenuItem>
-          <MenuItem text={"Services"}>
+          <MenuItem text={"Services"} link={"/services"}>
             <div className="grid grid-cols-3 gap-16 p-4">
               <section>
                 <h2 className="uppercase text-gray-500 font-bold">Marketing</h2>
@@ -542,9 +657,9 @@ const NavBlue = () => {
                   <li>
                     <SubItem
                       title="Digital Marketing"
-                      text="Get to know us better"
+                      text="Start promoting your business"
                       icon="/nav-icons/speakerphone.svg"
-                      url="/services"
+                      url="/digital-marketing"
                     />
                   </li>
                   {/* <li>
@@ -574,17 +689,17 @@ const NavBlue = () => {
                   <li>
                     <SubItem
                       title="SEO"
-                      text="Get to know us better"
+                      text="Get found on Google"
                       icon="/nav-icons/search.svg"
-                      url="/services"
+                      url="/seo"
                     />
                   </li>
                   <li>
                     <SubItem
-                      title="Logo Design"
-                      text="Get to know us better"
+                      title="Brand Design"
+                      text="Logos, colours, fonts and more"
                       icon="/nav-icons/mountains_black.svg"
-                      url="/services"
+                      url="/brand-design"
                     />
                   </li>
                   {/* <li>
@@ -602,26 +717,18 @@ const NavBlue = () => {
                 <ul>
                   <li>
                     <SubItem
-                      title="UI Design"
-                      text="Get to know us better"
-                      icon="/nav-icons/view_quilt.svg"
-                      url="/services"
-                    />
-                  </li>
-                  <li>
-                    <SubItem
-                      title="UX Design"
-                      text="Get to know us better"
-                      icon="/nav-icons/smile.svg"
-                      url="/services"
-                    />
-                  </li>
-                  <li>
-                    <SubItem
-                      title="Web Development"
-                      text="Get to know us better"
+                      title="Web Design"
+                      text="Get found online"
                       icon="/nav-icons/code.svg"
-                      url="/services"
+                      url="/web-design"
+                    />
+                  </li>
+                  <li>
+                    <SubItem
+                      title="E-Commerce Design"
+                      text="Sell products online"
+                      icon="/service-icons/shopping-cart-solid.svg"
+                      url="/ecommerce-design"
                     />
                   </li>
                 </ul>
@@ -632,9 +739,9 @@ const NavBlue = () => {
                   <li>
                     <SubItem
                       title="Photos &amp; Videos"
-                      text="Get to know us better"
+                      text="Engaging photos and videos"
                       icon="/nav-icons/photo_camera.svg"
-                      url="/services"
+                      url="/photosandvideos"
                     />
                   </li>
                   {/* <li>
@@ -645,6 +752,7 @@ const NavBlue = () => {
                       url="/servicepage"
                     />
                   </li> */}
+                  {/* 
                   <li>
                     <SubItem
                       title="Graphics Design"
@@ -653,6 +761,7 @@ const NavBlue = () => {
                       url="/services"
                     />
                   </li>
+                   */}
                   {/* <li>
                     <SubItem
                       title="Audio Content"
@@ -664,18 +773,18 @@ const NavBlue = () => {
                   <li>
                     <SubItem
                       title="Illustrations"
-                      text="Get to know us better"
+                      text="Beautifully hand-drawn images"
                       icon="/nav-icons/pencil.svg"
-                      url="/services"
+                      url="/illustrations"
                     />
                   </li>
                 </ul>
               </section>
             </div>
           </MenuItem>
-          {/* <MenuItem text={"About"}></MenuItem>
-          <MenuItem text={"Blog"}></MenuItem> */}
-          <MenuItem text={"Contact"}>
+          {/* <MenuItem text={"About"}></MenuItem>*/}
+          {/*<EmptyMenuItem text={"Blog"} link="/blog"></EmptyMenuItem>*/}
+          <MenuItem text={"Contact"} link={"/contact-us"}>
             <div className="grid grid-cols-2 gap-12 p-2">
               <section>
                 <SubItem

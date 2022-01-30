@@ -1,4 +1,5 @@
 export const StepsCard = (props) => {
+  console.log(props.direction);
   return (
     {
       /*[TR,BR,BL,TL]*/

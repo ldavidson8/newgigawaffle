@@ -15,7 +15,7 @@ module.exports = {
         mb: { min: "0px", max: "768px" },
         serviceXL: { min: "0px", max: "1500px" },
         scxl: { min: "1500px" },
-        desktop: "900px",
+        desktop: { min: "900px" },
       },
       colors: {
         primary: "#E14985",

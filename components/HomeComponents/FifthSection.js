@@ -40,10 +40,10 @@ export const FifthSection = () => {
                   <h2 className="text-white z-10 relative bottom-44 xl:-2 ml-4 lg:ml-8 py-1 text-2xl sm:text-3xl font-medium">
                     Grand Venue
                   </h2>
-                  <Link href="/portfolio">
+                  <Link href="https://grandvenue.co">
                     <a>
                       <h3 className="text-primary z-10 relative bottom-40 ml-4 lg:ml-8 text-xl font-medium">
-                        Read More
+                        Visit
                       </h3>
                     </a>
                   </Link>
@@ -61,10 +61,10 @@ export const FifthSection = () => {
                   <h2 className="text-white z-10 relative bottom-44 ml-4 lg:ml-8 py-1 text-2xl sm:text-3xl font-medium">
                     PlaygroundBullys UK
                   </h2>
-                  <Link href="/portfolio">
+                  <Link href="https://playgroundbullysuk.com">
                     <a>
                       <h3 className="text-primary z-10 relative bottom-40 ml-4 lg:ml-8 text-xl font-medium">
-                        Read More
+                        Visit
                       </h3>
                     </a>
                   </Link>

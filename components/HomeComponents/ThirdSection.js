@@ -24,7 +24,7 @@ export const ThirdSection = () => {
               multiple tactics for increasing your potential reach and growth
               plans across various channels of the web.
             </p>
-            <Link href="/services">
+            <Link href="/digital-marketing">
               <a className="underline text-primary text-lg lg:text-xl font-bold">
                 Find Out More
               </a>
@@ -76,7 +76,7 @@ export const ThirdSection = () => {
               document a lengthy plan and multiple campaign strategies to grasp
               the local, nationwide and global audiences.
             </p>
-            <Link href="/services">
+            <Link href="/digital-marketing">
               <a className="underline text-primary text-lg lg:text-xl font-bold">
                 Find Out More
               </a>

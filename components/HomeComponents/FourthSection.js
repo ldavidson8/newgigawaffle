@@ -28,7 +28,7 @@ export const FourthSection = () => {
             outreach suitable for your business and retaining loyal customers
             &amp; clients will require time and a mindset of said clientele.
           </p>
-          <Link href="/services">
+          <Link href="/digital-marketing">
             <a className="underline text-primary text-lg lg:text-xl font-bold">
               Find Out More
             </a>
@@ -69,7 +69,7 @@ export const FourthSection = () => {
             multimedia. Our designers can create whatever you can imagine for a
             fresh look and feeling whether you're a new or old business.
           </p>
-          <Link href="/services">
+          <Link href="/digital-marketing">
             <a className="underline text-primary text-lg lg:text-xl font-bold">
               Find Out More
             </a>
