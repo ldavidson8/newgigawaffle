@@ -16,6 +16,10 @@ module.exports = {
         serviceXL: { min: "0px", max: "1500px" },
         scxl: { min: "1500px" },
         desktop: { min: "900px" },
+        mobilelg: "680px",
+        mobilemd: "575px",
+        mobilesm: "520px",
+        mobilexs: "370px",
       },
       colors: {
         primary: "#E14985",
@@ -32,6 +36,7 @@ module.exports = {
       },
       backgroundImage: {
         heroImage: "url('/heroimage.png')",
+        promoImage: "url('/promobg.jpg')",
         mapDesktop: "url('/contact_desktop.png')",
         mapMobile: "url('/contact_mobile.png')",
         dash: "linear-gradient(180deg,#e5e7eb,#e5e7eb 50%,transparent 0,transparent);",

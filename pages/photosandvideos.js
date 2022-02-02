@@ -54,7 +54,7 @@ export default function Illustration() {
       "We can create engaging video content to promote your products/services ready to put on your website and/or social media's. Our team can create content which shows off the best bits of your products/services.",
       "false,false,false,true"
     ),
-    new ImageCard("Image", "/", "1"),
+    new ImageCard("Image", "/cookiephoto.png", "1"),
   ];
 
   return (

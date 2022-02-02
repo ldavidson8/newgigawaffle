@@ -4,164 +4,59 @@ import { useForm } from "react-hook-form";
 export const HeroPromo = () => {
   return (
     <div className="text-white">
-      <div className="w-full h-[100%] md:min-h-[100%] min-h-[200%] bg-heroImage bg-center bg-cover bg-no-repeat text-white mb-6 origin-top-left absolute"></div>
-      <div className="flex flex-col justify-center items-center h-full w-full relative px-4">
-        <img
-          src="/logo.png"
-          width="200px"
-          height="150px"
-          className="mt-10"
-        ></img>
-        <Link href="https://gigawaffle.co.uk">
-          <a className="mt-2 cursor-pointer underline">
-            Visit gigawaffle.co.uk
-          </a>
-        </Link>
-        <div className="md:mb-10 mb-4 mt-10 flex sm:gap-10 gap-4 justify-center">
-          <div className="relative">
-            <img
-              className="z-10 -translate-y-5 sm:h-[250px] h-[300px] sm:w-[150px] w-[180px] object-contain
-              "
-              src="/monkeypromo.png"
-              width="150px"
-              height="250px"
-            />
-          </div>
-          <div>
-            <h1 className="text-5xl desktop:text-7xl text-right font-semibold mb-3 z-10">
-              50% OFF
-            </h1>
-            <h2 className="text-3xl text-right">
-              digital marketing,
-              <br /> web design &<br />
-              branding services
-            </h2>
-          </div>
+      <div className="w-full h-[100%] md:min-h-[100%] min-h-[200%] bg-center bg-cover bg-no-repeat text-white mb-6 origin-top-left absolute -z-10"></div>
+      <div className="flex flex-row justify-end items-center h-full w-full relative mobilesm:pr-10 pr-4 mobilemd:pb-4 pb-10">
+        <div className="flex flex-col justify-end">
+          <img
+            src="/logo.png"
+            width="200px"
+            height="100px"
+            className="mobilesm:mt-10 mt-4 mobilesm:w-[200px] mobilesm:h-[45px] w-[150px] h-[33.75px]"
+          ></img>
+          <Link href="https://gigawaffle.co.uk">
+            <a className="mt-2 text-xs text-right mobilesm:text-md cursor-pointer underline text-black w-full hover:no-underline">
+              Visit gigawaffle.co.uk
+            </a>
+          </Link>
         </div>
-        <div className="grid md:grid-cols-2 grid-cols-1 xl:px-40 lg:px-20 sn:px-10 px-4 gap-10">
-          <p className="text-md text-left text-white max-w-screen-xl">
+      </div>
+      <div className="md:mb-10 mb-4 mt-10 flex sm:gap-10 gap-4 justify-center">
+        <img
+          className="absolute top-0 left-0 z-10 -translate-y-8 -translate-x-2 mobilelg:h-[375px] mobilesm:h-[360px] mobilelg:w-[300px] mobilesm:w-[280px] mobilexs:w-[200px] mobilexs:h-[270px] w-[170px] h-[250px] object-contain
+            "
+          src="/ringmonkey.png"
+          width="250px"
+          height="350px"
+        />
+      </div>
+      <div className="flex desktop:flex-row flex-col desktop:gap-10 max-w-[1250px] -translate-y-[17.5%] desktop:-translate-y-0 mx-auto px-4">
+        <div className="relative desktop:max-w-[50%] max-w-[60%] ml-auto">
+          <img src="/50promo.png" width="100%" height="100%"></img>
+        </div>
+        <div className="relative desktop:max-w-[50%] my-auto text-black desktop:mx-0 mobilesm:text-lg text-md mx-auto">
+          <p>
             We are gigawaffle; we aim to remove all the "waffle" from your
-            business's marketing, branding and social media management.
-            <br />
-            <br />
-            We offer solutions to your web design, branding and marketing needs.
+            business's marketing, branding and social media management. We offer
+            solutions to your web design, branding and marketing needs.
             Currently, we're offering a 50%* discount on all of our services, so
             feel free to get in touch with us to find out more about this offer!
-            Check out our socials for more of our work! @gigawaffleuk <br />{" "}
+            Check out our socials for more of our work! @gigawaffleuk
             <br />
-            <span className="text-sm text-center text-white max-w-screen-xl">
+            <br />
+            <span className="text-sm">
               *50% offer runs from xx/xx/22 to xx/xx/22. Offer only applies to
               the first payment of a contract, or the initial agreement of the
               contract set out for any of our packages. If you no longer wish to
               receive these emails, please click here.
             </span>
           </p>
-          <div>
-            <div className="flex items-center h-full md:px-8 font-bold">
-              <form
-                name="Promo Form"
-                method="POST"
-                autoComplete="off"
-                className="w-full mx-auto grid lg:grid-cols-2 grid-cols-1 gap-12"
-                data-netlify="true"
-              >
-                <div className="relative border-b-2 focus-within:border-primary">
-                  <input
-                    id="name"
-                    name="name"
-                    type="text"
-                    placeholder=" "
-                    className="block w-full bg-transparent appearance-none focus:outline-none"
-                  ></input>
-                  <label
-                    htmlFor="name"
-                    className="absolute top-0 duration-300 origin-0 cursor-text"
-                  >
-                    Name *
-                  </label>
-                </div>
-                <div className="relative border-b-2 focus-within:border-primary">
-                  <input
-                    id="email"
-                    name="email"
-                    type="email"
-                    placeholder=" "
-                    className="block w-full bg-transparent appearance-none focus:outline-none"
-                  ></input>
-                  <label
-                    htmlFor="email"
-                    className="absolute top-0 duration-300 origin-0 cursor-text"
-                  >
-                    Email *
-                  </label>
-                </div>
-                <div className="relative border-b-2 focus-within:border-primary">
-                  <input
-                    id="tel"
-                    name="tel"
-                    type="tel"
-                    placeholder=" "
-                    className="block w-full bg-transparent appearance-none focus:outline-none"
-                  ></input>
-                  <label
-                    htmlFor="tel"
-                    className="absolute top-0 duration-300 origin-0 cursor-text"
-                  >
-                    Phone
-                  </label>
-                </div>
-                <div className="relative border-b-2 focus-within:border-primary">
-                  <input
-                    id="company"
-                    name="company"
-                    type="text"
-                    placeholder=" "
-                    className="block w-full bg-transparent appearance-none focus:outline-none"
-                  ></input>
-                  <label className="absolute top-0 duration-300 origin-0 cursor-text">
-                    Company
-                  </label>
-                </div>
-                <div className="relative border-b-2 focus-within:border-primary">
-                  <input
-                    id="website"
-                    name="website"
-                    type="url"
-                    placeholder=" "
-                    className="block w-full bg-transparent appearance-none focus:outline-none"
-                  ></input>
-                  <label
-                    htmlFor="website"
-                    className="absolute top-0 duration-300 origin-0 cursor-text"
-                  >
-                    Website
-                  </label>
-                </div>
-                <div className="relative border-b-2 focus-within:border-primary">
-                  <textarea
-                    id="message"
-                    name="message"
-                    placeholder=" "
-                    className="block w-full bg-transparent appearance-none focus:outline-none"
-                  ></textarea>
-                  <label
-                    htmlFor="message"
-                    className="absolute top-0 duration-300 origin-0 cursor-text"
-                  >
-                    Message *
-                  </label>
-                </div>
-                <div className="col-span-full p-1 bg-gradient-to-br from-primary to-secondary rounded">
-                  <button
-                    type="submit"
-                    className="flex items-center justify-center h-16 p-8 bg-white rounded w-full text-primary font-bold"
-                  >
-                    Submit
-                  </button>
-                </div>
-              </form>
-            </div>
-          </div>
+          <Link href="#claimPromo" passHref>
+            <a>
+              <button className="bg-gradient-to-r from-[#09D2FE] to-[#F1B1FF] py-4 px-16 rounded-full text-black mx-auto mt-10 shadow-xl hover:shadow-none">
+                Claim 50% Off
+              </button>
+            </a>
+          </Link>
         </div>
       </div>
     </div>

@@ -473,7 +473,7 @@ const NavBlue = () => {
                       </Link>
                     </li> */}
                     <li className="p-2">
-                      <Link href="/illustrations">
+                      <Link href="/illustration">
                         <a className="inline-flex">
                           <span className="mr-3 mt-1">
                             <Image
@@ -775,7 +775,7 @@ const NavBlue = () => {
                       title="Illustrations"
                       text="Beautifully hand-drawn images"
                       icon="/nav-icons/pencil.svg"
-                      url="/illustrations"
+                      url="/illustration"
                     />
                   </li>
                 </ul>
