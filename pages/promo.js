@@ -10,6 +10,7 @@ import PromoLayout from "../components/PromoLayout";
 import NavBlue from "../components/NavBlue";
 import Iframe from "react-iframe";
 import Link from "next/link";
+import Script from "next/script";
 
 export default function Promo() {
   return (
@@ -55,7 +56,7 @@ export default function Promo() {
           style="border:0;width:100%;position:relative;z-index:100"
           className="w-full pt-10 mobilelg:bg-gray-500/20 bg-gray-500/50 rounded-xl p-4"
         ></Iframe>
-        <script src="https://www.cognitoforms.com/f/iframe.js"></script>
+        <Script src="https://www.cognitoforms.com/f/iframe.js"></Script>
       </div>
     </>
   );
