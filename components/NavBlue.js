@@ -108,7 +108,7 @@ const SubItemVariants = {
   },
 };
 
-const SubItem = ({ title, text, icon, url }) => {
+const SubItem = ({ title, text, icon, url, comingsoon }) => {
   return (
     <motion.div
       className="my-6 group cursor-pointer"
@@ -121,10 +121,17 @@ const SubItem = ({ title, text, icon, url }) => {
             <div>
               <Image src={icon} height="30" width="30"></Image>
             </div>
-            <div>
+            <div className="flex flex-row gap-2">
               <p className="font-semibold text-gray-800 group-hover:text-secondary 0 text-md">
                 {title}
               </p>
+              <span
+                className={`{font-semibold text-white bg-red-500 text-xs uppercase text-center h-4 mt-1 ${
+                  comingsoon == "true" ? "block" : "hidden"
+                }`}
+              >
+                Coming Soon
+              </span>
             </div>
             <div className="col-start-2">
               <p className="text-gray-400 group-hover:text-blue-400 text-sm">
@@ -489,6 +496,26 @@ const NavBlue = () => {
                         </a>
                       </Link>
                     </li>
+                    <li className="p-2">
+                      <div className="inline-flex">
+                        <span className="mr-3 mt-1">
+                          <Image
+                            src="/fadedmic.svg"
+                            height="15"
+                            width="15"
+                            layout="fixed"
+                          ></Image>
+                        </span>
+                        <div className="flex flex-col ">
+                          <span className="font-semibold text-white bg-red-500 text-xs uppercase text-center">
+                            Coming Soon
+                          </span>
+                          <span className="font-semibold text-gray-800 group-hover:text-secondary 0 text-sm">
+                            Podcast Creation
+                          </span>
+                        </div>
+                      </div>
+                    </li>
                   </ul>
                 </section>
                 <section className="relative">
@@ -628,6 +655,7 @@ const NavBlue = () => {
                     text="Dog Breeder"
                     icon="/client-logos/pgb-favicon.png"
                     url="/portfolio"
+                    comingsoon="false"
                   />
                 </li>
                 <li>
@@ -636,6 +664,7 @@ const NavBlue = () => {
                     text="Wedding Planner"
                     icon="/client-logos/crown.png"
                     url="/portfolio"
+                    comingsoon="false"
                   />
                 </li>
                 <li>
@@ -644,6 +673,7 @@ const NavBlue = () => {
                     text="Logistics &amp; Storage"
                     icon="/client-logos/unitecities-favicon.png"
                     url="/portfolio"
+                    comingsoon="false"
                   />
                 </li>
               </ul>
@@ -660,6 +690,7 @@ const NavBlue = () => {
                       text="Start promoting your business"
                       icon="/nav-icons/speakerphone.svg"
                       url="/digital-marketing"
+                      comingsoon="false"
                     />
                   </li>
                   {/* <li>
@@ -692,6 +723,7 @@ const NavBlue = () => {
                       text="Get found on Google"
                       icon="/nav-icons/search.svg"
                       url="/seo"
+                      comingsoon="false"
                     />
                   </li>
                   <li>
@@ -700,6 +732,7 @@ const NavBlue = () => {
                       text="Logos, colours, fonts and more"
                       icon="/nav-icons/mountains_black.svg"
                       url="/brand-design"
+                      comingsoon="false"
                     />
                   </li>
                   {/* <li>
@@ -721,6 +754,7 @@ const NavBlue = () => {
                       text="Get found online"
                       icon="/nav-icons/code.svg"
                       url="/web-design"
+                      comingsoon="false"
                     />
                   </li>
                   <li>
@@ -729,6 +763,7 @@ const NavBlue = () => {
                       text="Sell products online"
                       icon="/service-icons/shopping-cart-solid.svg"
                       url="/ecommerce-design"
+                      comingsoon="false"
                     />
                   </li>
                 </ul>
@@ -742,6 +777,7 @@ const NavBlue = () => {
                       text="Engaging photos and videos"
                       icon="/nav-icons/photo_camera.svg"
                       url="/photosandvideos"
+                      comingsoon="false"
                     />
                   </li>
                   {/* <li>
@@ -776,6 +812,16 @@ const NavBlue = () => {
                       text="Beautifully hand-drawn images"
                       icon="/nav-icons/pencil.svg"
                       url="/illustration"
+                      comingsoon="false"
+                    />
+                  </li>
+                  <li>
+                    <SubItem
+                      title="Podcast Creation"
+                      text="Engaging & Informative Content"
+                      icon="/fadedmic.svg"
+                      url="/podcast-creation"
+                      comingsoon="true"
                     />
                   </li>
                 </ul>
