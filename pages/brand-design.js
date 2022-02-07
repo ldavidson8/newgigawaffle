@@ -71,9 +71,9 @@ export default function BrandDesign() {
       preTitle="Bold & Exciting"
       title="Brand Design"
       description="Be noticed physically and across the Internet with a consistent and bold brand."
-      serviceImage="/service-images/pgbmaps.png"
+      serviceImage="/brand.png"
       serviceImgAlt=""
-      serviceOverlay="/service-images/pgboverlay.png"
+      serviceOverlay="/service-images/brandoverlay.png"
       serviceOverlayAlt=""
       cards={cards}
     />

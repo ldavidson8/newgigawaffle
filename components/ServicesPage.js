@@ -214,7 +214,7 @@ export const Services = (props) => {
         <h3 className="relative pt-40 mx-auto text-3xl font-bold text-center text-black font-rubik">
           Who we've worked with
         </h3>
-        <div className="grid desktop:grid-cols-6 sm:grid-cols-3 grid-cols-2 gap-10 max-w-section h-[100px] sm:px-10 all:px-4 mt-10">
+        <div className="grid desktop:grid-cols-7 sm:grid-cols-3 grid-cols-2 gap-10 max-w-section h-[100px] sm:px-10 all:px-4 mt-10">
           <img
             src="/client-logos/pgb.png"
             alt="Playground Bullys UK Logo"
@@ -243,6 +243,11 @@ export const Services = (props) => {
           <img
             src="/client-logos/scs.png"
             alt="Specialist Coating Logo"
+            className="h-[100px] object-cover mx-auto"
+          />
+          <img
+            src="/client-logos/dbs.png"
+            alt="Deltic Business Solutions Logo"
             className="h-[100px] object-cover mx-auto"
           />
         </div>

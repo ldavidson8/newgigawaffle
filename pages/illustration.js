@@ -68,8 +68,8 @@ export default function Illustration() {
     <Services
       bannerImage="/service-banners/webdesign.png"
       bannerAlt=""
-      preTitle="Eye-catching"
-      title="Illustration"
+      preTitle="Creative"
+      title="Illustrations"
       description="Make your business stand out from the crowd with our illustration services."
       serviceImage="/service-images/pgbmaps.png"
       serviceImgAlt=""
