@@ -31,9 +31,9 @@ module.exports = {
         clientCard: "inset 0 -20px 50px 2px rgba(0,0,0,1)",
       },
       backgroundImage: {
-        heroImage: "url('/heroimage.png')",
-        mapDesktop: "url('/contact_desktop.png')",
-        mapMobile: "url('/contact_mobile.png')",
+        heroImage: "url('/heroimage.jpg')",
+        mapDesktop: "url('/contact_desktop.jpg')",
+        mapMobile: "url('/contact_mobile.jpg')",
         dash: "linear-gradient(180deg,#e5e7eb,#e5e7eb 50%,transparent 0,transparent);",
       },
       backgroundSize: {
