@@ -48,6 +48,7 @@ module.exports = {
         fadedPodcast: "url('/pod.gif')",
         fadedECom: "url('/cookie.gif')",
         fadedPhoto: "url('/office.gif')",
+        studio: "url('/studio.jpg')",
         dash: "linear-gradient(180deg,#e5e7eb,#e5e7eb 50%,transparent 0,transparent);",
       },
       backgroundSize: {
