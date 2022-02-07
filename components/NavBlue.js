@@ -38,7 +38,7 @@ const MenuItem = ({ text, children, link, hover, ...props }) => {
           onHoverStart={() => setIsBeingHovered(true)}
           onHoverEnd={() => setIsBeingHovered(false)}
         >
-          <button className="relative text-white font-bold cursor-default">
+          <button className="relative text-white font-bold cursor-pointer">
             {text}
             {isBeingHovered && <Underline />}
           </button>
