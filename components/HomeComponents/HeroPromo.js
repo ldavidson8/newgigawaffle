@@ -44,7 +44,7 @@ export const HeroPromo = () => {
             <br />
             <br />
             <span className="text-sm">
-              *50% offer runs from xx/xx/22 to xx/xx/22. Offer only applies to
+              *50% offer runs from 07/02/22 to 28/02/22. Offer only applies to
               the first payment of a contract, or the initial agreement of the
               contract set out for any of our packages. If you no longer wish to
               receive these emails, please click here.

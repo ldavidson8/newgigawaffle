@@ -11,8 +11,15 @@ import NavBlue from "../components/NavBlue";
 import Iframe from "react-iframe";
 import Link from "next/link";
 import Script from "next/script";
+import { useForm } from "react-hook-form";
 
 export default function Promo() {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isSubmitting, isSubmitSuccessful },
+  } = useForm();
+
   return (
     <>
       <Head>
@@ -51,12 +58,173 @@ export default function Promo() {
         </a>
       </Link>
       <div className="max-w-[900px] mx-auto mt-20 rounded-xl p-4">
-        <Iframe
+        <div className="bg-white rounded-2xl w-full lg:w-full font-bold text-gray-600 p-4 md:p-12 shadow-xl">
+          <form
+            name="Contact Form"
+            method="POST"
+            autoComplete="off"
+            action="/success"
+            netlify-honeypot="bot-field"
+            data-netlify="true"
+            className="space-y-7 xl:space-y-10 w-full mx-auto"
+          >
+            <input type="hidden" name="form-name" value="inquiryForm" />
+            <p className="hidden">
+              <label>
+                Don't fill this out if you're human: <input name="bot-field" />
+              </label>
+            </p>
+            <p className="hidden">
+              <label
+                aria-hidden="true"
+                className="opacity-0 absolute top-0 left-0"
+              >
+                Enter your full name:
+                <input
+                  name="fullname"
+                  aria-hidden="true"
+                  className="opacity-0 absolute top-0 left-0"
+                />
+              </label>
+            </p>
+            <h1 className="text-black mb-4">Let's Talk</h1>
+            {errors.name && <p className="text-red-600">This is required</p>}
+            <div className="relative my-4 border-b-2 focus-within:border-primary">
+              <input
+                id="name"
+                name="name"
+                type="text"
+                placeholder=" "
+                className="block w-full appearance-none focus:outline-none bg-transparent"
+                {...register("name", { required: true })}
+                disabled={isSubmitting}
+              ></input>
+              <label
+                htmlFor="name"
+                className="absolute top-0 duration-300 origin-0 cursor-text"
+              >
+                Name *
+              </label>
+            </div>
+            <div className="relative my-4 border-b-2 focus-within:border-primary">
+              <input
+                id="email"
+                name="email"
+                type="email"
+                placeholder=" "
+                className="block w-full appearance-none focus:outline-none bg-transparent"
+                {...register("email", { required: true })}
+                disabled={isSubmitting}
+              ></input>
+              <label
+                htmlFor="email"
+                className="absolute top-0 duration-300 origin-0 cursor-text"
+              >
+                Email *
+              </label>
+            </div>
+            <div className="relative my-4 border-b-2 focus-within:border-primary">
+              <input
+                id="tel"
+                name="tel"
+                type="tel"
+                placeholder=" "
+                className="block w-full appearance-none focus:outline-none bg-transparent"
+                {...register("tel")}
+              ></input>
+              <label
+                htmlFor="tel"
+                className="absolute top-0 duration-300 origin-0 cursor-text"
+              >
+                Phone
+              </label>
+            </div>
+            <div className="relative my-4 border-b-2 focus-within:border-primary">
+              <input
+                id="company"
+                name="company"
+                type="text"
+                placeholder=" "
+                className="block w-full appearance-none focus:outline-none bg-transparent"
+                {...register("company")}
+              ></input>
+              <label
+                htmlFor="company"
+                className="absolute top-0 duration-300 origin-0 cursor-text"
+              >
+                Company Name
+              </label>
+            </div>
+            <div className="relative my-4 border-b-2 focus-within:border-primary">
+              <input
+                id="website"
+                name="website"
+                type="url"
+                placeholder=" "
+                className="block w-full appearance-none focus:outline-none bg-transparent"
+                {...register("website")}
+              ></input>
+              <label
+                htmlFor="website"
+                className="absolute top-0 duration-300 origin-0 cursor-text"
+              >
+                Website URL
+              </label>
+            </div>
+            <div className="relative my-4 border-b-2 focus-within:border-primary">
+              <textarea
+                id="message"
+                name="message"
+                placeholder=" "
+                className="block w-full appearance-none focus:outline-none bg-transparent"
+                {...register("message", { required: true })}
+                disabled={isSubmitting}
+              ></textarea>
+              <label
+                htmlFor="message"
+                className="absolute top-0 duration-300 origin-0 cursor-text"
+              >
+                Message *
+              </label>
+            </div>
+            <button
+              type="submit"
+              className="rounded-full w-full mx-auto flex justify-center items-center bg-primary p-4 text-white"
+              disabled={isSubmitting || isSubmitSuccessful}
+            >
+              {isSubmitting && (
+                <svg
+                  className="animate-spin -ml-1 mr-3 h-6 w-6 text-white"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <circle
+                    className="opacity-25"
+                    cx="12"
+                    cy="12"
+                    r="10"
+                    stroke="currentColor"
+                    strokeWidth="4"
+                  ></circle>
+                  <path
+                    className="opacity-75"
+                    fill="currentColor"
+                    d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                  ></path>
+                </svg>
+              )}
+              {!isSubmitting && !isSubmitSuccessful && <span>Submit</span>}
+              {isSubmitSuccessful && <span>Message Sent!</span>}
+            </button>
+          </form>
+        </div>
+        {/* <Iframe
           src="https://www.cognitoforms.com/f/QBWrPI31BEaZ4E5T60v3ig/2"
           style="border:0;width:100%;position:relative;z-index:100"
           className="w-full pt-10 mobilelg:bg-gray-500/20 bg-gray-500/50 rounded-xl p-4"
         ></Iframe>
-        <Script src="https://www.cognitoforms.com/f/iframe.js"></Script>
+        <Script src="https://www.cognitoforms.com/f/iframe.js"></Script> */}
       </div>
     </>
   );
