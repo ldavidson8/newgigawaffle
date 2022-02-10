@@ -60,7 +60,7 @@ export default function Promo() {
       <div className="max-w-[900px] mx-auto mt-20 rounded-xl p-4">
         <div className="bg-white rounded-2xl w-full lg:w-full font-bold text-gray-600 p-4 md:p-12 shadow-xl">
           <form
-            name="Contact Form"
+            name="50OffForm"
             method="POST"
             autoComplete="off"
             action="/success"
@@ -68,7 +68,7 @@ export default function Promo() {
             data-netlify="true"
             className="space-y-7 xl:space-y-10 w-full mx-auto"
           >
-            <input type="hidden" name="form-name" value="inquiryForm" />
+            <input type="hidden" name="form-name" value="50OffForm" />
             <p className="hidden">
               <label>
                 Don't fill this out if you're human: <input name="bot-field" />
