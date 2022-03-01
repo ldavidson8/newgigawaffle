@@ -58,6 +58,41 @@ const MenuItem = ({ text, children, ...props }) => {
   );
 };
 
+const EmptyMenuItem = ({ text, children, link, hover, ...props }) => {
+  const [isBeingHovered, setIsBeingHovered] = useState(false);
+
+  return (
+    <Link href={link} passHref>
+      <a>
+        <motion.div
+          className="px-10 relative"
+          onHoverStart={() => setIsBeingHovered(true)}
+          onHoverEnd={() => setIsBeingHovered(false)}
+        >
+          <button className="relative text-black font-bold cursor-default">
+            {text}
+            {isBeingHovered && <Underline />}
+          </button>
+          {isBeingHovered && (
+            <div className="h-[1000px] w-full">
+              <motion.div
+                {...props}
+                layoutId="menu"
+                className="absolute top-12 shadow-xl bg-white rounded-lg min-w-max gap-4 justify-center p-4 z-max"
+                variants={MenuItemVariants}
+                initial="hidden"
+                animate="hidden"
+              >
+                {children}
+              </motion.div>
+            </div>
+          )}
+        </motion.div>
+      </a>
+    </Link>
+  );
+};
+
 const SubItemVariants = {
   hidden: {
     x: -20,
