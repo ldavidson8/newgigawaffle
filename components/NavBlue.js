@@ -646,7 +646,7 @@ const NavBlue = () => {
           {/* Desktop Navigation */}
         </div>
         <motion.div className="p-6 justify-center w-full hidden desktop:flex">
-          <MenuItem text={"Portfolio"} link={"/portfolio"}>
+          <EmptyMenuItem text={"Portfolio"} link={"/portfolio"}>
             {/* <div>
               <ul>
                 <li>
@@ -678,7 +678,7 @@ const NavBlue = () => {
                 </li>
               </ul>
             </div> */}
-          </MenuItem>
+          </EmptyMenuItem>
           <MenuItem text={"Services"} link={"/services"}>
             <div className="grid grid-cols-3 gap-16 p-4">
               <section>

@@ -432,7 +432,7 @@ const NavTransparent = () => {
           {/* Desktop Navigation */}
         </div>
         <motion.div className="p-10 justify-center w-full hidden desktop:flex">
-          <MenuItem text={"Portfolio"}>
+          <EmptyMenuItem text={"Portfolio"}>
             {/* <div>
               <ul>
                 <li>
@@ -461,7 +461,7 @@ const NavTransparent = () => {
                 </li>
               </ul>
             </div> */}
-          </MenuItem>
+          </EmptyMenuItem>
           <MenuItem text={"Services"}>
             <div className="grid grid-cols-3 gap-16 p-4">
               <section>
