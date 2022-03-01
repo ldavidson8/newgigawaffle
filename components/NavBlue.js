@@ -647,7 +647,7 @@ const NavBlue = () => {
         </div>
         <motion.div className="p-6 justify-center w-full hidden desktop:flex">
           <MenuItem text={"Portfolio"} link={"/portfolio"}>
-            <div>
+            {/* <div>
               <ul>
                 <li>
                   <SubItem
@@ -677,7 +677,7 @@ const NavBlue = () => {
                   />
                 </li>
               </ul>
-            </div>
+            </div> */}
           </MenuItem>
           <MenuItem text={"Services"} link={"/services"}>
             <div className="grid grid-cols-3 gap-16 p-4">

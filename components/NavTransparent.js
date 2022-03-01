@@ -433,7 +433,7 @@ const NavTransparent = () => {
         </div>
         <motion.div className="p-10 justify-center w-full hidden desktop:flex">
           <MenuItem text={"Portfolio"}>
-            <div>
+            {/* <div>
               <ul>
                 <li>
                   <SubItem
@@ -460,7 +460,7 @@ const NavTransparent = () => {
                   />
                 </li>
               </ul>
-            </div>
+            </div> */}
           </MenuItem>
           <MenuItem text={"Services"}>
             <div className="grid grid-cols-3 gap-16 p-4">
